@@ -1,105 +1,102 @@
 $zen-width: 960px !default;
 $zen-content-position: middle !default; //possible values are first, middle, last
-$zen-content-margin: 0 !default;
 $zen-first-sidebar-width: 200px !default;
-$zen-first-sidebar-margin: 0 !default;
 $zen-second-sidebar-width: 200px !default;
-$zen-second-sidebar-margin: 0 !default;
 
 @mixin zen($direction: "ltr") {
 
   @if $direction == "rtl" {
-    $first = "right";
-    $last = "left";
+    $first:  "right";
+    $last: "left";
   }
   @else {
-    $first = "left";
-    $last = "right";
+    $first: "left";
+    $last: "right";
   }
 
   #page-wrapper, .region-page-closure { width: $zen-width; }
 
   #content {
     @include float($first);
-    width: $zen-width - $zen-content-margin;
-    margin-#{$first}: $zen-content-margin;
-    margin-#{$second}: $zen-width;
+    width: $zen-width;
+    margin-#{$first}: 0;
+    margin-#{$last}: -($zen-width);
 
     .sidebar-first & {
-      width: $zen-width - $zen-content-margin - $zen-first-sidebar-width;
+      width: $zen-width - $zen-first-sidebar-width;
       @if $zen-content-position == "first" {
-        margin-#{$first}: $zen-content-margin;
-        margin-#{$second}: -($zen-width - $zen-content-margin - $zen-first-sidebar-width);
+        margin-#{$first}: 0;
+        margin-#{$last}: -($zen-width - $zen-first-sidebar-width);
       }
       @else {
-        margin-#{$first}: $zen-content-margin + $zen-first-sidebar-width;
-        margin-#{$second}: -($zen-width);
+        margin-#{$first}: $zen-first-sidebar-width;
+        margin-#{$last}: -($zen-width);
       }
     }
 
     .sidebar-second #content {
-      width: $zen-width - $zen-content-margin - $zen-second-sidebar-width;
+      width: $zen-width - $zen-second-sidebar-width;
       @if $zen-content-position == "last" {
-        margin-#{$first}: $zen-content-margin + $zen-second-sidebar-width;
-        margin-#{$second}: -($zen-width);
+        margin-#{$first}: $zen-second-sidebar-width;
+        margin-#{$last}: -($zen-width);
       }
       @else {
-        margin-#{$first}: $zen-content-margin;
-        margin-#{$second}: -($zen-width - $zen-content-margin - $zen-second-sidebar-width);
+        margin-#{$first}: 0;
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width);
       }
     }
 
     .two-sidebars #content {
-      width: $zen-width - $zen-content-margin - $zen-first-sidebar-width - $zen-second-sidebar-width;
+      width: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
       @if $zen-content-position == "middle" {
-        margin-#{$first}: $zen-content-margin + $zen-first-sidebar-width;
-        margin-#{$second}: -($zen-width - $zen-second-sidebar-width);
+        margin-#{$first}: $zen-first-sidebar-width;
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width);
       }
       @if $zen-content-position == "first" {
-        margin-#{$first}: $zen-content-margin;
-        margin-#{$second}: -($zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width)
+        margin-#{$first}: 0;
+        margin-#{$last}: -($zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width)
       }
       @if $zen-content-position == "last" {
-        margin-#{$first}: $zen-content-margin + $zen-first-sidebar-width + $zen-second-sidebar-width;
-        margin-#{$second}: -($zen-width);
+        margin-#{$first}: $zen-first-sidebar-width + $zen-second-sidebar-width;
+        margin-#{$last}: -($zen-width);
       }
     }
   }
 
   .region-sidebar-first {
     @include float($first);
-    width: $zen-first-sidebar-width - $zen-first-sidebar-margin;
+    width: $zen-first-sidebar-width;
     @if $zen-content-position == "first" {
-      margin-#{$first}: $zen-first-sidebar-margin + $zen-width - $zen-content-margin - $zen-first-sidebar-width;
-      margin-#{$last}: -($zen-width - $zen-content-margin);
+      margin-#{$first}: $zen-width - $zen-first-sidebar-width;
+      margin-#{$last}: -($zen-width);
       .two-sidebars & {
-        margin-#{$first}: $zen-first-sidebar-margin + $zen-width - $zen-content-margin - $zen-first-sidebar-width - $zen-second-sidebar-width;
-        margin-#{$last}: -($zen-width - $zen-content-margin - $zen-second-sidebar-width)
+        margin-#{$first}: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width)
       }
     }
     @else {
-      margin-#{$first}: $zen-first-sidebar-margin;
-      margin-#{$second}: -$zen-first-sidebar-width;
+      margin-#{$first}: 0;
+      margin-#{$last}: -$zen-first-sidebar-width;
     }
   }
 
   .region-sidebar-second {
     @include float($first);
-    width: $zen-second-sidebar-width - $zen-second-sidebar-margin;
+    width: $zen-second-sidebar-width;
     @if $zen-content-position == "last" {
-      margin-#{$first}: $zen-second-sidebar-margin;
-      margin-#{$second}: -$zen-second-sidebar-width;
+      margin-#{$first}: 0;
+      margin-#{$last}: -$zen-second-sidebar-width;
       .two-sidebars & {
-        margin-#{$first}: $zen-second-sidebar-margin + $zen-first-sidebar-width;
-        margin-#{$second}: -($zen-second-sidebar-width + $zen-first-sidebar-width)
+        margin-#{$first}: $zen-first-sidebar-width;
+        margin-#{$last}: -($zen-second-sidebar-width + $zen-first-sidebar-width)
       }
     }
     @else {
-      margin-#{$first}: $zen-width - $zen-content-margin - $zen-second-sidebar-width;
-      margin-#{$second}: -($zen-width - $zen-content-margin);
+      margin-#{$first}: $zen-width - $zen-second-sidebar-width;
+      margin-#{$last}: -($zen-width);
       .two-sidebars & {
-        margin-#{$first}: $zen-second-sidebar-margin + $zen-width - $zen-content-margin - $zen-first-sidebar-width - $zen-second-sidebar-width;
-        margin-#{$second}: -($zen-width - $zen-content-margin - $zen-first-sidebar-width);
+        margin-#{$first}: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
+        margin-#{$last}: -($zen-width - $zen-first-sidebar-width);
       }
     }
   }
