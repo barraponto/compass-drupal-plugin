@@ -105,13 +105,12 @@ $zen-navigation-height: 2.3em !default;
 
 @mixin zen-navigation($direction: "ltr") {
 
+  $first: "left";
+  $last: "right";
+
   @if $direction == "rtl" {
     $first:  "right";
     $last: "left";
-  }
-  @else {
-    $first: "left";
-    $last: "right";
   }
 
   #navigation {
