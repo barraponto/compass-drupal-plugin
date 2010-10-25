@@ -9,7 +9,7 @@ $zen-navigation-height: 2.3em !default;
 
 //TODO: abstract fixed/liquid
 
-@mixin zen-layout($direction: "ltr") {
+@mixin zen-fixed($direction: "ltr") {
 
   $first: "left";
   $last: "right";
@@ -104,6 +104,21 @@ $zen-navigation-height: 2.3em !default;
         margin-#{$last}: -($zen-width - $zen-first-sidebar-width);
       }
     }
+  }
+}
+
+@mixin zen-liquid($direction: "ltr") {
+  
+}
+
+@mixin zen-layout($direction: "ltr") {
+  @if unit($zen-width) == "px" {
+    @include zen-fixed($direction);
+  }
+  @else if unit($zen-width) == "%" {
+    @warn "Liquid layout is still not supported, falling back to fixed layout.";
+    $zen-width: 960px;
+    @include zen-fixed($direction);
   }
 }
 
