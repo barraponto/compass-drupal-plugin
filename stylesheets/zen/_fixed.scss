@@ -7,6 +7,8 @@ $zen-second-sidebar-width: 200px !default;
 $zen-navigation-width: 100% !default;
 $zen-navigation-height: 2.3em !default;
 
+//TODO: abstract fixed/liquid
+
 @mixin zen-layout($direction: "ltr") {
 
   $first: "left";
