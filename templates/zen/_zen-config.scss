@@ -1,15 +1,33 @@
+@import "drupal/zen";
+
 // This variable controls the total width of the Zen theme.
 // You can use px for a Fixed layout or % for a Liquid layout
-// $zen-width: 960px;
+$zen-width: 960px;
 
 // These variables control the side of the sidebars
-// $zen-first-sidebar-width: 200px;
-// $zen-second-sidebar-width: 200px;
+$zen-first-sidebar-width: 200px;
+$zen-second-sidebar-width: 200px;
 
 // This variable positions the content relative to the sidebars
 // Possible values are first, last, middle
-// $zen-content-position: middle;
+$zen-content-position: middle;
+
+@include zen-layout();
 
 // These variables control the #navigation div
-// $zen-navigation-width: 100%;
-// $zen-navigation-height: 2.3em;
+$zen-navigation-width: 100%;
+$zen-navigation-height: 2.3em;
+
+@include zen-navigation();
+
+.theme-link {
+    a {
+    &:link {}
+    &:visited {}
+    &:hover,a:focus {}
+    &:active { } }
+}
+
+#page {
+  @extend .theme-link;
+}
