@@ -1,6 +1,18 @@
+Page
+ - Regions (Header, Content Top, Content Bottom, First Sidebar, Second Sidebar, Footer)
+ - Menus (Primary, Secondary, Each Region)
+ - Breadcrumbs (Home, Crumb, Title)
+ - Messages (Error, Status, Warning, Help)
+ - Content
+
+Module
+ - Box
+ - Title
+ - Content
+
 Elements
- - Collapsable Field Sets
  - Forms
+ - Collapsable Field Sets
  - Form Buttons
  - Image Style
  - Lists
@@ -9,28 +21,17 @@ Elements
  - Pagination
  - Table (table header, zebra striping)
  - Tabs
-
-Components
- - Box
- - Title
- - Content
+ - Byline
+ - Tags
 
 Objects
- - Nodes (Each Type)
- - Blocks (Each Region)
- - Views (Each View)
- - Comments ()
- - Messages (Error, Status, Warning, Help)
- - Profiles (Each Role)
+ - Nodes
+ - Blocks
+ - Views
+ - Comments
+ - Profiles
 
-Structure
- - Regions (Header, Content, Content Top, Content Bottom, First Sidebar, Second Sidebar, Footer)
- - Menus (Primary, Secondary, Each Region)
- - Breadcrumbs (Home, Crumb, Title)
-
-Node
+Content
  - H2-H6
  - Blockquote
  - Code
- - Tags
- - Byline
