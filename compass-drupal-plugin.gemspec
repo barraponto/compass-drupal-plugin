@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.2"
-  s.date = "2010-10-25"
+  s.version = "0.0.1"
+  s.date = "2010-10-26"
 
   # Gem Details
   s.name = %q{compass-drupal-plugin}
@@ -17,7 +17,8 @@ Gem::Specification.new do |s|
     "compass-drupal-plugin.gemspec",
     "lib/drupal.rb",
     "stylesheets/drupal/_zen.scss",
-    "templates/zen/_zen-base.scss",
+    "templates/zen/zen-base.scss",
+    "templates/zen/template.php",
     "templates/zen/manifest.rb"
   ]
 
