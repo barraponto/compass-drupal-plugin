@@ -1,5 +1,5 @@
 # Make sure you list all the project template files here in the manifest.
-stylesheet '_zen-config.scss', :media => 'screen, projection', :erb => true
+stylesheet 'zen-base.scss', :media => 'screen, projection', :erb => true, :to => "#{options[:project_name]}.scss"
 
 description "Zen Base Theme for Drupal"
 
