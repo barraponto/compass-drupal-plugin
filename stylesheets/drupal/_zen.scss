@@ -133,11 +133,23 @@ $zen-navigation-height: 2.3em !default;
   }
 
   #navigation {
+    overflow: hidden;
     @include float($first);
-    width: $zen-navigation-width;
+    width: 100%;
     margin-#{$first}: 0;
-    margin-#{$last}: -$zen-navigation-width;
+    margin-#{$last}: -100%;
+    padding: 0;
     height: $zen-navigation-height;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: $first; }
+    li {
+      @include float($first);
+      padding: 0;
+      padding-#{$last}: 10px; }
+
   }
 
   .with-navigation {
@@ -145,13 +157,6 @@ $zen-navigation-height: 2.3em !default;
       margin-top: $zen-navigation-height;
   } }
 
-  #navigation {
-    ul {
-      text-align: $first; }
-    li {
-      @include float($first);
-      padding: 0;
-      padding-#{$last}: 10px; } }
 }
 
 @mixin zen-dropdown-navigation {
