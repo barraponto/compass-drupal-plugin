@@ -9,117 +9,134 @@ $zen-navigation-height: 2.3em !default;
 
 //TODO: abstract fixed/liquid
 
-@mixin zen-fixed($direction: "ltr") {
+@mixin zen-layout-base {
+
+  .region-header {
+    clear: both; }
+
+  #main-wrapper {
+    position: relative; }
+
+}
+
+@mixin zen-layout-fixed($direction: "ltr") {
+
+  @include zen-layout-base;
 
   $first: "left";
   $last: "right";
 
   @if $direction == "rtl" {
     $first:  "right";
-    $last: "left";
-  }
+    $last: "left"; }
 
-  #page-wrapper, .region-page-closure { width: $zen-width; }
+  #page-wrapper, .region-page-closure {
+    margin-left: auto;
+    margin-right: auto;
+    width: $zen-width; }
 
   #content {
     @include float($first);
-    width: $zen-width;
-    margin-#{$first}: 0;
-    margin-#{$last}: -($zen-width);
+    padding: 0;
+
+    .no-sidebars & {
+      width: $zen-width;
+      margin-#{$first}: 0;
+      margin-#{$last}: -($zen-width); }
 
     .sidebar-first & {
       width: $zen-width - $zen-first-sidebar-width;
+
       @if $zen-content-position == "first" {
         margin-#{$first}: 0;
-        margin-#{$last}: -($zen-width - $zen-first-sidebar-width);
-      }
+        margin-#{$last}: -($zen-width - $zen-first-sidebar-width); }
+
       @else {
         margin-#{$first}: $zen-first-sidebar-width;
-        margin-#{$last}: -($zen-width);
-      }
-    }
+        margin-#{$last}: -($zen-width); } }
 
     .sidebar-second #content {
       width: $zen-width - $zen-second-sidebar-width;
+
       @if $zen-content-position == "last" {
         margin-#{$first}: $zen-second-sidebar-width;
-        margin-#{$last}: -($zen-width);
-      }
+        margin-#{$last}: -($zen-width); }
+
       @else {
         margin-#{$first}: 0;
-        margin-#{$last}: -($zen-width - $zen-second-sidebar-width);
-      }
-    }
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width); } }
 
     .two-sidebars #content {
       width: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
+
       @if $zen-content-position == "middle" {
         margin-#{$first}: $zen-first-sidebar-width;
-        margin-#{$last}: -($zen-width - $zen-second-sidebar-width);
-      }
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width); }
+
       @if $zen-content-position == "first" {
         margin-#{$first}: 0;
-        margin-#{$last}: -($zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width)
-      }
+        margin-#{$last}: -($zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width); }
+
       @if $zen-content-position == "last" {
         margin-#{$first}: $zen-first-sidebar-width + $zen-second-sidebar-width;
-        margin-#{$last}: -($zen-width);
-      }
-    }
-  }
+        margin-#{$last}: -($zen-width); } } }
 
   .region-sidebar-first {
     @include float($first);
     width: $zen-first-sidebar-width;
+
     @if $zen-content-position == "first" {
       margin-#{$first}: $zen-width - $zen-first-sidebar-width;
       margin-#{$last}: -($zen-width);
+
       .two-sidebars & {
         margin-#{$first}: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
-        margin-#{$last}: -($zen-width - $zen-second-sidebar-width)
-      }
-    }
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width); } }
+
     @else {
       margin-#{$first}: 0;
-      margin-#{$last}: -$zen-first-sidebar-width;
-    }
-  }
+      margin-#{$last}: -$zen-first-sidebar-width; } }
 
   .region-sidebar-second {
     @include float($first);
     width: $zen-second-sidebar-width;
+
     @if $zen-content-position == "last" {
       margin-#{$first}: 0;
       margin-#{$last}: -$zen-second-sidebar-width;
+
       .two-sidebars & {
         margin-#{$first}: $zen-first-sidebar-width;
-        margin-#{$last}: -($zen-second-sidebar-width + $zen-first-sidebar-width)
-      }
-    }
+        margin-#{$last}: -($zen-second-sidebar-width + $zen-first-sidebar-width); } }
+
     @else {
       margin-#{$first}: $zen-width - $zen-second-sidebar-width;
       margin-#{$last}: -($zen-width);
+
       .two-sidebars & {
         margin-#{$first}: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
-        margin-#{$last}: -($zen-width - $zen-first-sidebar-width);
-      }
-    }
-  }
+        margin-#{$last}: -($zen-width - $zen-first-sidebar-width); } } }
+
+  #content .section {
+    margin: 0;
+    padding: 0; }
+
 }
 
-@mixin zen-liquid($direction: "ltr") {
+@mixin zen-layout-liquid($direction: "ltr") {
   
 }
 
 @mixin zen-layout($direction: "ltr") {
+
   @if unit($zen-width) == "px" {
-    @include zen-fixed($direction);
-  }
+    @include zen-layout-fixed($direction); }
+
   @else if unit($zen-width) == "%" {
     @warn "Liquid layout is still not supported, falling back to fixed layout.";
     $zen-width: 960px;
-    @include zen-fixed($direction);
-  }
+    @include zen-layout-fixed($direction); }
+
 }
 
 @mixin zen-navigation($direction: "ltr") {
@@ -145,28 +162,28 @@ $zen-navigation-height: 2.3em !default;
       margin: 0;
       padding: 0;
       text-align: $first; }
+
     li {
       @include float($first);
       padding: 0;
-      padding-#{$last}: 10px; }
-
-  }
+      padding-#{$last}: 10px; } }
 
   .with-navigation {
     #content, .region-sidebar-first, .region-sidebar-second {
-      margin-top: $zen-navigation-height;
-  } }
+      margin-top: $zen-navigation-height; } }
 
 }
 
 @mixin zen-dropdown-navigation {
+
   #navigation {
-    overflow: visible;
-  }
+    overflow: visible; }
+
 }
 
 @mixin zen-clearfix-fix { //ironic, isn't it?
+
   #page-wrapper {
-    overflow-y: hidden;
-  }
+    overflow-y: hidden; }
+
 }
