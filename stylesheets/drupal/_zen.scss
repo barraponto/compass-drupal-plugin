@@ -1,13 +1,13 @@
 @import 'compass';
 
 $zen-width: 960px !default;
-$zen-content-position: middle !default; //possible values are first, middle, last
+$zen-content-position: "middle" !default; //possible values are first, middle, last
 $zen-first-sidebar-width: 200px !default;
 $zen-second-sidebar-width: 200px !default;
 $zen-navigation-width: 100% !default;
 $zen-navigation-height: 2.3em !default;
 
-//TODO: abstract fixed/liquid
+//TODO: liquid
 
 @mixin zen-layout-base {
 
@@ -36,6 +36,7 @@ $zen-navigation-height: 2.3em !default;
     width: $zen-width; }
 
   #content {
+    width: $zen-width;
     @include float($first);
     padding: 0;
 
@@ -55,7 +56,7 @@ $zen-navigation-height: 2.3em !default;
         margin-#{$first}: $zen-first-sidebar-width;
         margin-#{$last}: -($zen-width); } }
 
-    .sidebar-second #content {
+    .sidebar-second & {
       width: $zen-width - $zen-second-sidebar-width;
 
       @if $zen-content-position == "last" {
@@ -66,7 +67,7 @@ $zen-navigation-height: 2.3em !default;
         margin-#{$first}: 0;
         margin-#{$last}: -($zen-width - $zen-second-sidebar-width); } }
 
-    .two-sidebars #content {
+    .two-sidebars & {
       width: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
 
       @if $zen-content-position == "middle" {
@@ -114,7 +115,7 @@ $zen-navigation-height: 2.3em !default;
       margin-#{$last}: -($zen-width);
 
       .two-sidebars & {
-        margin-#{$first}: $zen-width - $zen-first-sidebar-width - $zen-second-sidebar-width;
+        margin-#{$first}: $zen-width - $zen-first-sidebar-width;
         margin-#{$last}: -($zen-width - $zen-first-sidebar-width); } } }
 
   #content .section {
@@ -181,14 +182,24 @@ $zen-navigation-height: 2.3em !default;
 
     .region-sidebar-first {
       @include float($last);
-      margin-#{$first}: -$zen-first-sidebar-width;
+      margin-#{$first}: -$zen-second-sidebar-width;
+
+      .two-sidebars &  {
+        margin-#{$first}: 0;
+        margin-#{$last}: $zen-second-sidebar-width;
+      }
 
       .section {
         margin-#{$first}: 20px; } }
 
     .region-sidebar-second {
       @include float($last);
-      margin-#{$first}: -$zen-second-sidebar-width;
+      margin-#{$first}: - $zen-second-sidebar-width;
+
+      .two-sidebars &  {
+        margin-#{$first}: 0;
+        margin-#{$last}: -($zen-first-sidebar-width + $zen-second-sidebar-width);
+      }
 
       .section {
         margin-#{$first}: 20px; }
@@ -225,9 +236,7 @@ $zen-navigation-height: 2.3em !default;
     @include zen-layout-fixed($direction); }
 
   @else if unit($zen-width) == "%" {
-    @warn "Liquid layout is still not supported, falling back to fixed layout.";
-    $zen-width: 960px;
-    @include zen-layout-fixed($direction); }
+    @include zen-layout-liquid($direction); }
 
 }
 
