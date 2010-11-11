@@ -124,7 +124,99 @@ $zen-navigation-height: 2.3em !default;
 }
 
 @mixin zen-layout-liquid($direction: "ltr") {
-  
+
+  @include zen-layout-base;
+
+  $first: "left";
+  $last: "right";
+
+  @if $direction == "rtl" {
+    $first:  "right";
+    $last: "left"; }
+
+  #page-wrapper, .region-page-closure {
+    min-width: 960px; }
+
+  #content {
+    @include float($first);
+    width: 100%;
+    margin-#{$first}: 0;
+    margin-#{$last}: -100%;
+    padding: 0;
+
+    .section {
+      margin: 0;
+      padding: 0; } }
+
+  .region-sidebar {
+    padding: 0;
+    margin: 0;
+
+    .section {
+      padding: 0;
+      margin: 0; } }
+
+  .region-sidebar-first {
+    @extend .region-sidebar;
+    width: $zen-first-sidebar-width; }
+
+  .region-sidebar-second {
+    @extend .region-sidebar;
+    width: $zen-second-sidebar-width; }
+
+  .no-sidebars #content .section {
+    margin: 0;
+    padding: 0; }
+
+  @if $zen-content-position == "first" {
+
+    .sidebar-first #content .section {
+      padding-#{$last}: $zen-first-sidebar-width; }
+
+    .sidebar-second #content .section {
+      padding-#{$last}: $zen-second-sidebar-width; }
+
+    .two-sidebars #content .section {
+      padding-#{$last}: $zen-first-sidebar-width + $zen-second-sidebar-width; }
+
+    .region-sidebar-first {
+      @include float($last);
+      margin-#{$first}: -$zen-first-sidebar-width;
+
+      .section {
+        margin-#{$first}: 20px; } }
+
+    .region-sidebar-second {
+      @include float($last);
+      margin-#{$first}: -$zen-second-sidebar-width;
+
+      .section {
+        margin-#{$first}: 20px; }
+    } }
+
+  @if $zen-content-position == "middle" {
+
+    .sidebar-first #content .section {
+      padding-#{$first}: $zen-first-sidebar-width; }
+
+    .sidebar-second #content .section {
+      padding-#{$last}: $zen-second-sidebar-width; }
+
+    .two-sidebars #content .section {
+      padding-#{$first}: $zen-first-sidebar-width;
+      padding-#{$last}: $zen-second-sidebar-width; } }
+
+  @if $zen-content-position == "last" {
+
+    .sidebar-first #content .section {
+      padding-#{$first}: $zen-first-sidebar-width; }
+
+    .sidebar-second #content .section {
+      padding-#{$first}: $zen-second-sidebar-width; }
+
+    .two-sidebars #content .section {
+      padding-#{$first}: $zen-first-sidebar-width + $zen-second-sidebar-width; } }
+
 }
 
 @mixin zen-layout($direction: "ltr") {
