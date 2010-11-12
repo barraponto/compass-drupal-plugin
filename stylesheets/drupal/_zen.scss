@@ -17,6 +17,11 @@ $zen-navigation-height: 2.3em !default;
   #main-wrapper {
     position: relative; }
 
+  #page-wrapper, .region-page-closure {
+    margin-left: auto;
+    margin-right: auto;
+    width: $zen-width; }
+
 }
 
 @mixin zen-layout-fixed($direction: "ltr") {
@@ -29,11 +34,6 @@ $zen-navigation-height: 2.3em !default;
   @if $direction == "rtl" {
     $first:  "right";
     $last: "left"; }
-
-  #page-wrapper, .region-page-closure {
-    margin-left: auto;
-    margin-right: auto;
-    width: $zen-width; }
 
   #content {
     width: $zen-width;
@@ -115,8 +115,8 @@ $zen-navigation-height: 2.3em !default;
       margin-#{$last}: -($zen-width);
 
       .two-sidebars & {
-        margin-#{$first}: $zen-width - $zen-first-sidebar-width;
-        margin-#{$last}: -($zen-width - $zen-first-sidebar-width); } } }
+        margin-#{$first}: $zen-width - $zen-second-sidebar-width;
+        margin-#{$last}: -($zen-width - $zen-second-sidebar-width); } } }
 
   #content .section {
     margin: 0;
@@ -202,8 +202,7 @@ $zen-navigation-height: 2.3em !default;
       }
 
       .section {
-        margin-#{$first}: 20px; }
-    } }
+        margin-#{$first}: 20px; } } }
 
   @if $zen-content-position == "middle" {
 
@@ -215,7 +214,19 @@ $zen-navigation-height: 2.3em !default;
 
     .two-sidebars #content .section {
       padding-#{$first}: $zen-first-sidebar-width;
-      padding-#{$last}: $zen-second-sidebar-width; } }
+      padding-#{$last}: $zen-second-sidebar-width; }
+
+    .region-sidebar-first {
+      @include float($first);
+
+      .section {
+        margin-#{$last}: 20px; } }
+
+    .region-sidebar-second {
+      @include float($last);
+
+      .section {
+        margin-#{$first}: 20px; } } }
 
   @if $zen-content-position == "last" {
 
@@ -226,7 +237,30 @@ $zen-navigation-height: 2.3em !default;
       padding-#{$first}: $zen-second-sidebar-width; }
 
     .two-sidebars #content .section {
-      padding-#{$first}: $zen-first-sidebar-width + $zen-second-sidebar-width; } }
+      padding-#{$first}: $zen-first-sidebar-width + $zen-second-sidebar-width; } 
+
+    .region-sidebar-first {
+      @include float($first);
+      margin-#{$last}: -$zen-second-sidebar-width;
+
+      .two-sidebars &  {
+        margin-#{$last}: $zen-second-sidebar-width;
+        margin-#{$first}: 0; }
+
+      .section {
+        margin-#{$last}: 20px; } }
+
+    .region-sidebar-second {
+      @include float($first);
+      margin-#{$last}: - $zen-second-sidebar-width;
+
+      .two-sidebars &  {
+        margin-#{$first}: - $zen-second-sidebar-width;
+        margin-#{$last}: 0;
+      }
+
+      .section {
+        margin-#{$last}: 20px; } } }
 
 }
 
