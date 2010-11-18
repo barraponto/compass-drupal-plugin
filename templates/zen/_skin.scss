@@ -1,0 +1,82 @@
+/* Page Elements */
+
+.-theme-skip-link { }
+.-theme-logo { }
+.-theme-name-and-slogan { }
+.-theme-mission { }
+.-theme-breadcrumb { }
+.-theme-messages { }
+.-theme-primary-tabs { }
+.-theme-secondary-tabs { }
+.-theme-main-menu { }
+.-theme-feed-icons { }
+.-theme-secondary-menu { }
+.-theme-footer-message { }
+
+/* Common Elements */
+
+.-theme-h2 { }
+.-theme-h3 { }
+.-theme-p { }
+.-theme-li { }
+
+.-theme-ul {
+  li { @extend .-theme-li; } }
+
+.-theme-ol {
+  li { @extend .-theme-li; } }
+
+.-theme-a {
+  &:link { }
+  &:visited { }
+  &:hover { }
+  &:focus { }
+  &:active { }
+}
+
+/* Content Elements */
+
+.-theme-h1 { }
+.-theme-h4 { }
+.-theme-code { }
+.-theme-blockquote { }
+.-theme-table {
+  tr {
+    th { }
+    td { } } }
+
+/* Base Object */
+
+.-base-object {
+  .title { }
+  .content { }
+}
+
+/* Helper Objects */
+
+.-content-object {
+  @extend .-base-module;
+  h1 { @extend .-theme-h1; }
+  h4 { @extend .-theme-h4; }
+  code { @extend .-theme-code; }
+  blockquote { @extend .-theme-blockquote; }
+  table { @extend .-theme-table; }
+  h2 { @extend .-theme-h2; }
+  h3 { @extend .-theme-h3; }
+  p { @extend .-theme-p; }
+  li { @extend .-theme-li; }
+  ul { @extend .-theme-ul; }
+  ol { @extend .-theme-ol; }
+  a { @extend .-theme-a; }
+}
+
+.-block-object {
+  @extend .-base-module;
+  h2 { @extend .-theme-h2; }
+  h3 { @extend .-theme-h3; }
+  p { @extend .-theme-p; }
+  li { @extend .-theme-li; }
+  ul { @extend .-theme-ul; }
+  ol { @extend .-theme-ol; }
+  a { @extend .-theme-a; }
+}
