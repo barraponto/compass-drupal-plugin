@@ -1,4 +1,5 @@
 @import "drupal/zen";
+@import "skin";
 
 // This variable controls the total width of the Zen theme.
 // You can use px for a Fixed layout or % for a Liquid layout
@@ -21,3 +22,56 @@ $zen-navigation-height: 2.3em;
 
 // Use this mixin to properly position the #navigation div
 @include zen-navigation();
+
+body { }
+
+#skip-link { }
+
+#page-wrapper {
+
+/* Content */
+
+  #content {
+    #mission { }
+    #breadcrumb { }
+    .messages { }
+    .tabs {
+      .primary { }
+      .secondary { } }
+    .feed-icons { } }
+
+/* Regions */
+
+  .region-sidebar-first & {
+    .block { } }
+
+  .region-sidebar-first & {
+    .block { } }
+
+  .region-navigation & {
+    #main-menu { }
+    .block { } }
+
+  .region-highlight & {
+    .block { } }
+
+  .region-content-top & {
+    .block { } }
+
+  .region-content-bottom & {
+    .block { } }
+
+  .region-header & {
+    #logo { }
+    #name-and-slogan { }
+    .block { } }
+
+  .region-footer & {
+    #secondary-menu { }
+    #footer-message { }
+    .block { } }
+
+  .region-page-closure & {
+    .block { } }
+
+}
