@@ -5,7 +5,12 @@
 .-theme-name-and-slogan { }
 .-theme-mission { }
 .-theme-breadcrumb { }
-.-theme-messages { }
+.-theme-messages {
+  &.error { }
+  &.warning { }
+  &.status { }
+  &.help { }
+}
 .-theme-primary-tabs { }
 .-theme-secondary-tabs { }
 .-theme-main-menu { }
