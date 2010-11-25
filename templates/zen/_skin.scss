@@ -1,16 +1,33 @@
 /* Page Elements */
 
 .-theme-skip-link { }
+
 .-theme-logo { }
-.-theme-name-and-slogan { }
+
+.-theme-name-and-slogan {
+  #site-name { 
+    a { } }
+  #site-slogan { } }
+
+.-theme-search-box {
+  #search {
+    .form-item { 
+      .form-text { } }
+    .form-submit { } } }
+
 .-theme-mission { }
-.-theme-breadcrumb { }
+
+.-theme-breadcrumb {
+  a { } }
+
 .-theme-messages {
+  ul {
+    li { } }
   &.error { }
   &.warning { }
   &.status { }
-  &.help { }
-}
+  &.help { } }
+
 .-theme-primary-tabs { }
 .-theme-secondary-tabs { }
 .-theme-main-menu { }
