@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.1.9"
-  s.date = "2010-11-28"
+  s.version = "0.2.0.alpha.0"
+  s.date = "2010-11-29"
 
   # Gem Details
   s.name = %q{compass-drupal-plugin}
