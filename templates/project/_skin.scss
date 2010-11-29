@@ -127,7 +127,10 @@
       &.first { }
       &.last { } } } }
 
-/* User Object */
-.-<%= project_name %>-user-object {
-  
-}
+/* Profile Object */
+.-<%= project_name %>-profile-object {
+  .picture { }
+  h3 { } /* profile category header */ 
+  dl { /* profile category wrapper */ 
+    dt { } /*profile category label */
+    dd { } /* profile category value */ } }
