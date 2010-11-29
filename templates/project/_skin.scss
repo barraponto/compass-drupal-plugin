@@ -27,9 +27,23 @@
 
 .-<%= project_name %>-primary-tabs { }
 .-<%= project_name %>-secondary-tabs { }
-.-<%= project_name %>-main-menu { }
-.-<%= project_name %>-feed-icons { }
-.-<%= project_name %>-secondary-menu { }
+.-<%= project_name %>-menu {
+  > li { //use > to target only child items,
+    &.first { }
+    &.last { }
+    &.expanded {
+      > ul { @extend .-<%= project_name %>-submenu; } } } }
+
+.-<%= project_name %>-submenu {
+    > li { //use > to target only child items,
+    &.first { }
+    &.last { }
+    &.expanded {
+      > ul { } } } }
+
+.-<%= project_name %>-feed-icons {
+  .feed-icon { } }
+
 .-<%= project_name %>-footer-message { }
 
 /* Common Elements */
@@ -56,8 +70,10 @@
 
 .-<%= project_name %>-h1 { }
 .-<%= project_name %>-h4 { }
+.-<%= project_name %>-pre { }
 .-<%= project_name %>-code { }
 .-<%= project_name %>-blockquote { }
+.-<%= project_name %>-cite { }
 .-<%= project_name %>-table {
   caption { }
   tr {
@@ -69,13 +85,13 @@
 
 /* Base Object */
 
-.-base-object {
+.-<%= project_name %>-base-object {
   .title { }
   .content { } }
 
 /* Helper Objects */
 
-.-content-object {
+.-<%= project_name %>-content-object {
   @extend .-base-object;
   h1 { @extend .-<%= project_name %>-h1; }
   h4 { @extend .-<%= project_name %>-h4; }
@@ -90,7 +106,7 @@
   ol { @extend .-<%= project_name %>-ol; }
   a { @extend .-<%= project_name %>-a; } }
 
-.-block-object {
+.-<%= project_name %>-block-object {
   @extend .-base-object;
   h2 { @extend .-<%= project_name %>-h2; }
   h3 { @extend .-<%= project_name %>-h3; }
@@ -99,3 +115,19 @@
   ul { @extend .-<%= project_name %>-ul; }
   ol { @extend .-<%= project_name %>-ol; }
   a { @extend .-<%= project_name %>-a; } }
+
+/* Node Object */
+
+.-<%= project_name %>-node-object {
+  .title { }
+  .meta { }
+  .content { @extend .-content-object; }
+  .links {
+    li {
+      &.first { }
+      &.last { } } } }
+
+/* User Object */
+.-<%= project_name %>-user-object {
+  
+}
