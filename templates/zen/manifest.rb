@@ -3,7 +3,7 @@ stylesheet 'zen-base.scss', :media => 'screen, projection', :to => "#{options[:p
 
 stylesheet 'zen-base-rtl.scss', :media => 'screen, projection', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss"
 
-stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
+stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
 
 description "Zen Layout for Drupal Zen Theme"
 
