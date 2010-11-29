@@ -1,7 +1,9 @@
 # Make sure you list all the project template files here in the manifest.
-stylesheet 'zen-base.scss', :media => 'screen, projection', :to => "#{options[:project_name]}.scss"
-stylesheet 'zen-base-rtl.scss', :media => 'screen, projection', :to => "#{options[:project_name]}-rtl.scss"
-stylesheet '_skin.scss'
+stylesheet 'zen-base.scss', :media => 'screen, projection', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+
+stylesheet 'zen-base-rtl.scss', :media => 'screen, projection', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss"
+
+stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
 
 description "Zen Layout for Drupal Zen Theme"
 

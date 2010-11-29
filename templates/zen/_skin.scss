@@ -1,51 +1,49 @@
-/* Page Elements */
+<% project_name = File.basename(config.project_path) %>/* Page Elements */
 
-.-theme-skip-link { }
-.-theme-logo { }
-.-theme-name-and-slogan { }
-.-theme-mission { }
-.-theme-breadcrumb { }
-.-theme-messages {
+.-<%= project_name %>-skip-link { }
+.-<%= project_name %>-logo { }
+.-<%= project_name %>-name-and-slogan { }
+.-<%= project_name %>-mission { }
+.-<%= project_name %>-breadcrumb { }
+.-<%= project_name %>-messages {
   &.error { }
   &.warning { }
   &.status { }
-  &.help { }
-}
-.-theme-primary-tabs { }
-.-theme-secondary-tabs { }
-.-theme-main-menu { }
-.-theme-feed-icons { }
-.-theme-secondary-menu { }
-.-theme-footer-message { }
+  &.help { } }
+.-<%= project_name %>-primary-tabs { }
+.-<%= project_name %>-secondary-tabs { }
+.-<%= project_name %>-main-menu { }
+.-<%= project_name %>-feed-icons { }
+.-<%= project_name %>-secondary-menu { }
+.-<%= project_name %>-footer-message { }
 
 /* Common Elements */
 
-.-theme-h2 { }
-.-theme-h3 { }
-.-theme-p { }
-.-theme-li { }
+.-<%= project_name %>-h2 { }
+.-<%= project_name %>-h3 { }
+.-<%= project_name %>-p { }
+.-<%= project_name %>-li { }
 
-.-theme-ul {
-  li { @extend .-theme-li; } }
+.-<%= project_name %>-ul {
+  li { @extend .-<%= project_name %>-li; } }
 
-.-theme-ol {
-  li { @extend .-theme-li; } }
+.-<%= project_name %>-ol {
+  li { @extend .-<%= project_name %>-li; } }
 
-.-theme-a {
+.-<%= project_name %>-a {
   &:link { }
   &:visited { }
   &:hover { }
   &:focus { }
-  &:active { }
-}
+  &:active { } }
 
 /* Content Elements */
 
-.-theme-h1 { }
-.-theme-h4 { }
-.-theme-code { }
-.-theme-blockquote { }
-.-theme-table {
+.-<%= project_name %>-h1 { }
+.-<%= project_name %>-h4 { }
+.-<%= project_name %>-code { }
+.-<%= project_name %>-blockquote { }
+.-<%= project_name %>-table {
   tr {
     th { }
     td { } } }
@@ -54,34 +52,31 @@
 
 .-base-object {
   .title { }
-  .content { }
-}
+  .content { } }
 
 /* Helper Objects */
 
 .-content-object {
-  @extend .-base-module;
-  h1 { @extend .-theme-h1; }
-  h4 { @extend .-theme-h4; }
-  code { @extend .-theme-code; }
-  blockquote { @extend .-theme-blockquote; }
-  table { @extend .-theme-table; }
-  h2 { @extend .-theme-h2; }
-  h3 { @extend .-theme-h3; }
-  p { @extend .-theme-p; }
-  li { @extend .-theme-li; }
-  ul { @extend .-theme-ul; }
-  ol { @extend .-theme-ol; }
-  a { @extend .-theme-a; }
-}
+  @extend .-base-object;
+  h1 { @extend .-<%= project_name %>-h1; }
+  h4 { @extend .-<%= project_name %>-h4; }
+  code { @extend .-<%= project_name %>-code; }
+  blockquote { @extend .-<%= project_name %>-blockquote; }
+  table { @extend .-<%= project_name %>-table; }
+  h2 { @extend .-<%= project_name %>-h2; }
+  h3 { @extend .-<%= project_name %>-h3; }
+  p { @extend .-<%= project_name %>-p; }
+  li { @extend .-<%= project_name %>-li; }
+  ul { @extend .-<%= project_name %>-ul; }
+  ol { @extend .-<%= project_name %>-ol; }
+  a { @extend .-<%= project_name %>-a; } }
 
 .-block-object {
-  @extend .-base-module;
-  h2 { @extend .-theme-h2; }
-  h3 { @extend .-theme-h3; }
-  p { @extend .-theme-p; }
-  li { @extend .-theme-li; }
-  ul { @extend .-theme-ul; }
-  ol { @extend .-theme-ol; }
-  a { @extend .-theme-a; }
-}
+  @extend .-base-object;
+  h2 { @extend .-<%= project_name %>-h2; }
+  h3 { @extend .-<%= project_name %>-h3; }
+  p { @extend .-<%= project_name %>-p; }
+  li { @extend .-<%= project_name %>-li; }
+  ul { @extend .-<%= project_name %>-ul; }
+  ol { @extend .-<%= project_name %>-ol; }
+  a { @extend .-<%= project_name %>-a; } }

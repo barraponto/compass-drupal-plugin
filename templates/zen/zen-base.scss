@@ -1,5 +1,5 @@
 @import "drupal/zen";
-@import "skin";
+@import "<%= File.basename(config.project_path) %>-skin";
 
 // This variable controls the total width of the Zen theme.
 // You can use px for a Fixed layout or % for a Liquid layout
