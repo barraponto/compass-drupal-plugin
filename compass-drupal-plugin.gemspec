@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.2.0"
+  s.version = "0.1.9"
   s.date = "2010-11-28"
 
   # Gem Details
@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.has_rdoc = false
   s.rubygems_version = %q{1.3.7}
-  s.add_dependency("compass", [">= 0.10.5"])
+  s.add_dependency("compass", [">= 0.11.alpha.1"])
 end

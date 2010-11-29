@@ -1,0 +1,9 @@
+=== ROADMAP ===
+0.2.0: Full Zen Skin support
+0.3.0: Extend Skin to core objects
+0.4.0: Extend Skin to contrib objects
+0.5.0: Bundle Zen Starter Kit
+
+=== LATER ===
+* Fusion support
+* Bundle Fusion Starter and Fusion Starter Lite

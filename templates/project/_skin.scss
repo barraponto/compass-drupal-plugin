@@ -1,15 +1,30 @@
-<% project_name = File.basename(config.project_path) %>/* Page Elements */
-
+/* Page Elements */
+<% project_name = File.basename(config.project_path) %>
 .-<%= project_name %>-skip-link { }
 .-<%= project_name %>-logo { }
-.-<%= project_name %>-name-and-slogan { }
+
+.-<%= project_name %>-name-and-slogan {
+  #site-name { 
+    a { } }
+  #site-slogan { } }
+
+.-<%= project_name %>-search-box {
+  #search {
+    .form-item { 
+      .form-text { } }
+    .form-submit { } } }
+
 .-<%= project_name %>-mission { }
 .-<%= project_name %>-breadcrumb { }
+
 .-<%= project_name %>-messages {
+  ul {
+    li { } }
   &.error { }
   &.warning { }
   &.status { }
   &.help { } }
+
 .-<%= project_name %>-primary-tabs { }
 .-<%= project_name %>-secondary-tabs { }
 .-<%= project_name %>-main-menu { }
@@ -44,9 +59,13 @@
 .-<%= project_name %>-code { }
 .-<%= project_name %>-blockquote { }
 .-<%= project_name %>-table {
+  caption { }
   tr {
     th { }
-    td { } } }
+    td { }
+    thead & { }
+    tfoot & { }
+    tbody & { } } }
 
 /* Base Object */
 
