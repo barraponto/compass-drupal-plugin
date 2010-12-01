@@ -1,3 +1,13 @@
+// These variables control the typefaces as defined in html-reset.css
+$zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+$zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
+
+//Use this mixin to set the new typefaces
+@include zen-typefaces($zen-proportional-typeface, $zen-monospaced-typeface);
+
+// These variables control the font sizes as defined in html-reset.css
+
+
 /* Page Elements */
 <% project_name = File.basename(config.project_path) %>
 

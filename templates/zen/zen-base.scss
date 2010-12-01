@@ -23,13 +23,6 @@ $zen-navigation-height: 2.3em;
 // Use this mixin to properly position the #navigation div
 @include zen-navigation();
 
-// These variables control the typefaces as defined in html-reset.css
-$zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
-$zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
-
-//Use this mixin to set the new typefaces
-@include zen-typefaces($zen-proportional-typeface, $zen-monospaced-typeface);
-
 body { }
 
 #skip-link { }
