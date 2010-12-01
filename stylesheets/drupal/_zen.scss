@@ -7,8 +7,6 @@ $zen-second-sidebar-width: 200px !default;
 $zen-navigation-width: 100% !default;
 $zen-navigation-height: 2.3em !default;
 
-//TODO: liquid
-
 @mixin zen-layout-base {
 
   .region-header {
@@ -39,6 +37,7 @@ $zen-navigation-height: 2.3em !default;
     width: $zen-width;
     @include float($first);
     padding: 0;
+
 
     .no-sidebars & {
       width: $zen-width;
@@ -186,8 +185,7 @@ $zen-navigation-height: 2.3em !default;
 
       .two-sidebars &  {
         margin-#{$first}: 0;
-        margin-#{$last}: $zen-second-sidebar-width;
-      }
+        margin-#{$last}: $zen-second-sidebar-width; }
 
       .section {
         margin-#{$first}: 20px; } }
@@ -198,8 +196,7 @@ $zen-navigation-height: 2.3em !default;
 
       .two-sidebars &  {
         margin-#{$first}: 0;
-        margin-#{$last}: -($zen-first-sidebar-width + $zen-second-sidebar-width);
-      }
+        margin-#{$last}: -($zen-first-sidebar-width + $zen-second-sidebar-width); }
 
       .section {
         margin-#{$first}: 20px; } } }
@@ -256,8 +253,7 @@ $zen-navigation-height: 2.3em !default;
 
       .two-sidebars &  {
         margin-#{$first}: - $zen-second-sidebar-width;
-        margin-#{$last}: 0;
-      }
+        margin-#{$last}: 0; }
 
       .section {
         margin-#{$last}: 20px; } } }
@@ -281,8 +277,7 @@ $zen-navigation-height: 2.3em !default;
 
   @if $direction == "rtl" {
     $first:  "right";
-    $last: "left";
-  }
+    $last: "left"; }
 
   #navigation {
     overflow: hidden;
@@ -321,4 +316,17 @@ $zen-navigation-height: 2.3em !default;
   #page-wrapper {
     overflow-y: hidden; }
 
+}
+
+@mixin zen-typefaces(
+  $proportional: 'Verdana, Tahoma, "DejaVu Sans", sans-serif',
+  $monospaced: '"Courier New", "DejaVu Sans Mono", monospace') {
+
+  body, caption, th, td, input, textarea, select, option, legend, fieldset {
+    font-family: $proportional; }
+
+  pre, code {
+    font-family: $monospaced; }
+
+  
 }
