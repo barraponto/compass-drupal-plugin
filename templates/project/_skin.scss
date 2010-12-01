@@ -1,5 +1,8 @@
 /* Page Elements */
 <% project_name = File.basename(config.project_path) %>
+
+.-<%= project_name %>-body { }
+.-<%= project_name %>-page { }
 .-<%= project_name %>-skip-link { }
 .-<%= project_name %>-logo { }
 
