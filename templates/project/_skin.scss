@@ -81,7 +81,6 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
 /* Content Elements */
 
-.-<%= project_name %>-h1 { }
 .-<%= project_name %>-h4 { }
 .-<%= project_name %>-pre { }
 .-<%= project_name %>-code { }
@@ -106,27 +105,26 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
 .-<%= project_name %>-content-object {
   @extend .-base-object;
-  h1 { @extend .-<%= project_name %>-h1; }
-  h4 { @extend .-<%= project_name %>-h4; }
-  code { @extend .-<%= project_name %>-code; }
-  blockquote { @extend .-<%= project_name %>-blockquote; }
-  table { @extend .-<%= project_name %>-table; }
   h2 { @extend .-<%= project_name %>-h2; }
   h3 { @extend .-<%= project_name %>-h3; }
+  h4 { @extend .-<%= project_name %>-h4; }
   p { @extend .-<%= project_name %>-p; }
-  li { @extend .-<%= project_name %>-li; }
   ul { @extend .-<%= project_name %>-ul; }
   ol { @extend .-<%= project_name %>-ol; }
+  li { @extend .-<%= project_name %>-li; }
+  table { @extend .-<%= project_name %>-table; }
+  code { @extend .-<%= project_name %>-code; }
+  blockquote { @extend .-<%= project_name %>-blockquote; }
   a { @extend .-<%= project_name %>-a; } }
 
 .-<%= project_name %>-block-object {
-  @extend .-base-object;
-  h2 { @extend .-<%= project_name %>-h2; }
+  @extend .-base-object;  
   h3 { @extend .-<%= project_name %>-h3; }
+  h4 { @extend .-<%= project_name %>-h4; }
   p { @extend .-<%= project_name %>-p; }
-  li { @extend .-<%= project_name %>-li; }
   ul { @extend .-<%= project_name %>-ul; }
   ol { @extend .-<%= project_name %>-ol; }
+  li { @extend .-<%= project_name %>-li; }
   a { @extend .-<%= project_name %>-a; } }
 
 /* Node Object */
