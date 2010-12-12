@@ -104,7 +104,7 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 /* Helper Objects */
 
 .-<%= project_name %>-content-object {
-  @extend .-base-object;
+  @extend .-<%= project_name %>-base-object;
   h2 { @extend .-<%= project_name %>-h2; }
   h3 { @extend .-<%= project_name %>-h3; }
   h4 { @extend .-<%= project_name %>-h4; }
@@ -118,7 +118,7 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
   a { @extend .-<%= project_name %>-a; } }
 
 .-<%= project_name %>-block-object {
-  @extend .-base-object;  
+  @extend .-<%= project_name %>-base-object;  
   h3 { @extend .-<%= project_name %>-h3; }
   h4 { @extend .-<%= project_name %>-h4; }
   p { @extend .-<%= project_name %>-p; }
@@ -133,7 +133,7 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
   .picture { }
   .title { }
   .meta { }
-  .content { @extend .-content-object; }
+  .content { @extend .-<%= project_name %>-content-object; }
   .links {
     li {
       &.first { }
