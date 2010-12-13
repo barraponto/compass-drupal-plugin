@@ -7,6 +7,9 @@ $zen-second-sidebar-width: 200px !default;
 $zen-navigation-width: 100% !default;
 $zen-navigation-height: 2.3em !default;
 
+$zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+$zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace;'
+
 @mixin zen-layout-base {
 
   .region-header {
@@ -318,15 +321,12 @@ $zen-navigation-height: 2.3em !default;
 
 }
 
-@mixin zen-typefaces(
-  $proportional: 'Verdana, Tahoma, "DejaVu Sans", sans-serif',
-  $monospaced: '"Courier New", "DejaVu Sans Mono", monospace') {
+@mixin zen-typefaces {
 
   body, caption, th, td, input, textarea, select, option, legend, fieldset {
-    font-family: $proportional; }
+    font-family: $zen-proportional-typeface; }
 
   pre, code {
-    font-family: $monospaced; }
-
+    font-family: $zen-monospaced-typeface; }
   
 }
