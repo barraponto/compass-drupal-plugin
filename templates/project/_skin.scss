@@ -59,6 +59,16 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
 .-<%= project_name %>-footer-message { }
 
+.-<%= project_name %>-pager {
+  .pager-item { }
+  .pager-current { }
+  .pager-previous { }
+  .pager-next { }
+  .pager-first { }
+  .pager-last { }
+  a { }
+}
+
 /* Common Elements */
 
 .-<%= project_name %>-h2 { }
@@ -89,6 +99,8 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 .-<%= project_name %>-table {
   caption { }
   tr {
+    &.odd { }
+    &.even { }
     th { }
     td { }
     thead & { }
@@ -132,12 +144,23 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 .-<%= project_name %>-node-object {
   .picture { }
   .title { }
-  .meta { }
+  .meta { 
+    .submitted { }
+    .terms { }
+  }
   .content { @extend .-<%= project_name %>-content-object; }
   .links {
     li {
       &.first { }
-      &.last { } } } }
+      &.last { } } }
+  &.node-sticky { }
+  &.node-unpublished {
+    .unpublished { }
+  }
+  &.node-by-viewer { }
+  .preview & { }
+}
+
 
 /* Profile Object */
 .-<%= project_name %>-profile-object {
