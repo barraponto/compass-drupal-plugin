@@ -54,11 +54,6 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
     &.expanded {
       > ul { } } } }
 
-.-<%= project_name %>-feed-icons {
-  .feed-icon { } }
-
-.-<%= project_name %>-footer-message { }
-
 .-<%= project_name %>-pager {
   .pager-item { }
   .pager-current { }
@@ -68,6 +63,13 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
   .pager-last { }
   a { }
 }
+
+.-<%= project_name %>-feed-icons {
+  .feed-icon { } }
+
+.-<%= project_name %>-footer-message { }
+
+/* */
 
 /* Common Elements */
 
