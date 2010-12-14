@@ -28,7 +28,8 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
     .form-submit { } } }
 
 .-<%= project_name %>-mission { }
-.-<%= project_name %>-breadcrumb { }
+.-<%= project_name %>-breadcrumb {
+  a { } }
 
 .-<%= project_name %>-messages {
   ul {
@@ -61,8 +62,7 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
   .pager-next { }
   .pager-first { }
   .pager-last { }
-  a { }
-}
+  a { } }
 
 .-<%= project_name %>-feed-icons {
   .feed-icon { } }
@@ -148,8 +148,7 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
   .title { }
   .meta { 
     .submitted { }
-    .terms { }
-  }
+    .terms { } }
   .content { @extend .-<%= project_name %>-content-object; }
   .links {
     li {
@@ -157,11 +156,9 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
       &.last { } } }
   &.node-sticky { }
   &.node-unpublished {
-    .unpublished { }
-  }
+    .unpublished { } }
   &.node-by-viewer { }
-  .preview & { }
-}
+  .preview & { } }
 
 
 /* Profile Object */
