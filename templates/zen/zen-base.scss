@@ -42,36 +42,40 @@ body { }
 
 /* Regions */
 
-  .region-sidebar-first & {
-    .block { } }
+  .region-sidebar-first {
+    .block {
+      &.odd { }
+      &.even { } } }
 
-  .region-sidebar-first & {
-    .block { } }
+  .region-sidebar-second {
+    .block {
+      &.odd { }
+      &.even { } } }
 
-  .region-navigation & {
+  .region-navigation {
     #main-menu { }
     .block { } }
 
-  .region-highlight & {
+  .region-highlight {
     .block { } }
 
-  .region-content-top & {
+  .region-content-top {
     .block { } }
 
-  .region-content-bottom & {
+  .region-content-bottom {
     .block { } }
 
-  .region-header & {
+  .region-header {
     #logo { }
     #name-and-slogan { }
     .block { } }
 
-  .region-footer & {
+  .region-footer {
     #secondary-menu { }
     #footer-message { }
     .block { } }
 
-  .region-page-closure & {
+  .region-page-closure {
     .block { } }
 
 }
