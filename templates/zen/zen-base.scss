@@ -24,54 +24,56 @@ $zen-base-font-size: $<%= project_name %>-base-font-size: 14px;
 //Use this mixin to set the font sizes
 @include zen-typography;
 
-body { }
+body { @extend .-<%= project_name %>-body; }
 
-#skip-link { }
+#skip-link { @extend .-<%= project_name %>-skip-link; }
 
 #page-wrapper {
+@extend .-<%= project_name %>-page;
 
 /* Content */
 
   #content {
-    #mission { }
-    #breadcrumb { }
+    #content-area { @extend .-<%= project_name %>-content-area; }
+    #mission { @extend .-<%= project_name %>-mission; }
+    #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
     .messages {
-      &.status { }
-      &.warning { }
-      &.error { }
-      &.help { } }
+      &.status { @extend .-<%= project_name %>-messages-status; }
+      &.warning { @extend .-<%= project_name %>-messages-warning; }
+      &.error { @extend .-<%= project_name %>-messages-error; }
+      &.help { @extend .-<%= project_name %>-messages-help; } }
     .tabs {
-      .primary { }
-      .secondary { } }
+      @extend .-<%= project_name %>-tabs;
+      .primary { @extend .-<%= project_name %>-primary-tabs; }
+      .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
     .feed-icons { }
 
 /* Nodes */
 
   .node {
-    .picture { }
-    .title { }
+    @extend .-<%= project_name %>-node;
+    .picture { @extend .-<%= project_name %>-node-picture; }
+    .title { @extend .-<%= project_name %>-node-title; }
     .meta {
-      .submitted { }
-      .terms { } }
+      @extend .-<%= project_name %>-node-meta;
+      .submitted { @extend .-<%= project_name %>-node-submitted; }
+      .terms { @extend .-<%= project_name %>-node-terms; } }
     .content { @extend .-<%= project_name %>-node-content; }
-    .links {
-      li {
-        &.first { }
-        &.last { } } }
-    &.node-sticky { }
-    &.node-unpublished {
-      .unpublished { } }
-    &.node-by-viewer { }
-    .preview & { } }
+    .links {@extend .-<%= project_name %>-node-links; }
+    &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
+    &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
+    &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
+    .preview & { @extend .-<%= project_name %>-node-preview; } }
 
 /* Profiles */
 
 .profile {
-  .picture { }
-  h3 { } /* profile category header */
-  dl { /* profile category wrapper */
-    dt { } /* profile category label */
-    dd { } } } /*  profile category value */
+  @extend .-<%= project_name %>-profile;
+  .picture { @extend .-<%= project_name %>-profile-picture; }
+  h3 { @extend .-<%= project_name %>-profile-category-title; } /* profile category header */
+  dl { @extend .-<%= project_name %>-profile-category-wrapper; /* profile category wrapper */
+    dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
+    dd { @extend .-<%= project_name %>-profile;-field-value; } } } /*  profile category value */
 
 }
 
@@ -79,41 +81,70 @@ body { }
 
   .region-sidebar-first {
     .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; }
       &.odd { }
       &.even { } } }
 
   .region-sidebar-second {
     .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; }
       &.odd { }
       &.even { } } }
 
   .region-navigation {
-    #main-menu { }
-    .block { } }
+    #main-menu {
+      @extend .-<%= project_name %>-menu;
+      > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } }
+    .block { @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-highlight {
-    .block { } }
+    .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-content-top {
-    .block { } }
+    .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-content-bottom {
-    .block { } }
+    .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-header {
-    #logo { }
+    #logo { @extend .-<%= project_name %>-logo; }
     #name-and-slogan {
-      #site-name { }
-      #site-slogan { } }
-    #search-box { }
-    .block { } }
+      @extend .-<%= project_name %>-name-and-slogan;
+      #site-name { @extend .-<%= project_name %>-site-name; }
+      #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
+    #search-box { @extend .-<%= project_name %>-search-box; }
+    .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-footer {
-    #secondary-menu { }
-    #footer-message { }
-    .block { } }
+    #secondary-menu { @extend .-<%= project_name %>-menu; }
+    #footer-message { @extend .-<%= project_name %>-footer-message; }
+    .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-page-closure {
-    .block { } }
+    .block {
+      @extend .-<%= project_name %>-block;
+      .title { @extend .-<%= project_name %>-block-title; }
+      .content { @extend .-<%= project_name %>-block-content; } } }
 
 }
