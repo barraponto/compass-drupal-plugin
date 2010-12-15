@@ -1,4 +1,4 @@
-// This variable controls the total width of the Zen theme.
+// This variable controls the total width of the container div
 // You can use px for a Fixed layout or % for a Liquid layout
 $<%= project_name %>-width: 960px;
 
@@ -21,7 +21,7 @@ $<%= project_name %>-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", mo
 // These variables control the font sizes as defined in html-reset.css
 $<%= project_name %>-font-size: 14px;
 
-/* Page Components */
+// Page Components
 <% project_name = File.basename(config.project_path) %>
 
 .-<%= project_name %>-body { }
@@ -55,14 +55,14 @@ $<%= project_name %>-font-size: 14px;
 .-<%= project_name %>-primary-tabs { }
 .-<%= project_name %>-secondary-tabs { }
 .-<%= project_name %>-menu {
-  > li { //use > to target only child items,
+  > li { // use > to target only child items,
     &.first { }
     &.last { }
     &.expanded {
       > ul { @extend .-<%= project_name %>-submenu; } } } }
 
 .-<%= project_name %>-submenu {
-    > li { //use > to target only child items,
+    > li { // use > to target only child items,
     &.first { }
     &.last { }
     &.expanded {
@@ -82,9 +82,9 @@ $<%= project_name %>-font-size: 14px;
 
 .-<%= project_name %>-footer-message { }
 
-/* Block Components */
+// Block Components
 
-/* Node Components */
+// Node Components
 
 .-<%= project_name %>-node-object {
   .picture { }
@@ -104,16 +104,15 @@ $<%= project_name %>-font-size: 14px;
   .preview & { } }
 
 
-/* Profile Components */
+// Profile Components
 .-<%= project_name %>-profile-object {
   .picture { }
-  h3 { } /* profile category header */ 
-  dl { /* profile category wrapper */ 
-    dt { } /*profile category label */
-    dd { } /* profile category value */ } }
+  h3 { } // profile category header
+  dl { // profile category wrapper
+    dt { } // profile category label
+    dd { } } } //  profile category value
 
-/* Common Elements */
-
+// Common Elements
 .-<%= project_name %>-h2 { }
 .-<%= project_name %>-h3 { }
 .-<%= project_name %>-p { }
@@ -132,7 +131,7 @@ $<%= project_name %>-font-size: 14px;
   &:focus { }
   &:active { } }
 
-/* Content Elements */
+// Content Elements
 
 .-<%= project_name %>-h4 { }
 .-<%= project_name %>-pre { }
@@ -150,13 +149,10 @@ $<%= project_name %>-font-size: 14px;
     tfoot & { }
     tbody & { } } }
 
-/* Base Object */
-
+// Helper Objects
 .-<%= project_name %>-base-object {
   .title { }
   .content { } }
-
-/* Helper Objects */
 
 .-<%= project_name %>-content-object {
   @extend .-<%= project_name %>-base-object;
