@@ -103,39 +103,61 @@ $<%= project_name %>-font-size: 14px;
 .-<%= project_name %>-footer-message { }
 
 // Block Components
+// Make copies of these components to make for a diversity of block styles
+.-<%= project_name %>-block { }
+.-<%= project_name %>-block-title { }
+.-<%= project_name %>-block-content { }
 
 // Node Components
+.-<%= project_name %>-node { }
 
-.-<%= project_name %>-node-object {
-  .picture { }
-  .title { }
-  .meta { 
-    .submitted { }
-    .terms { } }
-  .content { @extend .-<%= project_name %>-content-object; }
-  .links {
-    li {
-      &.first { }
-      &.last { } } }
-  &.node-sticky { }
-  &.node-unpublished {
+.-<%= project_name %>-node-picture { }
+
+.-<%= project_name %>-node-title { }
+
+.-<%= project_name %>-node-meta {
+
+.-<%= project_name %>-node-submitted { }
+
+.-<%= project_name %>-node-terms { } }
+
+.-<%= project_name %>-node-content { @extend .-<%= project_name %>-content-object; }
+
+.-<%= project_name %>-node-links {
+  li {
+    &.first { }
+    &.last { } } }
+
+.-<%= project_name %>-node-sticky { }
+
+.-<%= project_name %>-node-unpublished {
     .unpublished { } }
-  &.node-by-viewer { }
-  .preview & { } }
 
+.-<%= project_name %>-node-by-viewer { }
+
+.-<%= project_name %>-node-preview { }
 
 // Profile Components
-.-<%= project_name %>-profile-object {
-  .picture { }
-  h3 { } // profile category header
-  dl { // profile category wrapper
-    dt { } // profile category label
-    dd { } } } //  profile category value
+.-<%= project_name %>-profile { }
 
-// Common Elements
+.-<%= project_name %>-profile-picture { }
+
+.-<%= project_name %>-profile-category-header { }
+
+.-<%= project_name %>-profile-category-wrapper { }
+
+.-<%= project_name %>-profile-field-label { }
+
+.-<%= project_name %>-profile-field-value { }
+
+// Block Elements
+// Make a copy of these if you're looking for block diversity
 .-<%= project_name %>-h2 { }
+
 .-<%= project_name %>-h3 { }
+
 .-<%= project_name %>-p { }
+
 .-<%= project_name %>-li { }
 
 .-<%= project_name %>-ul {
@@ -151,13 +173,18 @@ $<%= project_name %>-font-size: 14px;
   &:focus { }
   &:active { } }
 
-// Content Elements
-
+// Node Elements
+// These objects shouldn't appear outside of nodes, but you never know.
 .-<%= project_name %>-h4 { }
+
 .-<%= project_name %>-pre { }
+
 .-<%= project_name %>-code { }
+
 .-<%= project_name %>-blockquote { }
+
 .-<%= project_name %>-cite { }
+
 .-<%= project_name %>-table {
   caption { }
   tr {
@@ -169,13 +196,8 @@ $<%= project_name %>-font-size: 14px;
     tfoot & { }
     tbody & { } } }
 
-// Helper Objects
-.-<%= project_name %>-base-object {
-  .title { }
-  .content { } }
-
-.-<%= project_name %>-content-object {
-  @extend .-<%= project_name %>-base-object;
+// Content Classes
+.-<%= project_name %>-node-content {
   h2 { @extend .-<%= project_name %>-h2; }
   h3 { @extend .-<%= project_name %>-h3; }
   h4 { @extend .-<%= project_name %>-h4; }
@@ -188,8 +210,7 @@ $<%= project_name %>-font-size: 14px;
   blockquote { @extend .-<%= project_name %>-blockquote; }
   a { @extend .-<%= project_name %>-a; } }
 
-.-<%= project_name %>-block-object {
-  @extend .-<%= project_name %>-base-object;  
+.-<%= project_name %>-block-content {
   h3 { @extend .-<%= project_name %>-h3; }
   h4 { @extend .-<%= project_name %>-h4; }
   p { @extend .-<%= project_name %>-p; }
