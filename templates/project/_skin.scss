@@ -1,16 +1,25 @@
-// These variables control the typefaces as defined in html-reset.css
-$zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
-$zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
+// This variable controls the total width of the Zen theme.
+// You can use px for a Fixed layout or % for a Liquid layout
+$<%= project_name %>-width: 960px;
 
-//Use this mixin to set the typefaces
-@include zen-typefaces;
+// These variables control the size of the sidebars
+$<%= project_name %>-first-sidebar-width: 200px;
+$<%= project_name %>-second-sidebar-width: 200px;
+
+// This variable positions the content relative to the sidebars
+// Possible values are first, last, middle
+$<%= project_name %>-content-position: "middle";
+
+// These variables control the #navigation div
+$<%= project_name %>-navigation-width: 100%;
+$<%= project_name %>-navigation-height: 2.3em;
+
+// These variables control the typefaces as defined in html-reset.css
+$<%= project_name %>-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+$<%= project_name %>-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
 // These variables control the font sizes as defined in html-reset.css
-$zen-font-size: 14px;
-
-//Use this mixin to set the font sizes
-@include zen-typography;
-
+$<%= project_name %>-font-size: 14px;
 
 /* Page Components */
 <% project_name = File.basename(config.project_path) %>
