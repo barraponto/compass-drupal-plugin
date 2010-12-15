@@ -43,7 +43,37 @@ body { }
     .tabs {
       .primary { }
       .secondary { } }
-    .feed-icons { } }
+    .feed-icons { }
+
+/* Nodes */
+
+  .node {
+    .picture { }
+    .title { }
+    .meta {
+      .submitted { }
+      .terms { } }
+    .content { @extend .-<%= project_name %>-node-content; }
+    .links {
+      li {
+        &.first { }
+        &.last { } } }
+    &.node-sticky { }
+    &.node-unpublished {
+      .unpublished { } }
+    &.node-by-viewer { }
+    .preview & { } }
+
+/* Profiles */
+
+.profile {
+  .picture { }
+  h3 { } /* profile category header */
+  dl { /* profile category wrapper */
+    dt { } /* profile category label */
+    dd { } } } /*  profile category value */
+
+}
 
 /* Regions */
 
