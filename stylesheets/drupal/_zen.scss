@@ -10,7 +10,7 @@ $zen-navigation-height: 2.3em !default;
 $zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif' !default;
 $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace' !default;
 
-$zen-font-size: 14px !default;
+$zen-base-font-size: 14px !default;
 
 @mixin zen-layout-base {
 
@@ -336,8 +336,8 @@ $zen-font-size: 14px !default;
 @mixin zen-typography {
 
   #skip-link, #page {
-    font-size: $zen-font-size * 1em / 16px;
-    line-height: ($zen-font-size + 4px) * 1em / $zen-font-size;
+    font-size: $zen-base-font-size * 1em / 16px;
+    line-height: ($zen-base-font-size + 4px) * 1em / $zen-base-font-size;
   }
 
 }
