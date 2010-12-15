@@ -2,13 +2,17 @@
 $zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
 $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
-//Use this mixin to set the new typefaces
-@include zen-typefaces($zen-proportional-typeface, $zen-monospaced-typeface);
+//Use this mixin to set the typefaces
+@include zen-typefaces;
 
 // These variables control the font sizes as defined in html-reset.css
+$zen-font-size: 14px;
+
+//Use this mixin to set the font sizes
+@include zen-typography;
 
 
-/* Page Elements */
+/* Page Components */
 <% project_name = File.basename(config.project_path) %>
 
 .-<%= project_name %>-body { }
@@ -17,7 +21,7 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 .-<%= project_name %>-logo { }
 
 .-<%= project_name %>-name-and-slogan {
-  #site-name { 
+  #site-name {
     a { } }
   #site-slogan { } }
 
@@ -69,7 +73,35 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
 
 .-<%= project_name %>-footer-message { }
 
-/* */
+/* Block Components */
+
+/* Node Components */
+
+.-<%= project_name %>-node-object {
+  .picture { }
+  .title { }
+  .meta { 
+    .submitted { }
+    .terms { } }
+  .content { @extend .-<%= project_name %>-content-object; }
+  .links {
+    li {
+      &.first { }
+      &.last { } } }
+  &.node-sticky { }
+  &.node-unpublished {
+    .unpublished { } }
+  &.node-by-viewer { }
+  .preview & { } }
+
+
+/* Profile Components */
+.-<%= project_name %>-profile-object {
+  .picture { }
+  h3 { } /* profile category header */ 
+  dl { /* profile category wrapper */ 
+    dt { } /*profile category label */
+    dd { } /* profile category value */ } }
 
 /* Common Elements */
 
@@ -140,31 +172,3 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
   ol { @extend .-<%= project_name %>-ol; }
   li { @extend .-<%= project_name %>-li; }
   a { @extend .-<%= project_name %>-a; } }
-
-/* Node Object */
-
-.-<%= project_name %>-node-object {
-  .picture { }
-  .title { }
-  .meta { 
-    .submitted { }
-    .terms { } }
-  .content { @extend .-<%= project_name %>-content-object; }
-  .links {
-    li {
-      &.first { }
-      &.last { } } }
-  &.node-sticky { }
-  &.node-unpublished {
-    .unpublished { } }
-  &.node-by-viewer { }
-  .preview & { } }
-
-
-/* Profile Object */
-.-<%= project_name %>-profile-object {
-  .picture { }
-  h3 { } /* profile category header */ 
-  dl { /* profile category wrapper */ 
-    dt { } /*profile category label */
-    dd { } /* profile category value */ } }
