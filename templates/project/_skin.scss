@@ -25,14 +25,19 @@ $<%= project_name %>-font-size: 14px;
 <% project_name = File.basename(config.project_path) %>
 
 .-<%= project_name %>-body { }
+
 .-<%= project_name %>-page { }
+
 .-<%= project_name %>-skip-link { }
+
 .-<%= project_name %>-logo { }
 
-.-<%= project_name %>-name-and-slogan {
-  #site-name {
-    a { } }
-  #site-slogan { } }
+.-<%= project_name %>-name-and-slogan { } // usally the .name-and-slogan div
+
+.-<%= project_name %>-site-name {
+  a { } }
+
+.-<%= project_name %>-site-slogan { }
 
 .-<%= project_name %>-search-box {
   #search {
@@ -41,32 +46,47 @@ $<%= project_name %>-font-size: 14px;
     .form-submit { } } }
 
 .-<%= project_name %>-mission { }
+
 .-<%= project_name %>-breadcrumb {
   a { } }
 
 .-<%= project_name %>-messages {
   ul {
-    li { } }
-  &.error { }
-  &.warning { }
-  &.status { }
-  &.help { } }
+    li { } } }
 
-.-<%= project_name %>-primary-tabs { }
-.-<%= project_name %>-secondary-tabs { }
+.-<%= project_name %>-messages-error { @extend .-<%= project_name %>-messages; }
+
+.-<%= project_name %>-messages-warning { @extend .-<%= project_name %>-messages; }
+
+.-<%= project_name %>-messages-status { @extend .-<%= project_name %>-messages; }
+
+.-<%= project_name %>-messages-help { @extend .-<%= project_name %>-messages; }
+
+.-<%= project_name %>-tabs { } // usually the .tabs div
+
+.-<%= project_name %>-primary-tabs {
+  li {
+    a { }
+    &.active {
+      a { } } } }
+
+.-<%= project_name %>-secondary-tabs {
+  li {
+    a { }
+    &.active {
+      a { } } } }
+
 .-<%= project_name %>-menu {
-  > li { // use > to target only child items,
+  > li { // use '>' to target only child items
     &.first { }
     &.last { }
-    &.expanded {
-      > ul { @extend .-<%= project_name %>-submenu; } } } }
+    &.expanded { } } }
 
-.-<%= project_name %>-submenu {
-    > li { // use > to target only child items,
+.-<%= project_name %>-submenu { // think expanded menus, not secondary menus
+    > li { // use '>' to target only child items
     &.first { }
     &.last { }
-    &.expanded {
-      > ul { } } } }
+    &.expanded { } } }
 
 .-<%= project_name %>-pager {
   .pager-item { }
