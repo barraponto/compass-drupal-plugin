@@ -10,6 +10,8 @@ $zen-navigation-height: 2.3em !default;
 $zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
 $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace;'
 
+$zen-font-size: 14px;
+
 @mixin zen-layout-base {
 
   .region-header {
@@ -328,5 +330,15 @@ $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace;'
 
   pre, code {
     font-family: $zen-monospaced-typeface; }
+
+}
+
+@mixin zen-typography {
+
+  #skip-link,
+  #page {
+    font-size: $zen-font-size * 1em / 16px;
+    line-height: ($zen-font-size + 4px) * 1em / $zen-font-size;
+  }
   
 }
