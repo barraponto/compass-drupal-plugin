@@ -14,14 +14,14 @@ $zen-second-sidebar-width: 200px;
 $zen-content-position: "middle";
 
 // Use this mixin to generate the Zen layout
-@include zen-layout();
+@include zen-layout;
 
 // These variables control the #navigation div
 $zen-navigation-width: 100%;
 $zen-navigation-height: 2.3em;
 
 // Use this mixin to properly position the #navigation div
-@include zen-navigation();
+@include zen-navigation;
 
 body { }
 
