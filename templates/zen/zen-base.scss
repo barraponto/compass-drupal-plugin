@@ -35,7 +35,11 @@ body { }
   #content {
     #mission { }
     #breadcrumb { }
-    .messages { }
+    .messages {
+      &.status { }
+      &.warning { }
+      &.error { }
+      &.help { } }
     .tabs {
       .primary { }
       .secondary { } }
@@ -68,7 +72,10 @@ body { }
 
   .region-header {
     #logo { }
-    #name-and-slogan { }
+    #name-and-slogan {
+      #site-name { }
+      #site-slogan { } }
+    #search-box { }
     .block { } }
 
   .region-footer {
