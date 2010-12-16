@@ -1,5 +1,6 @@
 @import "drupal/zen";
 @import "<%= File.basename(config.project_path) %>-skin";
+<% project_name = File.basename(config.project_path) %>
 
 // Map the zen variables to the skin variables
 $zen-width: $<%= project_name %>-width;
@@ -10,7 +11,7 @@ $zen-navigation-width: $<%= project_name %>-navigation-width;
 $zen-navigation-height: $<%= project_name %>-navigation-height;
 $zen-proportional-typeface: $<%= project_name %>-proportional-typeface;
 $zen-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
-$zen-base-font-size: $<%= project_name %>-base-font-size: 14px;
+$zen-base-font-size: $<%= project_name %>-base-font-size;
 
 // Use this mixin to generate the Zen layout
 @include zen-layout;
@@ -29,7 +30,7 @@ body { @extend .-<%= project_name %>-body; }
 #skip-link { @extend .-<%= project_name %>-skip-link; }
 
 #page-wrapper {
-@extend .-<%= project_name %>-page;
+  @extend .-<%= project_name %>-page;
 
 /* Content */
 
@@ -50,32 +51,31 @@ body { @extend .-<%= project_name %>-body; }
 
 /* Nodes */
 
-  .node {
-    @extend .-<%= project_name %>-node;
-    .picture { @extend .-<%= project_name %>-node-picture; }
-    .title { @extend .-<%= project_name %>-node-title; }
-    .meta {
-      @extend .-<%= project_name %>-node-meta;
-      .submitted { @extend .-<%= project_name %>-node-submitted; }
-      .terms { @extend .-<%= project_name %>-node-terms; } }
-    .content { @extend .-<%= project_name %>-node-content; }
-    .links {@extend .-<%= project_name %>-node-links; }
-    &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
-    &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-    &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
-    .preview & { @extend .-<%= project_name %>-node-preview; } }
+    .node {
+      @extend .-<%= project_name %>-node;
+      .picture { @extend .-<%= project_name %>-node-picture; }
+      .title { @extend .-<%= project_name %>-node-title; }
+      .meta {
+        @extend .-<%= project_name %>-node-meta;
+        .submitted { @extend .-<%= project_name %>-node-submitted; }
+        .terms { @extend .-<%= project_name %>-node-terms; } }
+      .content { @extend .-<%= project_name %>-node-content; }
+      .links { @extend .-<%= project_name %>-node-links; }
+      &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
+      &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
+      &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
+      .preview & { @extend .-<%= project_name %>-node-preview; } }
 
 /* Profiles */
 
-.profile {
-  @extend .-<%= project_name %>-profile;
-  .picture { @extend .-<%= project_name %>-profile-picture; }
-  h3 { @extend .-<%= project_name %>-profile-category-title; } /* profile category header */
-  dl { @extend .-<%= project_name %>-profile-category-wrapper; /* profile category wrapper */
-    dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
-    dd { @extend .-<%= project_name %>-profile;-field-value; } } } /*  profile category value */
-
-}
+    .profile {
+      @extend .-<%= project_name %>-profile;
+      .picture { @extend .-<%= project_name %>-profile-picture; }
+      h3 { @extend .-<%= project_name %>-profile-category-title; } /* profile category header */
+      dl { /* profile category wrapper */
+        @extend .-<%= project_name %>-profile-category-wrapper;
+        dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
+        dd { @extend .-<%= project_name %>-profile-field-value; } } } } /*  profile category value */
 
 /* Regions */
 
