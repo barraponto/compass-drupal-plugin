@@ -23,8 +23,75 @@ $<%= project_name %>-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", mo
 // These variables control the font sizes as defined in html-reset.css
 $<%= project_name %>-base-font-size: 14px;
 
-// Page Components
+//HTML Elements
+.-<%= project_name %>-h2 { } //Not meant for Block titles
 
+.-<%= project_name %>-h3 { }
+
+.-<%= project_name %>-h4 { }
+
+.-<%= project_name %>-p { }
+
+.-<%= project_name %>-li { }
+
+.-<%= project_name %>-ul {
+  li { @extend .-<%= project_name %>-li; } }
+
+.-<%= project_name %>-ol {
+  li { @extend .-<%= project_name %>-li; } }
+
+.-<%= project_name %>-blockquote { }
+
+.-<%= project_name %>-cite { }
+
+.-<%= project_name %>-a {
+  &:link { }
+  &:visited { }
+  &:hover { }
+  &:focus { }
+  &:active { } }
+
+.-<%= project_name %>-pre { }
+
+.-<%= project_name %>-code { }
+
+.-<%= project_name %>-table {
+  caption { }
+  tr {
+    &.odd { }
+    &.even { }
+    th { }
+    td { }
+    thead & { }
+    tfoot & { }
+    tbody & { } } }
+
+// Content Classes
+.-<%= project_name %>-node-content {
+  h2 { @extend .-<%= project_name %>-h2; }
+  h3 { @extend .-<%= project_name %>-h3; }
+  h4 { @extend .-<%= project_name %>-h4; }
+  p { @extend .-<%= project_name %>-p; }
+  li { @extend .-<%= project_name %>-li; }
+  ul { @extend .-<%= project_name %>-ul; }
+  ol { @extend .-<%= project_name %>-ol; }
+  pre { @extend .-<%= project_name %>-pre; }
+  code { @extend .-<%= project_name %>-code; }
+  blockquote { @extend .-<%= project_name %>-blockquote; }
+  cite { @extend .-<%= project_name %>-cite; }
+  a { @extend .-<%= project_name %>-a; }
+  table { @extend .-<%= project_name %>-table; } }
+
+.-<%= project_name %>-block-content {
+  h3 { @extend .-<%= project_name %>-h3; }
+  h4 { @extend .-<%= project_name %>-h4; }
+  p { @extend .-<%= project_name %>-p; }
+  ul { @extend .-<%= project_name %>-ul; }
+  ol { @extend .-<%= project_name %>-ol; }
+  li { @extend .-<%= project_name %>-li; }
+  a { @extend .-<%= project_name %>-a; } }
+
+// Page Components
 .-<%= project_name %>-body { }
 
 .-<%= project_name %>-skip-link { }
@@ -109,7 +176,7 @@ $<%= project_name %>-base-font-size: 14px;
 // Make copies of these components to make for a diversity of block styles
 .-<%= project_name %>-block { }
 .-<%= project_name %>-block-title { }
-.-<%= project_name %>-block-content { }
+.-<%= project_name %>-block-content { @extend .-<%= project_name %>-block-content; }
 
 // Node Components
 .-<%= project_name %>-node { }
@@ -124,7 +191,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-node-terms { } }
 
-.-<%= project_name %>-node-content { @extend .-<%= project_name %>-content-object; }
+.-<%= project_name %>-node-content { @extend .-<%= project_name %>-node-content; }
 
 .-<%= project_name %>-node-links {
   li {
@@ -153,71 +220,3 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-profile-field-value { }
 
-// Block Elements
-// Make a copy of these if you're looking for block diversity
-.-<%= project_name %>-h2 { }
-
-.-<%= project_name %>-h3 { }
-
-.-<%= project_name %>-p { }
-
-.-<%= project_name %>-li { }
-
-.-<%= project_name %>-ul {
-  li { @extend .-<%= project_name %>-li; } }
-
-.-<%= project_name %>-ol {
-  li { @extend .-<%= project_name %>-li; } }
-
-.-<%= project_name %>-a {
-  &:link { }
-  &:visited { }
-  &:hover { }
-  &:focus { }
-  &:active { } }
-
-// Node Elements
-// These objects shouldn't appear outside of nodes, but you never know.
-.-<%= project_name %>-h4 { }
-
-.-<%= project_name %>-pre { }
-
-.-<%= project_name %>-code { }
-
-.-<%= project_name %>-blockquote { }
-
-.-<%= project_name %>-cite { }
-
-.-<%= project_name %>-table {
-  caption { }
-  tr {
-    &.odd { }
-    &.even { }
-    th { }
-    td { }
-    thead & { }
-    tfoot & { }
-    tbody & { } } }
-
-// Content Classes
-.-<%= project_name %>-node-content {
-  h2 { @extend .-<%= project_name %>-h2; }
-  h3 { @extend .-<%= project_name %>-h3; }
-  h4 { @extend .-<%= project_name %>-h4; }
-  p { @extend .-<%= project_name %>-p; }
-  ul { @extend .-<%= project_name %>-ul; }
-  ol { @extend .-<%= project_name %>-ol; }
-  li { @extend .-<%= project_name %>-li; }
-  table { @extend .-<%= project_name %>-table; }
-  code { @extend .-<%= project_name %>-code; }
-  blockquote { @extend .-<%= project_name %>-blockquote; }
-  a { @extend .-<%= project_name %>-a; } }
-
-.-<%= project_name %>-block-content {
-  h3 { @extend .-<%= project_name %>-h3; }
-  h4 { @extend .-<%= project_name %>-h4; }
-  p { @extend .-<%= project_name %>-p; }
-  ul { @extend .-<%= project_name %>-ul; }
-  ol { @extend .-<%= project_name %>-ol; }
-  li { @extend .-<%= project_name %>-li; }
-  a { @extend .-<%= project_name %>-a; } }
