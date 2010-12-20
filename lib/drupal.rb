@@ -1,2 +1,3 @@
 require 'compass'
-Compass::Frameworks.register("drupal", :path => "#{File.dirname(__FILE__)}/..")
+extension_path = File.expand_path(File.join(File.dirname(__FILE__), ".."))
+Compass::Frameworks.register('drupal', :path => extension_path)
