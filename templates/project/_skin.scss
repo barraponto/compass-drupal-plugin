@@ -98,6 +98,8 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-page { }
 
+.-<%= project_name %>-header { }
+
 .-<%= project_name %>-content-area { }
 
 .-<%= project_name %>-logo { }
@@ -116,6 +118,12 @@ $<%= project_name %>-base-font-size: 14px;
     .form-submit { } } }
 
 .-<%= project_name %>-mission { }
+
+.-<%= project_name %>-main { }
+
+.-<%= project_name %>-content { }
+
+.-<%= project_name %>-sidebar { }
 
 .-<%= project_name %>-breadcrumb {
   a { } }
@@ -157,6 +165,8 @@ $<%= project_name %>-base-font-size: 14px;
     &.first { }
     &.last { }
     &.expanded { } } }
+
+.-<%= project_name %>-content-area { }
 
 .-<%= project_name %>-pager {
   .pager-item { }
