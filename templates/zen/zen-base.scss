@@ -30,7 +30,8 @@ body { @extend .-<%= project_name %>-body; }
 #skip-link { @extend .-<%= project_name %>-skip-link; }
 
 #page-wrapper {
-  @extend .-<%= project_name %>-page;
+
+  #page { @extend .-<%= project_name %>-page; }
 
 /* Content */
 
@@ -122,6 +123,7 @@ body { @extend .-<%= project_name %>-body; }
       .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-header {
+    @extend .-<%= project_name %>-header;
     #logo { @extend .-<%= project_name %>-logo; }
     #name-and-slogan {
       @extend .-<%= project_name %>-name-and-slogan;
