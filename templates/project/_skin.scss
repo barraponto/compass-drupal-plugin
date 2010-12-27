@@ -100,8 +100,6 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-header { }
 
-.-<%= project_name %>-content-area { }
-
 .-<%= project_name %>-logo { }
 
 .-<%= project_name %>-name-and-slogan { } // usally the .name-and-slogan div
@@ -121,9 +119,11 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-main { }
 
+.-<%= project_name %>-sidebar { }
+
 .-<%= project_name %>-content { }
 
-.-<%= project_name %>-sidebar { }
+.-<%= project_name %>-content-area { }
 
 .-<%= project_name %>-breadcrumb {
   a { } }
@@ -166,7 +166,7 @@ $<%= project_name %>-base-font-size: 14px;
     &.last { }
     &.expanded { } } }
 
-.-<%= project_name %>-content-area { }
+.-<%= project_name %>-footer { }
 
 .-<%= project_name %>-pager {
   .pager-item { }
@@ -185,7 +185,9 @@ $<%= project_name %>-base-font-size: 14px;
 // Block Components
 // Make copies of these components to make for a diversity of block styles
 .-<%= project_name %>-block { }
+
 .-<%= project_name %>-block-title { }
+
 .-<%= project_name %>-block-content { @extend .-<%= project_name %>-block-content; }
 
 // Node Components
@@ -229,4 +231,3 @@ $<%= project_name %>-base-font-size: 14px;
 .-<%= project_name %>-profile-field-label { }
 
 .-<%= project_name %>-profile-field-value { }
-
