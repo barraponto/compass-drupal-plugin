@@ -1,6 +1,7 @@
+<% project_name = File.basename(config.project_path) %>
+
 @import "drupal/zen";
 @import "<%= File.basename(config.project_path) %>-skin";
-<% project_name = File.basename(config.project_path) %>
 
 // Map the zen variables to the skin variables
 $zen-width: $<%= project_name %>-width;
