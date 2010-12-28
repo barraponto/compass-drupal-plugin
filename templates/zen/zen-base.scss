@@ -34,6 +34,15 @@ body { @extend .-<%= project_name %>-body; }
 
   #page { @extend .-<%= project_name %>-page; }
 
+  #header {
+    @extend .-<%= project_name %>-header;
+    #logo { @extend .-<%= project_name %>-logo; }
+    #name-and-slogan {
+      @extend .-<%= project_name %>-name-and-slogan;
+      #site-name { @extend .-<%= project_name %>-site-name; }
+      #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
+    #search-box { @extend .-<%= project_name %>-search-box; } }
+
 /* Content */
 
   #content {
@@ -124,13 +133,6 @@ body { @extend .-<%= project_name %>-body; }
       .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-header {
-    @extend .-<%= project_name %>-header;
-    #logo { @extend .-<%= project_name %>-logo; }
-    #name-and-slogan {
-      @extend .-<%= project_name %>-name-and-slogan;
-      #site-name { @extend .-<%= project_name %>-site-name; }
-      #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
-    #search-box { @extend .-<%= project_name %>-search-box; }
     .block {
       @extend .-<%= project_name %>-block;
       .title { @extend .-<%= project_name %>-block-title; }
