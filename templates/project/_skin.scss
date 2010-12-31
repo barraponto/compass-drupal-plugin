@@ -102,24 +102,18 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-logo { }
 
-.-<%= project_name %>-name-and-slogan { } // usally the .name-and-slogan div
+.-<%= project_name %>-name-and-slogan { } //usually the .name-and-slogan div
 
 .-<%= project_name %>-site-name {
   a { } }
 
 .-<%= project_name %>-site-slogan { }
 
-.-<%= project_name %>-search-box {
-  #search {
-    .form-item { 
-      .form-text { } }
-    .form-submit { } } }
-
 .-<%= project_name %>-mission { }
 
 .-<%= project_name %>-main { }
 
-.-<%= project_name %>-sidebar { }
+.-<%= project_name %>-sidebar { } //make a copy to have different sidebars
 
 .-<%= project_name %>-navigation { }
 
@@ -158,6 +152,7 @@ $<%= project_name %>-base-font-size: 14px;
     &.active {
       a { } } } }
 
+// Make copies of these components for a diversity of menu styles
 .-<%= project_name %>-menu {
   > li { // use '>' to target only child items
     &.first { }
@@ -187,7 +182,7 @@ $<%= project_name %>-base-font-size: 14px;
 .-<%= project_name %>-footer-message { }
 
 // Block Components
-// Make copies of these components to make for a diversity of block styles
+// Make copies of these components for a diversity of block styles
 .-<%= project_name %>-block { }
 
 .-<%= project_name %>-block-title { }
@@ -195,6 +190,7 @@ $<%= project_name %>-base-font-size: 14px;
 .-<%= project_name %>-block-content { @extend .-<%= project_name %>-block-content; }
 
 // Node Components
+// Make copies of these components for a diversity of node styles
 .-<%= project_name %>-node { }
 
 .-<%= project_name %>-node-picture { }
