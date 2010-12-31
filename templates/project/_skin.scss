@@ -125,6 +125,8 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-content { }
 
+.-<%= project_name %>-title { } //this will be the h1, except for the home page
+
 .-<%= project_name %>-content-area { }
 
 .-<%= project_name %>-breadcrumb {
@@ -197,7 +199,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-node-picture { }
 
-.-<%= project_name %>-node-title { }
+.-<%= project_name %>-node-title { } //for node listings, see page-title
 
 .-<%= project_name %>-node-meta {
 
