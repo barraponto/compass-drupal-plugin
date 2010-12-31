@@ -43,10 +43,23 @@ body { @extend .-<%= project_name %>-body; }
       #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
     #search-box { @extend .-<%= project_name %>-search-box; } }
 
+  #navigation {
+    @extend .-<%= project_name %>-navigation;
+    #main-menu {
+      @extend .-<%= project_name %>-menu;
+      > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } } }
+
+  #footer {
+    @extend .-<%= project_name %>-footer;
+    #secondary-menu { @extend .-<%= project_name %>-menu; }
+    #footer-message { @extend .-<%= project_name %>-footer-message; } }
+
 /* Content */
 
   #content {
-    #content-area { @extend .-<%= project_name %>-content-area; }
+    #content-area { 
+      @extend .-<%= project_name %>-content-area; 
+      .pager { @extend .-<%= project_name %>-pager; } }
     #mission { @extend .-<%= project_name %>-mission; }
     #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
     .messages {
@@ -107,9 +120,6 @@ body { @extend .-<%= project_name %>-body; }
       &.even { } } }
 
   .region-navigation {
-    #main-menu {
-      @extend .-<%= project_name %>-menu;
-      > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } }
     .block { @extend .-<%= project_name %>-block;
       .title { @extend .-<%= project_name %>-block-title; }
       .content { @extend .-<%= project_name %>-block-content; } } }
@@ -139,8 +149,6 @@ body { @extend .-<%= project_name %>-body; }
       .content { @extend .-<%= project_name %>-block-content; } } }
 
   .region-footer {
-    #secondary-menu { @extend .-<%= project_name %>-menu; }
-    #footer-message { @extend .-<%= project_name %>-footer-message; }
     .block {
       @extend .-<%= project_name %>-block;
       .title { @extend .-<%= project_name %>-block-title; }
