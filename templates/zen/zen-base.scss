@@ -34,6 +34,8 @@ body { @extend .-<%= project_name %>-body; }
 
   #page { @extend .-<%= project_name %>-page; }
 
+  #main { @extend .-<%= project_name %>-main; }
+
   #header {
     @extend .-<%= project_name %>-header;
     #logo { @extend .-<%= project_name %>-logo; }
@@ -41,7 +43,8 @@ body { @extend .-<%= project_name %>-body; }
       @extend .-<%= project_name %>-name-and-slogan;
       #site-name { @extend .-<%= project_name %>-site-name; }
       #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
-    #search-box { @extend .-<%= project_name %>-search-box; } }
+    //#search-box { @extend .-<%= project_name %>-search-box; }
+ }
 
   #navigation {
     @extend .-<%= project_name %>-navigation;
@@ -57,11 +60,9 @@ body { @extend .-<%= project_name %>-body; }
 /* Content */
 
   #content {
-    #content-area { 
-      @extend .-<%= project_name %>-content-area; 
-      .pager { @extend .-<%= project_name %>-pager; } }
-    #mission { @extend .-<%= project_name %>-mission; }
+    @extend .-<%= project_name %>-content;
     #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
+    h1.title { @extend .-<%= project_name %>-title; }
     .messages {
       &.status { @extend .-<%= project_name %>-messages-status; }
       &.warning { @extend .-<%= project_name %>-messages-warning; }
@@ -71,6 +72,10 @@ body { @extend .-<%= project_name %>-body; }
       @extend .-<%= project_name %>-tabs;
       .primary { @extend .-<%= project_name %>-primary-tabs; }
       .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
+    #content-area { 
+      @extend .-<%= project_name %>-content-area; 
+      .pager { @extend .-<%= project_name %>-pager; } }
+      #mission { @extend .-<%= project_name %>-mission; }
     .feed-icons { }
 
 /* Nodes */
@@ -104,6 +109,7 @@ body { @extend .-<%= project_name %>-body; }
 /* Regions */
 
   .region-sidebar-first {
+    @extend .-<%= project_name %>-sidebar;
     .block {
       @extend .-<%= project_name %>-block;
       .title { @extend .-<%= project_name %>-block-title; }
@@ -112,6 +118,7 @@ body { @extend .-<%= project_name %>-body; }
       &.even { } } }
 
   .region-sidebar-second {
+    @extend .-<%= project_name %>-sidebar;
     .block {
       @extend .-<%= project_name %>-block;
       .title { @extend .-<%= project_name %>-block-title; }
