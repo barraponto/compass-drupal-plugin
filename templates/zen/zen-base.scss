@@ -44,7 +44,7 @@ body { @extend .-<%= project_name %>-body; }
       #site-name { @extend .-<%= project_name %>-site-name; }
       #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
     //#search-box { @extend .-<%= project_name %>-search-box; }
- }
+  }
 
   #navigation {
     @extend .-<%= project_name %>-navigation;
@@ -76,7 +76,7 @@ body { @extend .-<%= project_name %>-body; }
       @extend .-<%= project_name %>-content-area; 
       .pager { @extend .-<%= project_name %>-pager; } }
       #mission { @extend .-<%= project_name %>-mission; }
-    .feed-icons { }
+    .feed-icons { @extend .-<%= project_name %>-feed-icons; }
 
 /* Nodes */
 
