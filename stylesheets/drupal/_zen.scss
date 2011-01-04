@@ -6,6 +6,7 @@ $zen-first-sidebar-width: 200px !default;
 $zen-second-sidebar-width: 200px !default;
 $zen-navigation-width: 100% !default;
 $zen-navigation-height: 2.3em !default;
+$zen-footer-size: 150px !default;
 
 $zen-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif' !default;
 $zen-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace' !default;
@@ -338,6 +339,30 @@ $zen-base-font-size: 14px !default;
   #skip-link, #page {
     font-size: $zen-base-font-size * 1em / 16px;
     line-height: ($zen-base-font-size + 4px) * 1em / $zen-base-font-size;
+  }
+
+}
+
+@mixin zen-footer {
+
+  html, body, #page-wrapper, #page {
+    height: 100%;
+  }
+
+  #main-wrapper {
+    min-height: 100%;
+  }
+
+  #main {
+    overflow: auto;
+    padding-bottom: $zen-footer-size; /* the footer size */
+  }
+
+  #footer {
+    position: relative;
+    clear: both;
+    height: $zen-footer-size;
+    margin-top: -$zen-footer-size; /* the negative value of the footer size */
   }
 
 }
