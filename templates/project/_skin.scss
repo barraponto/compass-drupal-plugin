@@ -1,5 +1,4 @@
-<% project_name = File.basename(config.project_path) %>
-
+<% project_name = File.basename(config.project_path) -%>
 // This variable controls the total width of the container div
 // You can use px for a Fixed layout or % for a Liquid layout
 $<%= project_name %>-width: 960px;
@@ -17,8 +16,8 @@ $<%= project_name %>-navigation-width: 100%;
 $<%= project_name %>-navigation-height: 2.3em;
 
 // These variables control the typefaces as defined in html-reset.css
-$<%= project_name %>-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
-$<%= project_name %>-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
+$<%= project_name %>-proportional-typeface: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", monospace;
 
 // These variables control the font sizes as defined in html-reset.css
 $<%= project_name %>-base-font-size: 14px;
