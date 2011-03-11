@@ -75,10 +75,9 @@ body { @extend .-<%= project_name %>-body; }
     @extend .-<%= project_name %>-node;
     .picture { @extend .-<%= project_name %>-node-picture; }
     .title { @extend .-<%= project_name %>-node-title; }
-    .meta {
-      @extend .-<%= project_name %>-node-meta;
-      .submitted { @extend .-<%= project_name %>-node-submitted; }
-      .terms { @extend .-<%= project_name %>-node-terms; } }
+    .meta { @extend .-<%= project_name %>-node-meta; }
+    .submitted { @extend .-<%= project_name %>-node-submitted; }
+    .terms { @extend .-<%= project_name %>-node-terms; }
     .content { @extend .-<%= project_name %>-node-content; }
     .links { @extend .-<%= project_name %>-node-links; }
     &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
