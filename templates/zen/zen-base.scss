@@ -29,141 +29,137 @@ body { @extend .-<%= project_name %>-body; }
 
 #skip-link { @extend .-<%= project_name %>-skip-link; }
 
-#page-wrapper {
+#page { @extend .-<%= project_name %>-page; }
 
-  #page { @extend .-<%= project_name %>-page; }
+#main { @extend .-<%= project_name %>-main; }
 
-  #main { @extend .-<%= project_name %>-main; }
+#header {
+  @extend .-<%= project_name %>-header;
+  #logo { @extend .-<%= project_name %>-logo; }
+  #name-and-slogan {
+    @extend .-<%= project_name %>-name-and-slogan;
+    #site-name { @extend .-<%= project_name %>-site-name; }
+    #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
+  //#search-box { @extend .-<%= project_name %>-search-box; }
+}
 
-  #header {
-    @extend .-<%= project_name %>-header;
-    #logo { @extend .-<%= project_name %>-logo; }
-    #name-and-slogan {
-      @extend .-<%= project_name %>-name-and-slogan;
-      #site-name { @extend .-<%= project_name %>-site-name; }
-      #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
-    //#search-box { @extend .-<%= project_name %>-search-box; }
-  }
+#navigation {
+  @extend .-<%= project_name %>-navigation;
+  #main-menu {
+    @extend .-<%= project_name %>-menu;
+    > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } } }
 
-  #navigation {
-    @extend .-<%= project_name %>-navigation;
-    #main-menu {
-      @extend .-<%= project_name %>-menu;
-      > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } } }
-
-  #footer {
-    @extend .-<%= project_name %>-footer;
-    #secondary-menu { @extend .-<%= project_name %>-menu; }
-    #footer-message { @extend .-<%= project_name %>-footer-message; } }
+#footer {
+  @extend .-<%= project_name %>-footer;
+  #secondary-menu { @extend .-<%= project_name %>-menu; }
+  #footer-message { @extend .-<%= project_name %>-footer-message; } }
 
 /* Content */
 
-  #content {
-    @extend .-<%= project_name %>-content;
-    #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
-    h1.title { @extend .-<%= project_name %>-title; }
-    .messages {
-      &.status { @extend .-<%= project_name %>-messages-status; }
-      &.warning { @extend .-<%= project_name %>-messages-warning; }
-      &.error { @extend .-<%= project_name %>-messages-error; }
-      &.help { @extend .-<%= project_name %>-messages-help; } }
-    .tabs {
-      @extend .-<%= project_name %>-tabs;
-      .primary { @extend .-<%= project_name %>-primary-tabs; }
-      .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
-    #content-area { 
-      @extend .-<%= project_name %>-content-area; 
-      .pager { @extend .-<%= project_name %>-pager; } }
-      #mission { @extend .-<%= project_name %>-mission; }
-    .feed-icons { @extend .-<%= project_name %>-feed-icons; }
+#content {
+  @extend .-<%= project_name %>-content;
+  #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
+  h1.title { @extend .-<%= project_name %>-title; }
+  .messages {
+    &.status { @extend .-<%= project_name %>-messages-status; }
+    &.warning { @extend .-<%= project_name %>-messages-warning; }
+    &.error { @extend .-<%= project_name %>-messages-error; }
+    &.help { @extend .-<%= project_name %>-messages-help; } }
+  .tabs {
+    @extend .-<%= project_name %>-tabs;
+    .primary { @extend .-<%= project_name %>-primary-tabs; }
+    .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
+  #content-area { 
+    @extend .-<%= project_name %>-content-area; 
+    .pager { @extend .-<%= project_name %>-pager; } }
+    #mission { @extend .-<%= project_name %>-mission; }
+  .feed-icons { @extend .-<%= project_name %>-feed-icons; }
 
 /* Nodes */
 
-    .node {
-      @extend .-<%= project_name %>-node;
-      .picture { @extend .-<%= project_name %>-node-picture; }
-      .title { @extend .-<%= project_name %>-node-title; }
-      .meta {
-        @extend .-<%= project_name %>-node-meta;
-        .submitted { @extend .-<%= project_name %>-node-submitted; }
-        .terms { @extend .-<%= project_name %>-node-terms; } }
-      .content { @extend .-<%= project_name %>-node-content; }
-      .links { @extend .-<%= project_name %>-node-links; }
-      &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
-      &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-      &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
-      .preview & { @extend .-<%= project_name %>-node-preview; } }
+  .node {
+    @extend .-<%= project_name %>-node;
+    .picture { @extend .-<%= project_name %>-node-picture; }
+    .title { @extend .-<%= project_name %>-node-title; }
+    .meta {
+      @extend .-<%= project_name %>-node-meta;
+      .submitted { @extend .-<%= project_name %>-node-submitted; }
+      .terms { @extend .-<%= project_name %>-node-terms; } }
+    .content { @extend .-<%= project_name %>-node-content; }
+    .links { @extend .-<%= project_name %>-node-links; }
+    &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
+    &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
+    &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
+    .preview & { @extend .-<%= project_name %>-node-preview; } }
 
 /* Profiles */
 
-    .profile {
-      @extend .-<%= project_name %>-profile;
-      .picture { @extend .-<%= project_name %>-profile-picture; }
-      h3 { @extend .-<%= project_name %>-profile-category-title; } /* profile category header */
-      dl { /* profile category wrapper */
-        @extend .-<%= project_name %>-profile-category-wrapper;
-        dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
-        dd { @extend .-<%= project_name %>-profile-field-value; } } } } /*  profile category value */
+  .profile {
+    @extend .-<%= project_name %>-profile;
+    .picture { @extend .-<%= project_name %>-profile-picture; }
+    h3 { @extend .-<%= project_name %>-profile-category-title; } /* profile category header */
+    dl { /* profile category wrapper */
+      @extend .-<%= project_name %>-profile-category-wrapper;
+      dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
+      dd { @extend .-<%= project_name %>-profile-field-value; } } } } /*  profile category value */
 
 /* Regions */
 
-  .region-sidebar-first {
-    @extend .-<%= project_name %>-sidebar;
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; }
-      &.odd { }
-      &.even { } } }
+.region-sidebar-first {
+  @extend .-<%= project_name %>-sidebar;
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; }
+    &.odd { }
+    &.even { } } }
 
-  .region-sidebar-second {
-    @extend .-<%= project_name %>-sidebar;
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; }
-      &.odd { }
-      &.even { } } }
+.region-sidebar-second {
+  @extend .-<%= project_name %>-sidebar;
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; }
+    &.odd { }
+    &.even { } } }
 
-  .region-navigation {
-    .block { @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
+.region-navigation {
+  .block { @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-  .region-highlight {
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
+.region-highlight {
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-  .region-content-top {
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
+.region-content-top {
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-  .region-content-bottom {
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
+.region-content-bottom {
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-  .region-header {
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
+.region-header {
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-  .region-footer {
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
+.region-footer {
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-  .region-page-closure {
-    .block {
-      @extend .-<%= project_name %>-block;
-      .title { @extend .-<%= project_name %>-block-title; }
-      .content { @extend .-<%= project_name %>-block-content; } } }
-
-}
+.region-page-closure {
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
