@@ -1,4 +1,4 @@
-<% project_name = File.basename(config.project_path) -%>
+<% project_name = File.basename(config.project_path) %>
 // This variable controls the total width of the container div
 // You can use px for a Fixed layout or % for a Liquid layout
 $<%= project_name %>-width: 960px;
