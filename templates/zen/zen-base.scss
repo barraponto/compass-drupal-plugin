@@ -89,11 +89,12 @@ body { @extend .-<%= project_name %>-body; }
   .profile {
     @extend .-<%= project_name %>-profile;
     .picture { @extend .-<%= project_name %>-profile-picture; }
-    h3 { @extend .-<%= project_name %>-profile-category-title; } /* profile category header */
-    dl { /* profile category wrapper */
+    h3 { @extend .-<%= project_name %>-profile-category-title; }
+    dl {
       @extend .-<%= project_name %>-profile-category-wrapper;
-      dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
-      dd { @extend .-<%= project_name %>-profile-field-value; } } } } /*  profile category value */
+      dt { @extend .-<%= project_name %>-profile-field-label; }
+      dd { @extend .-<%= project_name %>-profile-field-value; } } }
+}
 
 .region-sidebar-first {
   @extend .-<%= project_name %>-sidebar;
