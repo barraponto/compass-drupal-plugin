@@ -54,8 +54,6 @@ body { @extend .-<%= project_name %>-body; }
   #secondary-menu { @extend .-<%= project_name %>-menu; }
   #footer-message { @extend .-<%= project_name %>-footer-message; } }
 
-/* Content */
-
 #content {
   @extend .-<%= project_name %>-content;
   #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
@@ -75,8 +73,6 @@ body { @extend .-<%= project_name %>-body; }
     #mission { @extend .-<%= project_name %>-mission; }
   .feed-icons { @extend .-<%= project_name %>-feed-icons; }
 
-/* Nodes */
-
   .node {
     @extend .-<%= project_name %>-node;
     .picture { @extend .-<%= project_name %>-node-picture; }
@@ -92,8 +88,6 @@ body { @extend .-<%= project_name %>-body; }
     &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
     .preview & { @extend .-<%= project_name %>-node-preview; } }
 
-/* Profiles */
-
   .profile {
     @extend .-<%= project_name %>-profile;
     .picture { @extend .-<%= project_name %>-profile-picture; }
@@ -102,8 +96,6 @@ body { @extend .-<%= project_name %>-body; }
       @extend .-<%= project_name %>-profile-category-wrapper;
       dt { @extend .-<%= project_name %>-profile-field-label; } /* profile category label */
       dd { @extend .-<%= project_name %>-profile-field-value; } } } } /*  profile category value */
-
-/* Regions */
 
 .region-sidebar-first {
   @extend .-<%= project_name %>-sidebar;
