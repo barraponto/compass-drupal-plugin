@@ -39,9 +39,7 @@ body { @extend .-<%= project_name %>-body; }
   #name-and-slogan {
     @extend .-<%= project_name %>-name-and-slogan;
     #site-name { @extend .-<%= project_name %>-site-name; }
-    #site-slogan { @extend .-<%= project_name %>-site-slogan; } }
-  //#search-box { @extend .-<%= project_name %>-search-box; }
-}
+    #site-slogan { @extend .-<%= project_name %>-site-slogan; } } }
 
 #navigation {
   @extend .-<%= project_name %>-navigation;
