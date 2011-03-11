@@ -90,10 +90,9 @@ body { @extend .-<%= project_name %>-body; }
     @extend .-<%= project_name %>-profile;
     .picture { @extend .-<%= project_name %>-profile-picture; }
     h3 { @extend .-<%= project_name %>-profile-category-title; }
-    dl {
-      @extend .-<%= project_name %>-profile-category-wrapper;
-      dt { @extend .-<%= project_name %>-profile-field-label; }
-      dd { @extend .-<%= project_name %>-profile-field-value; } } }
+    dl { @extend .-<%= project_name %>-profile-category-wrapper; }
+    dt { @extend .-<%= project_name %>-profile-field-label; }
+    dd { @extend .-<%= project_name %>-profile-field-value; } }
 }
 
 .region-sidebar-first {
