@@ -3,9 +3,9 @@ stylesheet 'zen.scss', :to => "#{options[:project_name] || File.basename(config.
 
 stylesheet 'zen-rtl.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss"
 
-stylesheet '_zen.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}".scss
+stylesheet '_zen.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}.scss"
 
-stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}"-skin.scss, :erb => true
+stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
 
 description "Zen Layout for Drupal Zen Theme"
 
