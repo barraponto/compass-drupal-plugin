@@ -1,5 +1,4 @@
 <% project_name = File.basename(config.project_path) %>
-@import "<%= File.basename(config.project_path) %>-skin";
 
 // Map the zen variables to the skin variables
 $zen-width: $<%= project_name %>-width;
