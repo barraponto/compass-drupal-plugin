@@ -1,0 +1,13 @@
+<% project_name = File.basename(config.project_path) %>
+@import "<%= File.basename(config.project_path) %>-skin";
+
+// Map the zen variables to the skin variables
+$zen-width: $<%= project_name %>-width;
+$zen-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
+$zen-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
+$zen-content-position: $<%= project_name %>-content-position;
+$zen-navigation-width: $<%= project_name %>-navigation-width;
+$zen-navigation-height: $<%= project_name %>-navigation-height;
+$zen-proportional-typeface: $<%= project_name %>-proportional-typeface;
+$zen-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
+$zen-base-font-size: $<%= project_name %>-base-font-size;

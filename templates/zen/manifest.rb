@@ -1,7 +1,9 @@
 # Make sure you list all the project template files here in the manifest.
-stylesheet 'zen-base.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+stylesheet 'zen.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
 
-stylesheet 'zen-base-rtl.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss"
+stylesheet 'zen-rtl.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss"
+
+stylesheet '_zen.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}".scss
 
 stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
 
