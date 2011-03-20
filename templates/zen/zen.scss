@@ -19,9 +19,9 @@ body { @extend .-<%= project_name %>-body; }
 
 #skip-link { @extend .-<%= project_name %>-skip-link; }
 
-#page { @extend .-<%= project_name %>-page; }
+#page-wrapper { @extend .-<%= project_name %>-page; }
 
-#main { @extend .-<%= project_name %>-main; }
+#main-wrapper { @extend .-<%= project_name %>-main; }
 
 #header {
   @extend .-<%= project_name %>-header;
