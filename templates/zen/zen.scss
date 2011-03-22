@@ -23,28 +23,30 @@ body { @extend .-<%= project_name %>-body; }
 
 #main-wrapper { @extend .-<%= project_name %>-main; }
 
-#header {
-  @extend .-<%= project_name %>-header;
-  #logo { @extend .-<%= project_name %>-logo; }
-  #name-and-slogan {
-    @extend .-<%= project_name %>-name-and-slogan;
-    #site-name { @extend .-<%= project_name %>-site-name; }
-    #site-slogan { @extend .-<%= project_name %>-site-slogan; } } }
+#header { @extend .-<%= project_name %>-header; }
 
-#navigation {
-  @extend .-<%= project_name %>-navigation;
-  #main-menu {
-    @extend .-<%= project_name %>-menu;
-    > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } } }
+#logo { @extend .-<%= project_name %>-logo; }
 
-#footer {
-  @extend .-<%= project_name %>-footer;
-  #secondary-menu { @extend .-<%= project_name %>-menu; }
-  #footer-message { @extend .-<%= project_name %>-footer-message; } }
+#name-anad-slogan { @extend .-<%= project_name %>-name-and-slogan; }
+
+#site-name { @extend .-<%= project_name %>-site-name; }
+
+#site-slogan { @extend .-<%= project_name %>-site-slogan; }
+
+#navigation { @extend .-<%= project_name %>-navigation; }
+
+#main-menu {
+  @extend .-<%= project_name %>-menu;
+  > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } }
+
+#footer { @extend .-<%= project_name %>-footer; }
+
+#secondary-menu { @extend .-<%= project_name %>-menu; }
+
+#footer-message { @extend .-<%= project_name %>-footer-message; }
 
 #content {
   @extend .-<%= project_name %>-content;
-  #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
   h1.title { @extend .-<%= project_name %>-title; }
   .messages {
     &.status { @extend .-<%= project_name %>-messages-status; }
@@ -55,10 +57,6 @@ body { @extend .-<%= project_name %>-body; }
     @extend .-<%= project_name %>-tabs;
     .primary { @extend .-<%= project_name %>-primary-tabs; }
     .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
-  #content-area { 
-    @extend .-<%= project_name %>-content-area; 
-    .pager { @extend .-<%= project_name %>-pager; } }
-    #mission { @extend .-<%= project_name %>-mission; }
   .feed-icons { @extend .-<%= project_name %>-feed-icons; }
 
   .node {
@@ -83,6 +81,14 @@ body { @extend .-<%= project_name %>-body; }
     dt { @extend .-<%= project_name %>-profile-field-label; }
     dd { @extend .-<%= project_name %>-profile-field-value; } }
 }
+
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
+
+#content-area { 
+  @extend .-<%= project_name %>-content-area; 
+  .pager { @extend .-<%= project_name %>-pager; } }
+
+#mission { @extend .-<%= project_name %>-mission; }
 
 .region-sidebar-first {
   @extend .-<%= project_name %>-sidebar;
