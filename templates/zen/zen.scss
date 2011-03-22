@@ -21,17 +21,17 @@ body { @extend .-<%= project_name %>-body; }
 
 #page-wrapper { @extend .-<%= project_name %>-page; }
 
-#main-wrapper { @extend .-<%= project_name %>-main; }
-
 #header { @extend .-<%= project_name %>-header; }
 
 #logo { @extend .-<%= project_name %>-logo; }
 
-#name-anad-slogan { @extend .-<%= project_name %>-name-and-slogan; }
+#name-and-slogan { @extend .-<%= project_name %>-name-and-slogan; }
 
 #site-name { @extend .-<%= project_name %>-site-name; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
+
+#main-wrapper { @extend .-<%= project_name %>-main; }
 
 #navigation { @extend .-<%= project_name %>-navigation; }
 
