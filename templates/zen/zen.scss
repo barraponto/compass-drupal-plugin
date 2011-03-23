@@ -33,18 +33,6 @@ body { @extend .-<%= project_name %>-body; }
 
 #main-wrapper { @extend .-<%= project_name %>-main; }
 
-#navigation { @extend .-<%= project_name %>-navigation; }
-
-#main-menu {
-  @extend .-<%= project_name %>-menu;
-  > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } }
-
-#footer { @extend .-<%= project_name %>-footer; }
-
-#secondary-menu { @extend .-<%= project_name %>-menu; }
-
-#footer-message { @extend .-<%= project_name %>-footer-message; }
-
 #content {
   @extend .-<%= project_name %>-content;
   h1.title { @extend .-<%= project_name %>-title; }
@@ -57,7 +45,14 @@ body { @extend .-<%= project_name %>-body; }
     @extend .-<%= project_name %>-tabs;
     .primary { @extend .-<%= project_name %>-primary-tabs; }
     .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
-  .feed-icons { @extend .-<%= project_name %>-feed-icons; }
+  .feed-icons { @extend .-<%= project_name %>-feed-icons; } }
+
+#mission { @extend .-<%= project_name %>-mission; }
+
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }  
+
+#content-area {
+  @extend .-<%= project_name %>-content-area;
 
   .node {
     @extend .-<%= project_name %>-node;
@@ -80,15 +75,23 @@ body { @extend .-<%= project_name %>-body; }
     dl { @extend .-<%= project_name %>-profile-category-wrapper; }
     dt { @extend .-<%= project_name %>-profile-field-label; }
     dd { @extend .-<%= project_name %>-profile-field-value; } }
+    
+  .pager { @extend .-<%= project_name %>-pager; }
 }
 
-#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
+#navigation { @extend .-<%= project_name %>-navigation; }
 
-#content-area { 
-  @extend .-<%= project_name %>-content-area; 
-  .pager { @extend .-<%= project_name %>-pager; } }
+#main-menu {
+  @extend .-<%= project_name %>-menu;
+  > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } }
+  
+#footer { @extend .-<%= project_name %>-footer; }
 
-#mission { @extend .-<%= project_name %>-mission; }
+#secondary-menu { @extend .-<%= project_name %>-menu; }
+
+#footer-message { @extend .-<%= project_name %>-footer-message; }
+
+// I have grouped the regions since it looks better like this
 
 .region-sidebar-first {
   @extend .-<%= project_name %>-sidebar;
