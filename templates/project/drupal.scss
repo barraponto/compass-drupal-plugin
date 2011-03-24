@@ -1,50 +1,35 @@
 <% project_name = File.basename(config.project_path) %>
-@import "drupal/zen";
+@import "drupal/drupal";
 @import "<%= File.basename(config.project_path) %>-skin";
 @import "_<%= File.basename(config.project_path) %>-base";
 
 // Use this mixin to generate the Zen layout
-@include zen-layout;
-
-// Use this mixin to properly position the #navigation div
-@include zen-navigation;
+@include drupal-layout;
 
 //Use this mixin to set the typefaces
-@include zen-typefaces;
+@include drupal-typefaces;
 
 //Use this mixin to set the font sizes
-@include zen-typography;
+@include drupal-typography;
 
 body { @extend .-<%= project_name %>-body; }
 
-#skip-link { @extend .-<%= project_name %>-skip-link; }
+#page { @extend .-<%= project_name %>-page; }
 
-#page-wrapper { @extend .-<%= project_name %>-page; }
+#header { @extend .-<%= project_name %>-header; }
 
-#main-wrapper { @extend .-<%= project_name %>-main; }
+#logo { @extend .-<%= project_name %>-logo; }
 
-#header {
-  @extend .-<%= project_name %>-header;
-  #logo { @extend .-<%= project_name %>-logo; }
-  #name-and-slogan {
-    @extend .-<%= project_name %>-name-and-slogan;
-    #site-name { @extend .-<%= project_name %>-site-name; }
-    #site-slogan { @extend .-<%= project_name %>-site-slogan; } } }
+#name-and-slogan { @extend .-<%= project_name %>-name-and-slogan; }
 
-#navigation {
-  @extend .-<%= project_name %>-navigation;
-  #main-menu {
-    @extend .-<%= project_name %>-menu;
-    > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } } }
+#site-name { @extend .-<%= project_name %>-site-name; }
 
-#footer {
-  @extend .-<%= project_name %>-footer;
-  #secondary-menu { @extend .-<%= project_name %>-menu; }
-  #footer-message { @extend .-<%= project_name %>-footer-message; } }
+#site-slogan { @extend .-<%= project_name %>-site-slogan; }
+
+#main { @extend .-<%= project_name %>-main; }
 
 #content {
   @extend .-<%= project_name %>-content;
-  #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
   h1.title { @extend .-<%= project_name %>-title; }
   .messages {
     &.status { @extend .-<%= project_name %>-messages-status; }
@@ -55,11 +40,15 @@ body { @extend .-<%= project_name %>-body; }
     @extend .-<%= project_name %>-tabs;
     .primary { @extend .-<%= project_name %>-primary-tabs; }
     .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
-  #content-area { 
-    @extend .-<%= project_name %>-content-area; 
-    .pager { @extend .-<%= project_name %>-pager; } }
-    #mission { @extend .-<%= project_name %>-mission; }
-  .feed-icons { @extend .-<%= project_name %>-feed-icons; }
+  //drupal prints a link with an image inside, beware.
+  .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
+
+#mission { @extend .-<%= project_name %>-mission; }
+
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }  
+
+#content-content {
+  @extend .-<%= project_name %>-content-area;
 
   .node {
     @extend .-<%= project_name %>-node;
@@ -70,9 +59,8 @@ body { @extend .-<%= project_name %>-body; }
     .terms { @extend .-<%= project_name %>-node-terms; }
     .content { @extend .-<%= project_name %>-node-content; }
     .links { @extend .-<%= project_name %>-node-links; }
-    &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
+    &.sticky { @extend .-<%= project_name %>-node-sticky; }
     &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-    &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
     .preview & { @extend .-<%= project_name %>-node-preview; } }
 
   .profile {
@@ -82,40 +70,43 @@ body { @extend .-<%= project_name %>-body; }
     dl { @extend .-<%= project_name %>-profile-category-wrapper; }
     dt { @extend .-<%= project_name %>-profile-field-label; }
     dd { @extend .-<%= project_name %>-profile-field-value; } }
+    
+  .item-list { 
+    @extend .-<%= project_name %>-pager;
+    .pager-item { @extend .-<%= project_name %>-pager-item; }
+    .pager-first { @extend .-<%= project_name %>-pager-first; }
+    .pager-previous { @extend .-<%= project_name %>-pager-previous; }
+    .pager-current { @extend .-<%= project_name %>-pager-current; }
+    .pager-next { @extend .-<%= project_name %>-pager-next; }
+    .pager-last { @extend .-<%= project_name %>-pager-last; } }
 }
 
-.region-sidebar-first {
+#navigation { @extend .-<%= project_name %>-navigation; }
+
+#primary {
+  @extend .-<%= project_name %>-menu;
+  > li > .links { @extend .-<%= project_name %>-submenu; } }
+  
+#footer-wrapper { @extend .-<%= project_name %>-footer; }
+
+#secondary { @extend .-<%= project_name %>-menu; }
+
+#sidebar-left {
   @extend .-<%= project_name %>-sidebar;
   .block {
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; }
-    &.odd { }
-    &.even { } } }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-.region-sidebar-second {
+#sidebar-right {
   @extend .-<%= project_name %>-sidebar;
   .block {
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; }
-    &.odd { }
-    &.even { } } }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
-.region-navigation {
+#navigation {
   .block { @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-highlight {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-content-top {
-  .block {
-    @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
     .content { @extend .-<%= project_name %>-block-content; } } }
 
@@ -125,19 +116,17 @@ body { @extend .-<%= project_name %>-body; }
     .title { @extend .-<%= project_name %>-block-title; }
     .content { @extend .-<%= project_name %>-block-content; } } }
 
-.region-header {
+#header-region {
   .block {
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
     .content { @extend .-<%= project_name %>-block-content; } } }
 
-.region-footer {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-page-closure {
+#footer {
+  //Drupal will print the footer message right away, but theming the
+  //whole region isn't a good idea. Copy page.tpl.php to your theme and
+  //edit it to wrap the $footer_message variable
+  //@extend .-<%= project_name %>-footer-message;
   .block {
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
