@@ -1,16 +1,20 @@
 # Make sure you list all the project template files here in the manifest.
-stylesheet 'drupal-base.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+file 'drupal.info', :to => "#{options[:project_name] || File.basename(config.project_path)}.info", :erb => true
+
+stylesheet 'drupal.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+
+stylesheet '_drupal-base.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-base.scss", :erb => true
 
 stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
 
-description "Drupal skin for object-oriented css development"
+description "Drupal layout and skin stylesheets for object-oriented CSS development"
 
 help %Q{
-  This plugin adds a skin stylesheet to speed up theme development
+  This plugin starts Drupal layout and skin CSS files to speed up theme development
 }
 
 welcome_message %Q{
-  Import the YOURTHEME-skin file into any of your stylesheets or use YOURTHEME.scss
-  Don't forget to adjust YOURTHEME.info accordingly.
-  Use @extend to map elements on your stylesheets to the skin.
+  Hello and welcome to Drupal Compass Plugin.
+  This is a blank theme meant for skilled users only.
+  If you're looking for something fun and easy to use, try the Zen or Fusion variants.
 }

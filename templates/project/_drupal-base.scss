@@ -1,0 +1,10 @@
+<% project_name = File.basename(config.project_path) %>
+
+// Map the drupal variables to the skin variables
+$drupal-width: $<%= project_name %>-width;
+$drupal-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
+$drupal-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
+$drupal-content-position: $<%= project_name %>-content-position;
+$drupal-proportional-typeface: $<%= project_name %>-proportional-typeface;
+$drupal-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
+$drupal-base-font-size: $<%= project_name %>-base-font-size;
