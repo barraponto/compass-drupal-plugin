@@ -4,4 +4,4 @@ description = This is a raw, naked, bare Drupal theme. It inherits all of the de
 core = 6.x
 engine = phptemplate
 
-stylesheets[all][] = <%= project_name %>.css
+stylesheets[all][] = stylesheets/<%= project_name %>.css
