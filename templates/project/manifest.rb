@@ -3,8 +3,6 @@ file 'drupal.info', :to => "#{options[:project_name] || File.basename(config.pro
 
 stylesheet 'drupal.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
 
-stylesheet 'drupal-rtl.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss", :erb => true
-
 stylesheet '_drupal-base.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-base.scss", :erb => true
 
 stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
