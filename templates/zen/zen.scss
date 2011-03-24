@@ -76,7 +76,14 @@ body { @extend .-<%= project_name %>-body; }
     dt { @extend .-<%= project_name %>-profile-field-label; }
     dd { @extend .-<%= project_name %>-profile-field-value; } }
     
-  .pager { @extend .-<%= project_name %>-pager; }
+  .pager { 
+    @extend .-<%= project_name %>-pager;
+    .pager-item { @extend .-<%= project_name %>-pager; }
+    .pager-first { @extend .-<%= project_name %>-pager; }
+    .pager-previous { @extend .-<%= project_name %>-pager; }
+    .pager-current { @extend .-<%= project_name %>-pager; }
+    .pager-next { @extend .-<%= project_name %>-pager; }
+    .pager-last { @extend .-<%= project_name %>-pager; } }
 }
 
 #navigation { @extend .-<%= project_name %>-navigation; }
