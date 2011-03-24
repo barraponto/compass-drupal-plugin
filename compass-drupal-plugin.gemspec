@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.2.0.beta.8"
+  s.version = "0.2.1.beta.1"
   s.date = "2011-03-14"
 
   # Gem Details
@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
     "stylesheets/drupal/_zen.scss",
     "templates/project/drupal.info",
     "templates/project/drupal.scss",
-    "templates/project/drupal-rtl.scss",
     "templates/project/_drupal-base.scss",
     "templates/project/_skin.scss",
     "templates/project/manifest.rb",
