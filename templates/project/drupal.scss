@@ -1,16 +1,6 @@
 <% project_name = File.basename(config.project_path) %>
-@import "drupal/drupal";
 @import "<%= File.basename(config.project_path) %>-skin";
 @import "_<%= File.basename(config.project_path) %>-base";
-
-// Use this mixin to generate the Zen layout
-@include drupal-layout;
-
-//Use this mixin to set the typefaces
-@include drupal-typefaces;
-
-//Use this mixin to set the font sizes
-@include drupal-typography;
 
 body { @extend .-<%= project_name %>-body; }
 
