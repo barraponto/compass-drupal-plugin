@@ -16,7 +16,13 @@ body { @extend .-<%= project_name %>-body; }
 
 #page { @extend .-<%= project_name %>-page; }
 
-#header { @extend .-<%= project_name %>-header; }
+#header { 
+  @extend .-<%= project_name %>-header;
+  
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
 #logo { @extend .-<%= project_name %>-logo; }
 
@@ -26,30 +32,55 @@ body { @extend .-<%= project_name %>-body; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
 
-#main { @extend .-<%= project_name %>-main; }
+#container { @extend .-<%= project_name %>-main; }
 
-#content {
-  @extend .-<%= project_name %>-content;
-  h1.title { @extend .-<%= project_name %>-title; }
-  .messages {
-    &.status { @extend .-<%= project_name %>-messages-status; }
-    &.warning { @extend .-<%= project_name %>-messages-warning; }
-    &.error { @extend .-<%= project_name %>-messages-error; }
-    &.help { @extend .-<%= project_name %>-messages-help; } }
-  .tabs {
-    @extend .-<%= project_name %>-tabs;
-    .primary { @extend .-<%= project_name %>-primary-tabs; }
-    .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
-  //drupal prints a link with an image inside, beware.
-  .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
+#navigation {
+  @extend .-<%= project_name %>-navigation;
+  
+  .block { @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
+
+#primary {
+  @extend .-<%= project_name %>-menu;
+  > li > .links { @extend .-<%= project_name %>-submenu; } }
+  
+#secondary { @extend .-<%= project_name %>-menu; }
+    
+#sidebar-left {
+  @extend .-<%= project_name %>-sidebar;
+  
+  .block {
+    @extend .-<%= project_name %>-block;
+    .title { @extend .-<%= project_name %>-block-title; }
+    .content { @extend .-<%= project_name %>-block-content; } } }
 
 #mission { @extend .-<%= project_name %>-mission; }
 
 #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }  
 
+#content {
+  @extend .-<%= project_name %>-content;
+  
+  h1.title { @extend .-<%= project_name %>-title; }
+  
+  .tabs {
+    @extend .-<%= project_name %>-tabs;
+    .primary { @extend .-<%= project_name %>-primary-tabs; }
+    .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
+    
+  .messages {
+    &.status { @extend .-<%= project_name %>-messages-status; }
+    &.warning { @extend .-<%= project_name %>-messages-warning; }
+    &.error { @extend .-<%= project_name %>-messages-error; }
+    &.help { @extend .-<%= project_name %>-messages-help; } }
+    
+  //drupal prints only a link with an image inside, beware.
+  .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
+
 #content-content {
   @extend .-<%= project_name %>-content-area;
-
+  
   .node {
     @extend .-<%= project_name %>-node;
     .picture { @extend .-<%= project_name %>-node-picture; }
@@ -71,7 +102,7 @@ body { @extend .-<%= project_name %>-body; }
     dt { @extend .-<%= project_name %>-profile-field-label; }
     dd { @extend .-<%= project_name %>-profile-field-value; } }
     
-  .item-list { 
+  .pager { 
     @extend .-<%= project_name %>-pager;
     .pager-item { @extend .-<%= project_name %>-pager-item; }
     .pager-first { @extend .-<%= project_name %>-pager-first; }
@@ -79,54 +110,29 @@ body { @extend .-<%= project_name %>-body; }
     .pager-current { @extend .-<%= project_name %>-pager-current; }
     .pager-next { @extend .-<%= project_name %>-pager-next; }
     .pager-last { @extend .-<%= project_name %>-pager-last; } }
-}
-
-#navigation { @extend .-<%= project_name %>-navigation; }
-
-#primary {
-  @extend .-<%= project_name %>-menu;
-  > li > .links { @extend .-<%= project_name %>-submenu; } }
-  
-#footer-wrapper { @extend .-<%= project_name %>-footer; }
-
-#secondary { @extend .-<%= project_name %>-menu; }
-
-#sidebar-left {
-  @extend .-<%= project_name %>-sidebar;
-  .block {
+    
+  .block { //Yes, content is a default region :P
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
+    .content { @extend .-<%= project_name %>-block-content; } }
+}
 
 #sidebar-right {
   @extend .-<%= project_name %>-sidebar;
+  
   .block {
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
     .content { @extend .-<%= project_name %>-block-content; } } }
 
-#navigation {
-  .block { @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-content-bottom {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-#header-region {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-#footer {
+#footer-wrapper {
+  @extend .-<%= project_name %>-footer;
+  
   //Drupal will print the footer message right away, but theming the
   //whole region isn't a good idea. Copy page.tpl.php to your theme and
   //edit it to wrap the $footer_message variable
   //@extend .-<%= project_name %>-footer-message;
+  
   .block {
     @extend .-<%= project_name %>-block;
     .title { @extend .-<%= project_name %>-block-title; }
