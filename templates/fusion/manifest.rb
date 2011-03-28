@@ -5,7 +5,7 @@ stylesheet 'fusion.scss', :to => "#{options[:project_name] || File.basename(conf
 
 stylesheet '_fusion-base.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-base.scss", :erb => true
 
-stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
+stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
 
 description "Fusion layout and skin stylesheets for object-oriented CSS development"
 
