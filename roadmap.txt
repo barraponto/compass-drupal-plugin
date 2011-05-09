@@ -1,10 +1,11 @@
 === ROADMAP ===
-0.2.0: Full Zen Skin support
-0.3.0: Extend Skin to core objects
-0.4.0: Extend Skin to admin and form objects
-0.5.0: Extend Skin to contrib objects
-1.0.0: Bundle Zen Starter Kit
+0.2.0: Extend Skin to required core objects
+0.3.0: Extend Skin to form elements and required core forms
+0.4.0: Extend Skin to standard core objects and forms (from D7 standard profile)
+0.5.0: Extend Skin to administrative forms 
+1.0.0: Provide extensive documentation
+2.0.0: Implement Zen styles as a skin
 
 === LATER ===
-* Fusion support
-* Bundle Fusion Starter and Fusion Starter Lite
+* Adaptivetheme and Tao support
+* Implement 960.gs properly in Fusion support
