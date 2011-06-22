@@ -5,6 +5,10 @@
 0.5.0: Extend Skin to administrative forms 
 1.0.0: Provide extensive documentation
 2.0.0: Implement Zen styles as a skin
+3.0.0: Support Drupal 7 (and upgrade base themes)
+
+=== TODO ===
+* Properly support RTL styles
 
 === LATER ===
 * Adaptivetheme and Tao support
