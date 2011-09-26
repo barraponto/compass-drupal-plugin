@@ -24,6 +24,15 @@ As a collateral effect of this approach, we get to split Layout and Styles. The 
 
 As a bonus, layouts provides its own mixins and variables, and skins can provide their own variables for colors and typography. The _base SCSS file will map theme variables to skin variables, allowing your theme to pick which skin values to inherit.
 
+Themer Guide
+============
+
+Once you have created your new project, there should be 3 files in the sass folder: <THEME NAME>.scss, <THEME NAME>-skin.css and <THEME NAME>-base.css. The skin file has classes for every basic UI object of the Drupal interface: nodes, menus, breadcrumbs, and has several variables for typography, color pallettes and more. This is the file meant for editing and sharing.
+
+The <THEME NAME>.scss maps theme selectors to skin properties using @extend. Avoid adding properties to this file, except for layout properties (position, float, margin) used to rearrange the UI objects.
+
+In order to use contributed skins, save the contributed -skin.css file in the sass folder and change some of the @extend directives from <THEME NAME>.scss. You might want to change some of the variable mappings in <THEME NAME>-base.scss as well.
+
 Known Issues
 ============
 

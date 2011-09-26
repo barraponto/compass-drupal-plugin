@@ -9,6 +9,8 @@
 
 === TODO ===
 * Properly support RTL styles
+* Organize stylesheets according to tpl files and theme functions
+* Write documentation for developers
 
 === LATER ===
 * Adaptivetheme and Tao support
