@@ -19,7 +19,7 @@ $<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", mon
 $<%= project_name %>-base-font-size: 14px;
 
 //HTML Elements
-.-<%= project_name %>-h2 { } //Not meant for Block titles
+.-<%= project_name %>-h2 { } 
 
 .-<%= project_name %>-h3 { }
 
@@ -95,60 +95,24 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-header { }
 
+.-<%= project_name %>-logo-title { } // usually a #logo-title wrapper div (YMMV)
+
 .-<%= project_name %>-logo { }
 
-.-<%= project_name %>-name-and-slogan { } //usually the .name-and-slogan div
+.-<%= project_name %>-name-and-slogan { } // usually a #name-and-slogan wrapper div (YMMV) 
 
 .-<%= project_name %>-site-name {
   a { } }
 
 .-<%= project_name %>-site-slogan { }
 
-.-<%= project_name %>-mission { }
+.-<%= project_name %>-header-region { }
 
-.-<%= project_name %>-main { }
-
-.-<%= project_name %>-sidebar { } //make a copy to have different sidebars
+.-<%= project_name %>-container { }
 
 .-<%= project_name %>-navigation { }
 
-.-<%= project_name %>-content { }
-
-.-<%= project_name %>-title { } //this will be the h1, except for the home page
-
-.-<%= project_name %>-content-area { }
-
-.-<%= project_name %>-breadcrumb {
-  a { } }
-
-.-<%= project_name %>-messages {
-  ul {
-    li { } } }
-
-.-<%= project_name %>-messages-error { @extend .-<%= project_name %>-messages; }
-
-.-<%= project_name %>-messages-warning { @extend .-<%= project_name %>-messages; }
-
-.-<%= project_name %>-messages-status { @extend .-<%= project_name %>-messages; }
-
-.-<%= project_name %>-messages-help { @extend .-<%= project_name %>-messages; }
-
-.-<%= project_name %>-tabs { } // usually the .tabs div
-
-.-<%= project_name %>-primary-tabs {
-  li {
-    a { }
-    &.active {
-      a { } } } }
-
-.-<%= project_name %>-secondary-tabs {
-  li {
-    a { }
-    &.active {
-      a { } } } }
-
-// Make copies of these components for a diversity of menu styles
-.-<%= project_name %>-menu {
+.-<%= project_name %>-menu { // by default, both menus inherit these styles
   > li { // use '>' to target only child items
     &.first { }
     &.last { }
@@ -160,7 +124,36 @@ $<%= project_name %>-base-font-size: 14px;
     &.last { }
     &.expanded { } } }
 
-.-<%= project_name %>-footer { }
+.-<%= project_name %>-sidebar { } // by default both sidebars inherit these styles
+
+.-<%= project_name %>-main { }
+
+.-<%= project_name %>-mission { }
+
+.-<%= project_name %>-breadcrumb {
+  a { } }
+
+.-<%= project_name %>-content { }
+
+.-<%= project_name %>-tabs {
+  .primary { }
+  .secondary { }
+  // the following styles apply to both tab groups.
+  ul { }
+  li { } 
+  a { } 
+  a.active { } }
+
+.-<%= project_name %>-messages {
+  &.status { }
+  &.warning { }
+  &.error { }
+  &.help { }
+
+  // when there is more than one message, they get wrapped in a ul
+  ul { }
+  li { }
+}
 
 .-<%= project_name %>-pager {
   .pager-item { }
@@ -173,6 +166,12 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-feed-icons {
   .feed-icon { } }
+  
+.-<%= project_name %>-title { } 
+
+.-<%= project_name %>-content-area { }
+
+.-<%= project_name %>-footer { }
 
 .-<%= project_name %>-footer-message { }
 
