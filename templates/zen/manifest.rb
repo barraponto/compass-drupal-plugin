@@ -18,4 +18,5 @@ welcome_message %Q{
   You need to add it to YOURTHEME.info in order to load it into Drupal.
   If either zen-fixed.css or zen-liquid.css are declared on YOURTHEME.info,
   you should comment it to avoid CSS conflicts.
+  You must enable relative assets in config.rb in order to use theme images in the css.
 }

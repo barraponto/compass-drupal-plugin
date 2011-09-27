@@ -17,4 +17,5 @@ welcome_message %Q{
   Hello and welcome to Drupal Compass Plugin.
   This is a blank theme meant for skilled users only.
   If you're looking for something fun and easy to use, try the Zen or Fusion variants.
+  You must enable relative assets in config.rb in order to use theme images in the css.
 }

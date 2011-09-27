@@ -16,4 +16,5 @@ help %Q{
 welcome_message %Q{
   Hello and welcome to Fusion Compass Plugin.
   Fusion is a powerful base theme built on top of the NineSixty grid framework meant to be used with the Skinr module.
+  You must enable relative assets in config.rb in order to use theme images in the css.
 }

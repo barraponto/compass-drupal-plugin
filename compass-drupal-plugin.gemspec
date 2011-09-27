@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.2.3.beta"
-  s.date = "2011-03-28"
+  s.version = "0.2.4.beta"
+  s.date = "2011-09-27"
 
   # Gem Details
   s.name = %q{compass-drupal-plugin}
   s.authors = ["Capi Etheriel"]
-  s.summary = %q{a compass extension providing drupal integration}
-  s.description = %q{a compass extension providing drupal integration, supporting the popular base theme Zen}
+  s.summary = %q{a Compass extension providing Drupal integration}
+  s.description = %q{a Compass extension providing Drupal integration, supporting popular base themes}
   s.email = %q{barraponto@gmail.com}
   s.homepage = %q{http://bitbucket.org/barraponto/drupal-compass-extension/}
 
