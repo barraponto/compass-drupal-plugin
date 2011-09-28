@@ -23,7 +23,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #header-region { @extend .-<%= project_name %>-header-region; }
 
-#container { @extend .-<%= project_name %>-main; }
+#container { @extend .-<%= project_name %>-container; }
 
 #navigation {
   @extend .-<%= project_name %>-navigation; }
