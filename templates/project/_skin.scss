@@ -176,12 +176,25 @@ $<%= project_name %>-base-font-size: 14px;
 .-<%= project_name %>-footer-message { }
 
 // Block Components
-// Make copies of these components for a diversity of block styles
+// These are defaults for every block in your theme
 .-<%= project_name %>-block { }
 
 .-<%= project_name %>-block-title { }
 
 .-<%= project_name %>-block-content { @extend .-<%= project_name %>-block-content; }
+
+// Make copies of the components for a diversity of block styles, like these
+.-<%= project_name %>-content-block { }
+
+.-<%= project_name %>-content-block-title { }
+
+.-<%= project_name %>-content-block-content { @extend .-<%= project_name %>-block-content; }
+
+.-<%= project_name %>-sidebar-block { }
+
+.-<%= project_name %>-sidebar-block-title { }
+
+.-<%= project_name %>-sidebar-block-content { @extend .-<%= project_name %>-block-content; }
 
 // Node Components
 // Make copies of these components for a diversity of node styles

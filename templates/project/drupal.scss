@@ -72,16 +72,22 @@ body { @extend .-<%= project_name %>-body; }
 
 /* block.tpl.php */
 .block {
-  // these are Kit regions blocks, set as examples for any region specific block styling
-  #content-content & { @extend .-<%= project_name %>-content-block; }
-  #sidebar-left & { @extend .-<%= project_name %>-sidebar-block; }
-  #sidebar-right & { @extend .-<%= project_name %>-sidebar-block; }
-
-  // these selectors will affect all of your blocks, beware!
-  // try scoping the selectors by region, as shown above
+  // try scoping the selectors by region
   @extend .-<%= project_name %>-block; 
   > h2 { @extend .-<%= project_name %>-block-title; }
-  .content { @extend .-<%= project_name %>-block-content; } }
+  .content { @extend .-<%= project_name %>-block-content; } 
+
+  // these are Kit regions blocks, set as examples for any region specific block styling
+  #content-content & { 
+    @extend .-<%= project_name %>-content-block; 
+    > h2 { @extend .-<%= project_name %>-content-block-title; }
+    .content { @extend .-<%= project_name %>-content-block-content; } }
+
+  #sidebar-left &,
+  #sidebar-right & { 
+    @extend .-<%= project_name %>-sidebar-block;
+    > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
+    .content { @extend .-<%= project_name %>-sidebar-block-content; } } }
 
 /* node.tpl.php */
 .node {
