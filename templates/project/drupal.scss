@@ -93,7 +93,7 @@ body { @extend .-<%= project_name %>-body; }
 .node {
   @extend .-<%= project_name %>-node;
   .picture { @extend .-<%= project_name %>-node-picture; }
-  h2 { @extend .-<%= project_name %>-node-title; }
+  > h2 { @extend .-<%= project_name %>-node-title; }
   .meta { @extend .-<%= project_name %>-node-meta; }
   .submitted { @extend .-<%= project_name %>-node-submitted; }
   .terms { @extend .-<%= project_name %>-node-terms; }
