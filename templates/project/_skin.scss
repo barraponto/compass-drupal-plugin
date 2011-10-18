@@ -29,11 +29,9 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-li { }
 
-.-<%= project_name %>-ul {
-  li { @extend .-<%= project_name %>-li; } }
+.-<%= project_name %>-ul { }
 
-.-<%= project_name %>-ol {
-  li { @extend .-<%= project_name %>-li; } }
+.-<%= project_name %>-ol { }
 
 .-<%= project_name %>-blockquote { }
 
