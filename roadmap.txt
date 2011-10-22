@@ -8,6 +8,7 @@
 3.0.0: Support Drupal 7 (and upgrade base themes)
 
 === TODO ===
+* Bug: names with _ and other unsupported theme names
 * Properly support RTL styles
 * Organize stylesheets according to tpl files and theme functions
 * Write documentation for developers
