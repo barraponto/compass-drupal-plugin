@@ -15,6 +15,9 @@
 //Use this mixin to set the font sizes
 @include zen-typography;
 
+//Use this mixin to set a fixed footer
+@include zen-footer;
+
 body { @extend .-<%= project_name %>-body; }
 
 #skip-link { @extend .-<%= project_name %>-skip-link; }
