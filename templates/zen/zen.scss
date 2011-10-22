@@ -22,7 +22,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #skip-link { @extend .-<%= project_name %>-skip-link; }
 
-#page-wrapper { @extend .-<%= project_name %>-page; }
+#page { @extend .-<%= project_name %>-page; }
 
 #header { @extend .-<%= project_name %>-header; }
 
@@ -34,7 +34,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
 
-#main-wrapper { @extend .-<%= project_name %>-main; }
+#main { @extend .-<%= project_name %>-main; }
 
 #content {
   @extend .-<%= project_name %>-content;
