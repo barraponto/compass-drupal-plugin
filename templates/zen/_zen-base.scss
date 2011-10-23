@@ -12,3 +12,6 @@ $zen-base-font-size: $<%= project_name %>-base-font-size;
 // Zen requires navbar width and height, following are default ones
 $zen-navigation-width: 100%;
 $zen-navigation-height: 2.3em;
+
+// Zen footer requires a footer height, following is the default height
+$zen-footer-size: 150px;
