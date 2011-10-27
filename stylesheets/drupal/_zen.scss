@@ -345,16 +345,17 @@ $zen-base-font-size: 14px !default;
 
 @mixin zen-footer {
 
-  html, body, #page-wrapper, #page {
+  html, body, #page-wrapper, #page, #main-wrapper {
     height: 100%;
   }
 
   #main-wrapper {
+    height: auto;
     min-height: 100%;
   }
 
   #main {
-    overflow: auto;
+    //overflow: auto;
     padding-bottom: $zen-footer-size; /* the footer size */
   }
 
