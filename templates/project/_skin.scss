@@ -19,7 +19,7 @@ $<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", mon
 $<%= project_name %>-base-font-size: 14px;
 
 //HTML Elements
-.-<%= project_name %>-h2 { } 
+.-<%= project_name %>-h2 { }
 
 .-<%= project_name %>-h3 { }
 
@@ -97,7 +97,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-logo { }
 
-.-<%= project_name %>-name-and-slogan { } // usually a #name-and-slogan wrapper div (YMMV) 
+.-<%= project_name %>-name-and-slogan { } // usually a #name-and-slogan wrapper div (YMMV)
 
 .-<%= project_name %>-site-name {
   a { } }
@@ -138,8 +138,8 @@ $<%= project_name %>-base-font-size: 14px;
   .secondary { }
   // the following styles apply to both tab groups.
   ul { }
-  li { } 
-  a { } 
+  li { }
+  a { }
   a.active { } }
 
 .-<%= project_name %>-messages {
@@ -164,8 +164,8 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-feed-icons {
   .feed-icon { } }
-  
-.-<%= project_name %>-title { } 
+
+.-<%= project_name %>-title { }
 
 .-<%= project_name %>-content-area { }
 
