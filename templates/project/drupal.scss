@@ -61,14 +61,13 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 #sidebar-right { @extend .-<%= project_name %>-sidebar; }
 
 #footer-wrapper {
-  @extend .-<%= project_name %>-footer;
-  
-  //Drupal will print the footer message right away, but theming the
-  //whole region isn't a good idea. Copy page.tpl.php to your theme and
-  //edit it to wrap the $footer_message variable
-  //@extend .-<%= project_name %>-footer-message;
+  @extend .-<%= project_name %>-footer; }
 
- }
+ //Drupal will print the footer message right away, but theming the
+//whole region isn't a good idea. Copy page.tpl.php to your theme and
+//edit it to wrap the $footer_message variable
+//@extend .-<%= project_name %>-footer-message;
+
 
 /* block.tpl.php */
 .block {
