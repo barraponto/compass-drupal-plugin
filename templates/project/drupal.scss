@@ -84,7 +84,18 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   #sidebar-right & { 
     @extend .-<%= project_name %>-sidebar-block;
     > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
-    .content { @extend .-<%= project_name %>-sidebar-block-content; } } }
+    .content { @extend .-<%= project_name %>-sidebar-block-content; } } 
+  
+  #header-region & { 
+    @extend .-<%= project_name %>-header-block; 
+    > h2 { @extend .-<%= project_name %>-header-block-title; }
+    .header { @extend .-<%= project_name %>-header-block-header; } }
+ 
+  #footer & { 
+    @extend .-<%= project_name %>-footer-block; 
+    > h2 { @extend .-<%= project_name %>-footer-block-title; }
+    .footer { @extend .-<%= project_name %>-footer-block-footer; } }
+}
 
 /* node.tpl.php */
 .node {
