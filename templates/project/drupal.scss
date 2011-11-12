@@ -7,7 +7,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #page { @extend .-<%= project_name %>-page; }
 
-#header { 
+#header {
   @extend .-<%= project_name %>-header; }
 
 #logo-title { @extend .-<%= project_name %>-logo-title; }
@@ -30,7 +30,7 @@ body { @extend .-<%= project_name %>-body; }
 ul.primary-links  {
   @extend .-<%= project_name %>-menu;
   > li > .links { @extend .-<%= project_name %>-submenu; } }
-  
+
 ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
 #sidebar-left { @extend .-<%= project_name %>-sidebar; }
@@ -39,20 +39,20 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
 #mission { @extend .-<%= project_name %>-mission; }
 
-#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }  
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
 
 #content {
   @extend .-<%= project_name %>-content;
-  
+
   div.tabs { @extend .-<%= project_name %>-tabs; }
-    
+
   .messages { @extend .-<%= project_name %>-messages; }
 
   .pager { @extend .-<%= project_name %>-pager; }
-    
+
   //drupal prints only a link with an image inside, beware.
   .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
-  
+
 #page-title { @extend .-<%= project_name %>-title; }
 
 #content-content { @extend .-<%= project_name %>-content-area; }
@@ -70,29 +70,29 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 /* block.tpl.php */
 .block {
   // try scoping the selectors by region
-  @extend .-<%= project_name %>-block; 
+  @extend .-<%= project_name %>-block;
   > h2 { @extend .-<%= project_name %>-block-title; }
-  .content { @extend .-<%= project_name %>-block-content; } 
+  .content { @extend .-<%= project_name %>-block-content; }
 
   // these are Kit regions blocks, set as examples for any region specific block styling
-  #content-content & { 
-    @extend .-<%= project_name %>-content-block; 
+  #content-content & {
+    @extend .-<%= project_name %>-content-block;
     > h2 { @extend .-<%= project_name %>-content-block-title; }
     .content { @extend .-<%= project_name %>-content-block-content; } }
 
   #sidebar-left &,
-  #sidebar-right & { 
+  #sidebar-right & {
     @extend .-<%= project_name %>-sidebar-block;
     > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
-    .content { @extend .-<%= project_name %>-sidebar-block-content; } } 
-  
-  #header-region & { 
-    @extend .-<%= project_name %>-header-block; 
+    .content { @extend .-<%= project_name %>-sidebar-block-content; } }
+
+  #header-region & {
+    @extend .-<%= project_name %>-header-block;
     > h2 { @extend .-<%= project_name %>-header-block-title; }
     .header { @extend .-<%= project_name %>-header-block-header; } }
- 
-  #footer & { 
-    @extend .-<%= project_name %>-footer-block; 
+
+  #footer & {
+    @extend .-<%= project_name %>-footer-block;
     > h2 { @extend .-<%= project_name %>-footer-block-title; }
     .footer { @extend .-<%= project_name %>-footer-block-footer; } }
 }
@@ -119,4 +119,4 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   dl { @extend .-<%= project_name %>-profile-category-wrapper; }
   dt { @extend .-<%= project_name %>-profile-field-label; }
   dd { @extend .-<%= project_name %>-profile-field-value; } }
-  
+
