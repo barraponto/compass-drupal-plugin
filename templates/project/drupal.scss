@@ -28,11 +28,11 @@ body { @extend .-<%= project_name %>-body; }
 #navigation {
   @extend .-<%= project_name %>-navigation; }
 
-.primary-links  {
+ul.primary-links  {
   @extend .-<%= project_name %>-menu;
   > li > .links { @extend .-<%= project_name %>-submenu; } }
   
-.secondary-links  { @extend .-<%= project_name %>-menu; }
+ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
 #sidebar-left { @extend .-<%= project_name %>-sidebar; }
 
