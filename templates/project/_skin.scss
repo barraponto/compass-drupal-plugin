@@ -60,7 +60,7 @@ $<%= project_name %>-base-font-size: 14px;
     tbody & { } } }
 
 // Content Classes
-.-<%= project_name %>-node-content {
+.-<%= project_name %>-full-html-content {
   h2 { @extend .-<%= project_name %>-h2; }
   h3 { @extend .-<%= project_name %>-h3; }
   h4 { @extend .-<%= project_name %>-h4; }
@@ -75,7 +75,7 @@ $<%= project_name %>-base-font-size: 14px;
   a { @extend .-<%= project_name %>-a; }
   table { @extend .-<%= project_name %>-table; } }
 
-.-<%= project_name %>-block-content {
+.-<%= project_name %>-restricted-html-content {
   h3 { @extend .-<%= project_name %>-h3; }
   h4 { @extend .-<%= project_name %>-h4; }
   p { @extend .-<%= project_name %>-p; }
@@ -179,20 +179,20 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-block-title { }
 
-.-<%= project_name %>-block-content { @extend .-<%= project_name %>-block-content; }
+.-<%= project_name %>-block-content { @extend .-<%= project_name %>-restricted-html-content; }
 
 // Make copies of the components for a diversity of block styles, like these
 .-<%= project_name %>-content-block { }
 
 .-<%= project_name %>-content-block-title { }
 
-.-<%= project_name %>-content-block-content { @extend .-<%= project_name %>-block-content; }
+.-<%= project_name %>-content-block-content { @extend .-<%= project_name %>-restricted-html-content; }
 
 .-<%= project_name %>-sidebar-block { }
 
 .-<%= project_name %>-sidebar-block-title { }
 
-.-<%= project_name %>-sidebar-block-content { @extend .-<%= project_name %>-block-content; }
+.-<%= project_name %>-sidebar-block-content { @extend .-<%= project_name %>-restricted-html-content; }
 
 // Node Components
 // Make copies of these components for a diversity of node styles
@@ -208,7 +208,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-node-terms { } }
 
-.-<%= project_name %>-node-content { @extend .-<%= project_name %>-node-content; }
+.-<%= project_name %>-node-content { @extend .-<%= project_name %>-full-html-content; }
 
 .-<%= project_name %>-node-links {
   li {
