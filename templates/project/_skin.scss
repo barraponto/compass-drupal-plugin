@@ -186,13 +186,13 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-content-block-title { }
 
-.-<%= project_name %>-content-block-content { @extend .-<%= project_name %>-restricted-html-content; }
+.-<%= project_name %>-content-block-content { }
 
 .-<%= project_name %>-sidebar-block { }
 
 .-<%= project_name %>-sidebar-block-title { }
 
-.-<%= project_name %>-sidebar-block-content { @extend .-<%= project_name %>-restricted-html-content; }
+.-<%= project_name %>-sidebar-block-content { }
 
 // Node Components
 // Make copies of these components for a diversity of node styles
