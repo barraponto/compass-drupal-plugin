@@ -202,11 +202,11 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-node-title { } //meant for node listings, see also .-<%= project_name %>-title
 
-.-<%= project_name %>-node-meta {
+.-<%= project_name %>-node-meta { }
 
 .-<%= project_name %>-node-submitted { }
 
-.-<%= project_name %>-node-terms { } }
+.-<%= project_name %>-node-terms { }
 
 .-<%= project_name %>-node-content { @extend .-<%= project_name %>-full-html-content; }
 
