@@ -61,11 +61,10 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
 #footer-wrapper { @extend .-<%= project_name %>-footer; }
 
- //Drupal will print the footer message right away, but theming the
-//whole region isn't a good idea. Copy page.tpl.php to your theme and
-//edit it to wrap the $footer_message variable
-//@extend .-<%= project_name %>-footer-message;
-
+// Drupal will print the footer message right away, but theming the
+// whole region isn't a good idea. Copy page.tpl.php to your theme and
+// edit it to wrap the $footer_message variable
+// .footer-wrapper { @extend .-<%= project_name %>-footer-message; }
 
 /* block.tpl.php */
 .block {
@@ -109,7 +108,8 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   .links { @extend .-<%= project_name %>-node-links; }
   &.sticky { @extend .-<%= project_name %>-node-sticky; }
   &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-  .preview & { @extend .-<%= project_name %>-node-preview; } }
+  .preview & { @extend .-<%= project_name %>-node-preview; }
+}
 
 /* user-profile.tpl.php */
 .profile {
@@ -118,5 +118,6 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   h3 { @extend .-<%= project_name %>-profile-category-title; }
   dl { @extend .-<%= project_name %>-profile-category-wrapper; }
   dt { @extend .-<%= project_name %>-profile-field-label; }
-  dd { @extend .-<%= project_name %>-profile-field-value; } }
+  dd { @extend .-<%= project_name %>-profile-field-value; }
+}
 
