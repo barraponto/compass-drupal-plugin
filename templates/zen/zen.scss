@@ -18,6 +18,7 @@
 //Use this mixin to set a fixed footer
 @include zen-footer;
 
+/* page.tpl.php */
 body { @extend .-<%= project_name %>-body; }
 
 #skip-link { @extend .-<%= project_name %>-skip-link; }
@@ -28,7 +29,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #logo { @extend .-<%= project_name %>-logo; }
 
-#name-and-slogan { @extend .-<%= project_name %>-name-and-slogan; }
+#name-and-slogan { @extend .-<%= project_name %>-branding; }
 
 #site-name { @extend .-<%= project_name %>-site-name; }
 
@@ -39,16 +40,10 @@ body { @extend .-<%= project_name %>-body; }
 #content {
   @extend .-<%= project_name %>-content;
   h1.title { @extend .-<%= project_name %>-title; }
-  .messages {
-    &.status { @extend .-<%= project_name %>-messages-status; }
-    &.warning { @extend .-<%= project_name %>-messages-warning; }
-    &.error { @extend .-<%= project_name %>-messages-error; }
-    &.help { @extend .-<%= project_name %>-messages-help; } }
-  .tabs {
-    @extend .-<%= project_name %>-tabs;
-    .primary { @extend .-<%= project_name %>-primary-tabs; }
-    .secondary { @extend .-<%= project_name %>-secondary-tabs; } }
-  .feed-icons { @extend .-<%= project_name %>-feed-icons; } }
+  .messages { @extend .-<%= project_name %>-messages; }
+  .tabs { @extend .-<%= project_name %>-tabs; }
+  .feed-icons { @extend .-<%= project_name %>-feed-icons; }
+}
 
 #mission { @extend .-<%= project_name %>-mission; }
 
@@ -56,37 +51,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #content-area {
   @extend .-<%= project_name %>-content-area;
-
-  .node {
-    @extend .-<%= project_name %>-node;
-    .picture { @extend .-<%= project_name %>-node-picture; }
-    .title { @extend .-<%= project_name %>-node-title; }
-    .meta { @extend .-<%= project_name %>-node-meta; }
-    .submitted { @extend .-<%= project_name %>-node-submitted; }
-    .terms { @extend .-<%= project_name %>-node-terms; }
-    .content { @extend .-<%= project_name %>-node-content; }
-    .links { @extend .-<%= project_name %>-node-links; }
-    &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
-    &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-    &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
-    .preview & { @extend .-<%= project_name %>-node-preview; } }
-
-  .profile {
-    @extend .-<%= project_name %>-profile;
-    .picture { @extend .-<%= project_name %>-profile-picture; }
-    h3 { @extend .-<%= project_name %>-profile-category-title; }
-    dl { @extend .-<%= project_name %>-profile-category-wrapper; }
-    dt { @extend .-<%= project_name %>-profile-field-label; }
-    dd { @extend .-<%= project_name %>-profile-field-value; } }
-    
-  .pager { 
-    @extend .-<%= project_name %>-pager;
-    .pager-item { @extend .-<%= project_name %>-pager; }
-    .pager-first { @extend .-<%= project_name %>-pager; }
-    .pager-previous { @extend .-<%= project_name %>-pager; }
-    .pager-current { @extend .-<%= project_name %>-pager; }
-    .pager-next { @extend .-<%= project_name %>-pager; }
-    .pager-last { @extend .-<%= project_name %>-pager; } }
+  .pager { @extend .-<%= project_name %>-pager; }
 }
 
 #navigation { @extend .-<%= project_name %>-navigation; }
@@ -101,6 +66,30 @@ body { @extend .-<%= project_name %>-body; }
 
 #footer-message { @extend .-<%= project_name %>-footer-message; }
 
+/* node.tpl.php */
+.node {
+  @extend .-<%= project_name %>-node;
+  .picture { @extend .-<%= project_name %>-node-picture; }
+  .title { @extend .-<%= project_name %>-node-title; }
+  .meta { @extend .-<%= project_name %>-node-meta; }
+  .submitted { @extend .-<%= project_name %>-node-submitted; }
+  .terms { @extend .-<%= project_name %>-node-terms; }
+  .content { @extend .-<%= project_name %>-node-content; }
+  .links { @extend .-<%= project_name %>-node-links; }
+  &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
+  &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
+  &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
+  .preview & { @extend .-<%= project_name %>-node-preview; } }
+
+/* user-profile.tpl.php */
+.profile {
+  @extend .-<%= project_name %>-profile;
+  .picture { @extend .-<%= project_name %>-profile-picture; }
+  h3 { @extend .-<%= project_name %>-profile-category-title; }
+  dl { @extend .-<%= project_name %>-profile-category-wrapper; }
+  dt { @extend .-<%= project_name %>-profile-field-label; }
+  dd { @extend .-<%= project_name %>-profile-field-value; } }
+    
 // I have grouped the regions since it looks better like this
 
 .region-sidebar-first {
