@@ -93,11 +93,9 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-header { }
 
-.-<%= project_name %>-logo-title { } // usually a #logo-title wrapper div (YMMV)
-
 .-<%= project_name %>-logo { }
 
-.-<%= project_name %>-name-and-slogan { } // usually a #name-and-slogan wrapper div (YMMV)
+.-<%= project_name %>-branding { } // usually a #name-and-slogan wrapper div (YMMV)
 
 .-<%= project_name %>-site-name {
   a { } }

@@ -7,14 +7,11 @@ body { @extend .-<%= project_name %>-body; }
 
 #page { @extend .-<%= project_name %>-page; }
 
-#header {
-  @extend .-<%= project_name %>-header; }
-
-#logo-title { @extend .-<%= project_name %>-logo-title; }
+#header { @extend .-<%= project_name %>-header; }
 
 #logo { @extend .-<%= project_name %>-logo; }
 
-#name-and-slogan { @extend .-<%= project_name %>-name-and-slogan; }
+#name-and-slogan { @extend .-<%= project_name %>-branding; }
 
 #site-name { @extend .-<%= project_name %>-site-name; }
 
@@ -24,8 +21,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #container { @extend .-<%= project_name %>-container; }
 
-#navigation {
-  @extend .-<%= project_name %>-navigation; }
+#navigation { @extend .-<%= project_name %>-navigation; }
 
 ul.primary-links  {
   @extend .-<%= project_name %>-menu;
