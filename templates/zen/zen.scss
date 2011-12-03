@@ -31,6 +31,8 @@ body { @extend .-<%= project_name %>-body; }
 
 #name-and-slogan { @extend .-<%= project_name %>-branding; }
 
+.region-header { }
+
 #site-name { @extend .-<%= project_name %>-site-name; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
@@ -42,8 +44,11 @@ body { @extend .-<%= project_name %>-body; }
   h1.title { @extend .-<%= project_name %>-title; }
   .messages { @extend .-<%= project_name %>-messages; }
   .tabs { @extend .-<%= project_name %>-tabs; }
-  .feed-icons { @extend .-<%= project_name %>-feed-icons; }
-}
+  .feed-icons { @extend .-<%= project_name %>-feed-icons; } }
+
+.region-highlight { }
+
+.region-content-top { } 
 
 #mission { @extend .-<%= project_name %>-mission; }
 
@@ -51,10 +56,17 @@ body { @extend .-<%= project_name %>-body; }
 
 #content-area {
   @extend .-<%= project_name %>-content-area;
-  .pager { @extend .-<%= project_name %>-pager; }
-}
+  .pager { @extend .-<%= project_name %>-pager; } }
+
+.region-content-bottom { }
 
 #navigation { @extend .-<%= project_name %>-navigation; }
+
+.region-navigation { }
+
+.region-sidebar-first,
+.region-sidebar-second {
+  @extend .-<%= project_name %>-sidebar; }
 
 #main-menu {
   @extend .-<%= project_name %>-menu;
@@ -65,6 +77,42 @@ body { @extend .-<%= project_name %>-body; }
 #secondary-menu { @extend .-<%= project_name %>-menu; }
 
 #footer-message { @extend .-<%= project_name %>-footer-message; }
+
+.region-footer { }
+
+.region-page-closure { }
+
+
+/* block.tpl.php */
+.block {
+  // try scoping the selectors by region
+  @extend .-<%= project_name %>-block;
+  > h2 { @extend .-<%= project_name %>-block-title; }
+  .content { @extend .-<%= project_name %>-block-content; }
+
+  // these are Kit regions blocks, set as examples for any region specific block styling
+  #content-content & {
+    @extend .-<%= project_name %>-content-block;
+    > h2 { @extend .-<%= project_name %>-content-block-title; }
+    .content { @extend .-<%= project_name %>-content-block-content; } }
+
+  .region-sidebar-first &,
+  .region-sidebar-second & {
+    @extend .-<%= project_name %>-sidebar-block;
+    > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
+    .content { @extend .-<%= project_name %>-sidebar-block-content; } }
+
+  .region-header & {
+    @extend .-<%= project_name %>-header-block;
+    > h2 { @extend .-<%= project_name %>-header-block-title; }
+    .content { @extend .-<%= project_name %>-header-block-content; } }
+
+  .region-footer & {
+    @extend .-<%= project_name %>-footer-block;
+    > h2 { @extend .-<%= project_name %>-footer-block-title; }
+    .content { @extend .-<%= project_name %>-footer-block-content; } }
+}
+
 
 /* node.tpl.php */
 .node {
@@ -81,6 +129,7 @@ body { @extend .-<%= project_name %>-body; }
   &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
   .preview & { @extend .-<%= project_name %>-node-preview; } }
 
+
 /* user-profile.tpl.php */
 .profile {
   @extend .-<%= project_name %>-profile;
@@ -88,65 +137,6 @@ body { @extend .-<%= project_name %>-body; }
   h3 { @extend .-<%= project_name %>-profile-category-title; }
   dl { @extend .-<%= project_name %>-profile-category-wrapper; }
   dt { @extend .-<%= project_name %>-profile-field-label; }
-  dd { @extend .-<%= project_name %>-profile-field-value; } }
-    
-// I have grouped the regions since it looks better like this
+  dd { @extend .-<%= project_name %>-profile-field-value; } 
+}
 
-.region-sidebar-first {
-  @extend .-<%= project_name %>-sidebar;
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; }
-    &.odd { }
-    &.even { } } }
-
-.region-sidebar-second {
-  @extend .-<%= project_name %>-sidebar;
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; }
-    &.odd { }
-    &.even { } } }
-
-.region-navigation {
-  .block { @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-highlight {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-content-top {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-content-bottom {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-header {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-footer {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
-
-.region-page-closure {
-  .block {
-    @extend .-<%= project_name %>-block;
-    .title { @extend .-<%= project_name %>-block-title; }
-    .content { @extend .-<%= project_name %>-block-content; } } }
