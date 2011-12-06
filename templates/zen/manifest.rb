@@ -1,11 +1,11 @@
 # Make sure you list all the project template files here in the manifest.
-stylesheet 'zen.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+stylesheet 'zen.scss', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true
 
-stylesheet 'zen-rtl.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}-rtl.scss", :erb => true
+stylesheet 'zen-rtl.scss', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}-rtl.scss", :erb => true
 
-stylesheet '_zen-base.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-base.scss", :erb => true
+stylesheet '_zen-base.scss', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true
 
-stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
+stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true
 
 description "Zen Layout for Drupal Zen Theme"
 

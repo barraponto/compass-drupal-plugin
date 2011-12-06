@@ -1,6 +1,6 @@
-<% project_name = File.basename(config.project_path) %>
-@import "<%= File.basename(config.project_path) %>-skin";
-@import "_<%= File.basename(config.project_path) %>-base";
+<% project_name = File.basename(Compass.configuration.project_path) %>
+@import "<%= File.basename(Compass.configuration.project_path) %>-skin";
+@import "_<%= File.basename(Compass.configuration.project_path) %>-base";
 
 body { @extend .-<%= project_name %>-body; }
 

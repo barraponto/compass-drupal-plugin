@@ -1,11 +1,11 @@
 # Make sure you list all the project template files here in the manifest.
-file 'drupal.info', :to => "#{options[:project_name] || File.basename(config.project_path)}.info", :erb => true
+file 'drupal.info', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
 
-stylesheet 'drupal.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+stylesheet 'drupal.scss', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true
 
-stylesheet '_drupal-base.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-base.scss", :erb => true
+stylesheet '_drupal-base.scss', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true
 
-stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
+stylesheet '_skin.scss', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true
 
 description "Drupal layout and skin stylesheets for object-oriented CSS development"
 

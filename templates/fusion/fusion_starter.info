@@ -1,5 +1,5 @@
 ; $Id: fusion_starter.info,v 1.1.2.5 2010/02/14 06:44:16 sociotech Exp $
-<% project_name = File.basename(config.project_path) %>
+<% project_name = File.basename(Compass.configuration.project_path) %>
 name = <%= project_name %>
 description = Fusion Starter sub-theme. Requires <a href="http://drupal.org/project/fusion">Fusion Core</a> and the <a href="http://drupal.org/project/skinr">Skinr</a> module to enable easy point-and-click theming.
 base theme = fusion_core

@@ -1,7 +1,7 @@
-<% project_name = File.basename(config.project_path) %>
+<% project_name = File.basename(Compass.configuration.project_path) %>
 @import "drupal/zen";
-@import "<%= File.basename(config.project_path) %>-skin";
-@import "_<%= File.basename(config.project_path) %>-base";
+@import "<%= File.basename(Compass.configuration.project_path) %>-skin";
+@import "_<%= File.basename(Compass.configuration.project_path) %>-base";
 
 // Use this mixin to generate the Zen layout
 @include zen-layout;

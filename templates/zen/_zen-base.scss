@@ -1,4 +1,4 @@
-<% project_name = File.basename(config.project_path) %>
+<% project_name = File.basename(Compass.configuration.project_path) %>
 
 // Map the zen variables to the skin variables
 $zen-width: $<%= project_name %>-width;
