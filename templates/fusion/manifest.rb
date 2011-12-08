@@ -1,11 +1,11 @@
 # Make sure you list all the project template files here in the manifest.
-file 'fusion_starter.info', :to => "#{options[:project_name] || File.basename(config.project_path)}.info", :erb => true
+file 'fusion_starter.info', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
 
-stylesheet 'fusion.scss', :to => "#{options[:project_name] || File.basename(config.project_path)}.scss", :erb => true
+stylesheet 'fusion.scss', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true
 
-stylesheet '_fusion-base.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-base.scss", :erb => true
+stylesheet '_fusion-base.scss', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true
 
-stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(config.project_path)}-skin.scss", :erb => true
+stylesheet '../project/_skin.scss', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true
 
 description "Fusion layout and skin stylesheets for object-oriented CSS development"
 
