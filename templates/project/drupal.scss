@@ -2,7 +2,7 @@
 @import "<%= File.basename(Compass.configuration.project_path) %>-skin";
 @import "_<%= File.basename(Compass.configuration.project_path) %>-base";
 
-/* page.tpl.php */
+// page.tpl.php
 body { @extend .-<%= project_name %>-body; }
 
 #page { @extend .-<%= project_name %>-page; }
@@ -62,7 +62,7 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 // edit it to wrap the $footer_message variable
 // .footer-wrapper { @extend .-<%= project_name %>-footer-message; }
 
-/* block.tpl.php */
+// block.tpl.php
 .block {
   // try scoping the selectors by region
   @extend .-<%= project_name %>-block;
@@ -92,7 +92,7 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
     .content { @extend .-<%= project_name %>-footer-block-content; } }
 }
 
-/* node.tpl.php */
+// node.tpl.php
 .node {
   @extend .-<%= project_name %>-node;
   .picture { @extend .-<%= project_name %>-node-picture; }
@@ -107,7 +107,7 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   .preview & { @extend .-<%= project_name %>-node-preview; }
 }
 
-/* user-profile.tpl.php */
+// user-profile.tpl.php
 .profile {
   @extend .-<%= project_name %>-profile;
   .picture { @extend .-<%= project_name %>-profile-picture; }

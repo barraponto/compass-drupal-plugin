@@ -18,7 +18,7 @@ $<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", mon
 // These variables control the font sizes as defined in html-reset.css
 $<%= project_name %>-base-font-size: 14px;
 
-//HTML Elements
+/* <%= project_name %> HTML elements styles */
 .-<%= project_name %>-h2 { }
 
 .-<%= project_name %>-h3 { }
@@ -59,7 +59,7 @@ $<%= project_name %>-base-font-size: 14px;
     tfoot & { }
     tbody & { } } }
 
-// Content Classes
+/* <%= project_name %> filtered content styles */
 .-<%= project_name %>-full-html-content {
   h2 { @extend .-<%= project_name %>-h2; }
   h3 { @extend .-<%= project_name %>-h3; }
@@ -84,7 +84,7 @@ $<%= project_name %>-base-font-size: 14px;
   li { @extend .-<%= project_name %>-li; }
   a { @extend .-<%= project_name %>-a; } }
 
-// Page Components
+/* <%= project_name %> page.tpl.php styles */
 .-<%= project_name %>-body { }
 
 .-<%= project_name %>-skip-link { }
@@ -171,7 +171,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-footer-message { }
 
-// Block Components
+/* <%= project_name %> block.tpl.php styles */
 // These are defaults for every block in your theme
 .-<%= project_name %>-block { }
 
@@ -192,7 +192,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-sidebar-block-content { }
 
-// Node Components
+/* <%= project_name %> node.tpl.php styles */
 // Make copies of these components for a diversity of node styles
 .-<%= project_name %>-node { }
 
@@ -222,7 +222,7 @@ $<%= project_name %>-base-font-size: 14px;
 
 .-<%= project_name %>-node-preview { }
 
-// Profile Components
+/* <%= project_name %> profile.tpl.php styles */
 .-<%= project_name %>-profile { }
 
 .-<%= project_name %>-profile-picture { }
