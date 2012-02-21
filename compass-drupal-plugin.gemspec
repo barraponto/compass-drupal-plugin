@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.2.4.beta"
+  s.version = "0.2.5.alpha"
   s.date = "2011-09-27"
 
   # Gem Details
@@ -17,18 +17,18 @@ Gem::Specification.new do |s|
     "compass-drupal-plugin.gemspec",
     "lib/drupal.rb",
     "stylesheets/drupal/_zen.scss",
-    "templates/fusion/fusion_starter.info",
-    "templates/fusion/fusion.scss",
-    "templates/fusion/_fusion-base.scss",
+    "templates/fusion/fusion_starter.info.erb",
+    "templates/fusion/fusion.scss.erb",
+    "templates/fusion/_fusion-base.scss.erb",
     "templates/fusion/manifest.rb",
-    "templates/project/drupal.info",
-    "templates/project/drupal.scss",
-    "templates/project/_drupal-base.scss",
-    "templates/project/_skin.scss",
+    "templates/project/drupal.info.erb",
+    "templates/project/drupal.scss.erb",
+    "templates/project/_drupal-base.scss.erb",
+    "templates/project/_skin.scss.erb",
     "templates/project/manifest.rb",
-    "templates/zen/zen-rtl.scss",
-    "templates/zen/zen.scss",
-    "templates/zen/_zen-base.scss",
+    "templates/zen/zen-rtl.scss.erb",
+    "templates/zen/zen.scss.erb",
+    "templates/zen/_zen-base.scss.erb",
     "templates/zen/manifest.rb"
   ]
 
