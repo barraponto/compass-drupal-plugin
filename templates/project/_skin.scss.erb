@@ -49,15 +49,16 @@ $<%= project_name %>-base-font-size: 14px;
 .-<%= project_name %>-code { }
 
 .-<%= project_name %>-table {
-  caption { }
-  tr {
-    &.odd { }
-    &.even { }
-    th { }
-    td { }
-    thead & { }
-    tfoot & { }
-    tbody & { } } }
+  caption { } }
+
+.-<%= project_name %>-table-row {
+  &.odd { }
+  &.even { }
+  thead & { }
+  tbody & { }
+  tfoot & { }
+  th { }
+  td { } }
 
 /* <%= project_name %> filtered content styles */
 .-<%= project_name %>-full-html-content {
@@ -73,7 +74,8 @@ $<%= project_name %>-base-font-size: 14px;
   blockquote { @extend .-<%= project_name %>-blockquote; }
   cite { @extend .-<%= project_name %>-cite; }
   a { @extend .-<%= project_name %>-a; }
-  table { @extend .-<%= project_name %>-table; } }
+  table { @extend .-<%= project_name %>-table; } 
+  tr { @extend .-<%= project_name %>-table-row; } }
 
 .-<%= project_name %>-restricted-html-content {
   h3 { @extend .-<%= project_name %>-h3; }
