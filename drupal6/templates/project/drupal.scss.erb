@@ -7,7 +7,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #page { @extend .-<%= project_name %>-page; }
 
-#header { @extend .-<%= project_name %>-header; }
+#header { @extend .-<%= project_name %>-header-section; }
 
 #logo { @extend .-<%= project_name %>-logo; }
 
@@ -19,7 +19,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #header-region { @extend .-<%= project_name %>-header-region; }
 
-#container { @extend .-<%= project_name %>-container; }
+#container { @extend .-<%= project_name %>-main-section; }
 
 #navigation { @extend .-<%= project_name %>-navigation; }
 
@@ -29,7 +29,7 @@ ul.primary-links  {
 
 ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
-#sidebar-left { @extend .-<%= project_name %>-sidebar; }
+#sidebar-left { @extend .-<%= project_name %>-sidebar-region; }
 
 #main { @extend .-<%= project_name %>-main; }
 
@@ -46,21 +46,26 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
   .pager { @extend .-<%= project_name %>-pager; }
 
-  //drupal prints only a link with an image inside, beware.
+  // Core prints only a link with an image inside, beware.
   .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
 
 #page-title { @extend .-<%= project_name %>-title; }
 
 #content-content { @extend .-<%= project_name %>-content-area; }
 
-#sidebar-right { @extend .-<%= project_name %>-sidebar; }
+#sidebar-right { @extend .-<%= project_name %>-sidebarregion; }
 
-#footer-wrapper { @extend .-<%= project_name %>-footer; }
+#footer-wrapper { @extend .-<%= project_name %>-footer-section; }
 
-// Drupal will print the footer message right away, but theming the
-// whole region isn't a good idea. Copy page.tpl.php to your theme and
+// Core will print the footer message right away, but theming the
+// whole section isn't a good idea. Copy page.tpl.php to your theme and
 // edit it to wrap the $footer_message variable
-// .footer-wrapper { @extend .-<%= project_name %>-footer-message; }
+// .footer-message { @extend .-<%= project_name %>-footer-message; }
+
+// Core will print the footer blocks right away, but theming the
+// whole section might not be enough. Copy page.tpl.php to your theme and
+// edit it to wrap the $footer variable
+// #footer { @extend .<%= project_name %>-footer-region; }
 
 // block.tpl.php
 .block {
