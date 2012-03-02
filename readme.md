@@ -10,10 +10,10 @@ Install
 
     gem install compass-drupal-plugin
 
-Create a Fusion based sub-theme
+Create a core based sub-theme
 ===============================
 
-    compass create <THEME NAME> -r drupal --using drupal/fusion
+    compass create <THEME NAME> -r drupal --using drupal6
 
 Layout and Skins
 ================
