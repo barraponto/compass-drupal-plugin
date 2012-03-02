@@ -1,6 +1,6 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
-@import "<%= File.basename(Compass.configuration.project_path) %>-skin";
-@import "_<%= File.basename(Compass.configuration.project_path) %>-base";
+@import "<%= project_name %>-skin";
+@import "_<%= project_name %>-base";
 
 // page.tpl.php
 body { @extend .-<%= project_name %>-body; }

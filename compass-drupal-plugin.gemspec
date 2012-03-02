@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.2.5.alpha"
+  s.version = "0.3.0.alpha"
   s.date = "2011-09-27"
 
   # Gem Details
@@ -9,27 +9,26 @@ Gem::Specification.new do |s|
   s.summary = %q{a Compass extension providing Drupal integration}
   s.description = %q{a Compass extension providing Drupal integration, supporting popular base themes}
   s.email = %q{barraponto@gmail.com}
-  s.homepage = %q{http://bitbucket.org/barraponto/drupal-compass-extension/}
+  s.homepage = %q{http://github.com/barraponto/drupal-compass-plugin/}
 
   # Gem Files
-  # s.files = %w(README.mkdn)
   s.files = [
     "compass-drupal-plugin.gemspec",
     "lib/drupal.rb",
-    "stylesheets/drupal/_zen.scss",
-    "templates/fusion/fusion_starter.info.erb",
-    "templates/fusion/fusion.scss.erb",
-    "templates/fusion/_fusion-base.scss.erb",
-    "templates/fusion/manifest.rb",
-    "templates/project/drupal.info.erb",
-    "templates/project/drupal.scss.erb",
-    "templates/project/_drupal-base.scss.erb",
-    "templates/project/_skin.scss.erb",
-    "templates/project/manifest.rb",
-    "templates/zen/zen-rtl.scss.erb",
-    "templates/zen/zen.scss.erb",
-    "templates/zen/_zen-base.scss.erb",
-    "templates/zen/manifest.rb"
+    "drupal6/stylesheets/drupal/_zen.scss",
+    "drupal6/templates/fusion/fusion_starter.info.erb",
+    "drupal6/templates/fusion/fusion.scss.erb",
+    "drupal6/templates/fusion/_fusion-base.scss.erb",
+    "drupal6/templates/fusion/manifest.rb",
+    "drupal6/templates/project/drupal.info.erb",
+    "drupal6/templates/project/drupal.scss.erb",
+    "drupal6/templates/project/_drupal-base.scss.erb",
+    "drupal6/templates/project/_skin.scss.erb",
+    "drupal6/templates/project/manifest.rb",
+    "drupal6/templates/zen/zen-rtl.scss.erb",
+    "drupal6/templates/zen/zen.scss.erb",
+    "drupal6/templates/zen/_zen-base.scss.erb",
+    "drupal6/templates/zen/manifest.rb"
   ]
 
   # Gem Bookkeeping
