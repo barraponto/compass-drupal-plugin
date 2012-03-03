@@ -125,9 +125,8 @@ $<%= project_name %>-base-font-size: 14px;
     &.last { }
     &.expanded { } } }
 
-.-<%= project_name %>-sidebar-region { } // by default both sidebars inherit these styles
-
-.-<%= project_name %>-main { }
+.-<%= project_name %>-sidebar-first-region,
+.-<%= project_name %>-sidebar-second-region { }
 
 .-<%= project_name %>-mission { }
 
@@ -188,15 +187,11 @@ $<%= project_name %>-base-font-size: 14px;
 
 // Make copies of the components for a diversity of block styles, like these
 .-<%= project_name %>-content-block { }
-
 .-<%= project_name %>-content-block-title { }
-
 .-<%= project_name %>-content-block-content { }
 
 .-<%= project_name %>-sidebar-block { }
-
 .-<%= project_name %>-sidebar-block-title { }
-
 .-<%= project_name %>-sidebar-block-content { }
 
 /* <%= project_name %> node.tpl.php styles */

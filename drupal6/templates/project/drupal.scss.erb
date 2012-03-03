@@ -29,9 +29,7 @@ ul.primary-links  {
 
 ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
-#sidebar-left { @extend .-<%= project_name %>-sidebar-region; }
-
-#main { @extend .-<%= project_name %>-main; }
+#sidebar-left { @extend .-<%= project_name %>-sidebar-first-region; }
 
 #mission { @extend .-<%= project_name %>-mission; }
 
@@ -51,9 +49,9 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
 
 #page-title { @extend .-<%= project_name %>-title; }
 
-#content-content { @extend .-<%= project_name %>-content-area; }
+#content-content { @extend .-<%= project_name %>-content-region; }
 
-#sidebar-right { @extend .-<%= project_name %>-sidebarregion; }
+#sidebar-right { @extend .-<%= project_name %>-sidebar-second-region; }
 
 #footer-wrapper { @extend .-<%= project_name %>-footer-section; }
 
@@ -74,24 +72,23 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   > h2 { @extend .-<%= project_name %>-block-title; }
   .content { @extend .-<%= project_name %>-block-content; }
 
-  // these are Kit regions blocks, set as examples for any region specific block styling
+  #header-region & {
+    @extend .-<%= project_name %>-header-block;
+    > h2 { @extend .-<%= project_name %>-header-block-title; }
+    .content { @extend .-<%= project_name %>-header-block-content; } }
+
   #content-content & {
     @extend .-<%= project_name %>-content-block;
     > h2 { @extend .-<%= project_name %>-content-block-title; }
     .content { @extend .-<%= project_name %>-content-block-content; } }
 
   #sidebar-left &,
-  #sidebar-right & {
+  #sidebar-right & { // this defaults to theming both regions blocks the same
     @extend .-<%= project_name %>-sidebar-block;
     > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
     .content { @extend .-<%= project_name %>-sidebar-block-content; } }
 
-  #header-region & {
-    @extend .-<%= project_name %>-header-block;
-    > h2 { @extend .-<%= project_name %>-header-block-title; }
-    .content { @extend .-<%= project_name %>-header-block-content; } }
-
-  #footer & {
+  #footer & { // this works regardless of page.tpl.php patch suggested above
     @extend .-<%= project_name %>-footer-block;
     > h2 { @extend .-<%= project_name %>-footer-block-title; }
     .content { @extend .-<%= project_name %>-footer-block-content; } }
