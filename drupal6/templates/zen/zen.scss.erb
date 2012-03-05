@@ -21,7 +21,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #page { @extend .-<%= project_name %>-page; }
 
-#header { @extend .-<%= project_name %>-header; }
+#header { @extend .-<%= project_name %>-header-section; }
 
 #logo { @extend .-<%= project_name %>-logo; }
 
@@ -33,7 +33,7 @@ body { @extend .-<%= project_name %>-body; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
 
-#main { @extend .-<%= project_name %>-main; }
+#main { @extend .-<%= project_name %>-main-section; }
 
 #content {
   @extend .-<%= project_name %>-content;
@@ -51,7 +51,10 @@ body { @extend .-<%= project_name %>-body; }
 #breadcrumb { @extend .-<%= project_name %>-breadcrumb; }  
 
 #content-area {
-  @extend .-<%= project_name %>-content-area;
+  // Zen does not support the content region by default.
+  // However, since it usually wraps the actual content
+  // it should extend the skin content-region properties
+  @extend .-<%= project_name %>-content-region;
   .pager { @extend .-<%= project_name %>-pager; } }
 
 .region-content-bottom { }
@@ -65,12 +68,14 @@ body { @extend .-<%= project_name %>-body; }
   @extend .-<%= project_name %>-sidebar; }
 
 #main-menu {
-  @extend .-<%= project_name %>-menu;
-  > li.expanded > ul.menu { @extend .-<%= project_name %>-submenu; } }
-  
+  @extend .-<%= project_name %>-main-menu;
+  > li.expanded > ul.menu { @extend .-<%= project_name %>-main-submenu; } }
+
 #footer { @extend .-<%= project_name %>-footer; }
 
-#secondary-menu { @extend .-<%= project_name %>-menu; }
+#secondary-menu {
+  @extend .-<%= project_name %>-secondary-menu;
+  > li.expanded > ul.menu { @extend .-<%= project_name %>-secondary-submenu; } }
 
 #footer-message { @extend .-<%= project_name %>-footer-message; }
 
