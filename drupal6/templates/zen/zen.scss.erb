@@ -35,10 +35,15 @@ body { @extend .-<%= project_name %>-body; }
 
 #content {
   @extend .-<%= project_name %>-content;
+
   h1.title { @extend .-<%= project_name %>-title; }
+
   .messages { @extend .-<%= project_name %>-messages; }
+
   .tabs { @extend .-<%= project_name %>-tabs; }
-  .help { @extend .-<%= project_name %>-tabs; }
+
+  .help { @extend .-<%= project_name %>-help; }
+
   .feed-icons { @extend .-<%= project_name %>-feed-icons; } }
 
 #mission { @extend .-<%= project_name %>-mission; }
@@ -97,7 +102,6 @@ body { @extend .-<%= project_name %>-body; }
   .links { @extend .-<%= project_name %>-node-links; }
   &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
   &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-  &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
   .preview & { @extend .-<%= project_name %>-node-preview; } }
 
 // user-profile.tpl.php
