@@ -24,10 +24,12 @@ body { @extend .-<%= project_name %>-body; }
 #navigation { @extend .-<%= project_name %>-navigation; }
 
 ul.primary-links  {
-  @extend .-<%= project_name %>-menu;
-  > li > .links { @extend .-<%= project_name %>-submenu; } }
+  @extend .-<%= project_name %>-main-menu;
+  > li > .links { @extend .-<%= project_name %>-main-submenu; } }
 
-ul.secondary-links  { @extend .-<%= project_name %>-menu; }
+  ul.secondary-links  { 
+  @extend .-<%= project_name %>-secondary-menu;
+  > li > .links { @extend .-<%= project_name %>-secondary-submenu; } }
 
 #sidebar-left { @extend .-<%= project_name %>-sidebar-first-region; }
 
@@ -84,17 +86,20 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
     > h2 { @extend .-<%= project_name %>-content-block-title; }
     .content { @extend .-<%= project_name %>-content-block-content; } }
 
-  #sidebar-left &,
-  #sidebar-right & { // this defaults to theming both regions blocks the same
-    @extend .-<%= project_name %>-sidebar-block;
-    > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
-    .content { @extend .-<%= project_name %>-sidebar-block-content; } }
+  #sidebar-left & {
+    @extend .-<%= project_name %>-sidebar-first-block;
+    > h2 { @extend .-<%= project_name %>-sidebar-first-block-title; }
+    .content { @extend .-<%= project_name %>-sidebar-first-block-content; } }
+
+  #sidebar-right & {
+    @extend .-<%= project_name %>-sidebar-second-block;
+    > h2 { @extend .-<%= project_name %>-sidebar-second-block-title; }
+    .content { @extend .-<%= project_name %>-sidebar-second-block-content; } }
 
   #footer & { // this works regardless of page.tpl.php patch suggested above
     @extend .-<%= project_name %>-footer-block;
     > h2 { @extend .-<%= project_name %>-footer-block-title; }
-    .content { @extend .-<%= project_name %>-footer-block-content; } }
-}
+    .content { @extend .-<%= project_name %>-footer-block-content; } } }
 
 // node.tpl.php
 .node {
@@ -108,8 +113,7 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   .links { @extend .-<%= project_name %>-node-links; }
   &.sticky { @extend .-<%= project_name %>-node-sticky; }
   &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-  .preview & { @extend .-<%= project_name %>-node-preview; }
-}
+  .preview & { @extend .-<%= project_name %>-node-preview; } }
 
 // user-profile.tpl.php
 .profile {
@@ -118,6 +122,5 @@ ul.secondary-links  { @extend .-<%= project_name %>-menu; }
   h3 { @extend .-<%= project_name %>-profile-category-title; }
   dl { @extend .-<%= project_name %>-profile-category-wrapper; }
   dt { @extend .-<%= project_name %>-profile-field-label; }
-  dd { @extend .-<%= project_name %>-profile-field-value; }
-}
+  dd { @extend .-<%= project_name %>-profile-field-value; } }
 
