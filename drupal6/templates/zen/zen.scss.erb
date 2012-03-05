@@ -3,22 +3,18 @@
 @import "<%= project_name %>-skin";
 @import "_<%= project_name %>-base";
 
-// Use this mixin to generate the Zen layout
+// Generate the Zen layout
 @include zen-layout;
-
-// Use this mixin to properly position the #navigation div
+// Properly position the navigation wrapper
 @include zen-navigation;
-
-//Use this mixin to set the typefaces
+// Set the typefaces
 @include zen-typefaces;
-
-//Use this mixin to set the font sizes
+// Set the font sizes
 @include zen-typography;
+// Set a fixed footer (experimental)
+// @include zen-footer;
 
-//Use this mixin to set a fixed footer
-@include zen-footer;
-
-/* page.tpl.php */
+// page.tpl.php
 body { @extend .-<%= project_name %>-body; }
 
 #skip-link { @extend .-<%= project_name %>-skip-link; }
@@ -82,8 +78,7 @@ body { @extend .-<%= project_name %>-body; }
 
 .region-page-closure { }
 
-
-/* block.tpl.php */
+// block.tpl.php
 .block {
   // try scoping the selectors by region
   @extend .-<%= project_name %>-block;
@@ -114,7 +109,7 @@ body { @extend .-<%= project_name %>-body; }
 }
 
 
-/* node.tpl.php */
+// node.tpl.php
 .node {
   @extend .-<%= project_name %>-node;
   .picture { @extend .-<%= project_name %>-node-picture; }
@@ -129,14 +124,12 @@ body { @extend .-<%= project_name %>-body; }
   &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
   .preview & { @extend .-<%= project_name %>-node-preview; } }
 
-
-/* user-profile.tpl.php */
+// user-profile.tpl.php
 .profile {
   @extend .-<%= project_name %>-profile;
   .picture { @extend .-<%= project_name %>-profile-picture; }
   h3 { @extend .-<%= project_name %>-profile-category-title; }
   dl { @extend .-<%= project_name %>-profile-category-wrapper; }
   dt { @extend .-<%= project_name %>-profile-field-label; }
-  dd { @extend .-<%= project_name %>-profile-field-value; } 
-}
+  dd { @extend .-<%= project_name %>-profile-field-value; } }
 
