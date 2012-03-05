@@ -27,8 +27,6 @@ body { @extend .-<%= project_name %>-body; }
 
 #name-and-slogan { @extend .-<%= project_name %>-branding; }
 
-.region-header { }
-
 #site-name { @extend .-<%= project_name %>-site-name; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
@@ -40,15 +38,12 @@ body { @extend .-<%= project_name %>-body; }
   h1.title { @extend .-<%= project_name %>-title; }
   .messages { @extend .-<%= project_name %>-messages; }
   .tabs { @extend .-<%= project_name %>-tabs; }
+  .help { @extend .-<%= project_name %>-tabs; }
   .feed-icons { @extend .-<%= project_name %>-feed-icons; } }
-
-.region-highlight { }
-
-.region-content-top { } 
 
 #mission { @extend .-<%= project_name %>-mission; }
 
-#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }  
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; } 
 
 #content-area {
   // Zen does not support the content region by default.
@@ -57,15 +52,7 @@ body { @extend .-<%= project_name %>-body; }
   @extend .-<%= project_name %>-content-region;
   .pager { @extend .-<%= project_name %>-pager; } }
 
-.region-content-bottom { }
-
 #navigation { @extend .-<%= project_name %>-navigation; }
-
-.region-navigation { }
-
-.region-sidebar-first,
-.region-sidebar-second {
-  @extend .-<%= project_name %>-sidebar; }
 
 #main-menu {
   @extend .-<%= project_name %>-main-menu;
@@ -79,40 +66,24 @@ body { @extend .-<%= project_name %>-body; }
 
 #footer-message { @extend .-<%= project_name %>-footer-message; }
 
-.region-footer { }
-
-.region-page-closure { }
+// region.tpl.php
+// See $zen-supported-regions in _<%= project_name %>-base.scss
+@each $region in $zen-supported-regions {
+  .region-#{$region} {
+    @extend .-<%= project_name %>-#{$region}-region; } }
 
 // block.tpl.php
 .block {
-  // try scoping the selectors by region
   @extend .-<%= project_name %>-block;
   > h2 { @extend .-<%= project_name %>-block-title; }
   .content { @extend .-<%= project_name %>-block-content; }
 
-  // these are Kit regions blocks, set as examples for any region specific block styling
-  #content-content & {
-    @extend .-<%= project_name %>-content-block;
-    > h2 { @extend .-<%= project_name %>-content-block-title; }
-    .content { @extend .-<%= project_name %>-content-block-content; } }
-
-  .region-sidebar-first &,
-  .region-sidebar-second & {
-    @extend .-<%= project_name %>-sidebar-block;
-    > h2 { @extend .-<%= project_name %>-sidebar-block-title; }
-    .content { @extend .-<%= project_name %>-sidebar-block-content; } }
-
-  .region-header & {
-    @extend .-<%= project_name %>-header-block;
-    > h2 { @extend .-<%= project_name %>-header-block-title; }
-    .content { @extend .-<%= project_name %>-header-block-content; } }
-
-  .region-footer & {
-    @extend .-<%= project_name %>-footer-block;
-    > h2 { @extend .-<%= project_name %>-footer-block-title; }
-    .content { @extend .-<%= project_name %>-footer-block-content; } }
-}
-
+  // See $zen-supported-regions in _<%= project_name %>-base.scss
+  @each $region in $zen-supported-regions {
+    .region-#{$region} & {
+      @extend .-<%= project_name %>-#{$region}-block;
+      > h2 { @extend .-<%= project_name %>-#{$region}-block-title; }
+      .content { @extend .-<%= project_name %>-#{$region}-block-content; } } } }
 
 // node.tpl.php
 .node {
