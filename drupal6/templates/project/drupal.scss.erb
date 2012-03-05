@@ -17,8 +17,6 @@ body { @extend .-<%= project_name %>-body; }
 
 #site-slogan { @extend .-<%= project_name %>-site-slogan; }
 
-#header-region { @extend .-<%= project_name %>-header-region; }
-
 #container { @extend .-<%= project_name %>-main-section; }
 
 #navigation { @extend .-<%= project_name %>-navigation; }
@@ -30,8 +28,6 @@ ul.primary-links  {
   ul.secondary-links  { 
   @extend .-<%= project_name %>-secondary-menu;
   > li > .links { @extend .-<%= project_name %>-secondary-submenu; } }
-
-#sidebar-left { @extend .-<%= project_name %>-sidebar-first-region; }
 
 #mission { @extend .-<%= project_name %>-mission; }
 
@@ -46,16 +42,10 @@ ul.primary-links  {
 
   .help { @extend .-<%= project_name %>-help; }
 
-  .pager { @extend .-<%= project_name %>-pager; }
-
   // Core prints only a link with an image inside, beware.
   .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
 
 #page-title { @extend .-<%= project_name %>-title; }
-
-#content-content { @extend .-<%= project_name %>-content-region; }
-
-#sidebar-right { @extend .-<%= project_name %>-sidebar-second-region; }
 
 #footer-wrapper { @extend .-<%= project_name %>-footer-section; }
 
@@ -63,6 +53,18 @@ ul.primary-links  {
 // whole section isn't a good idea. Copy page.tpl.php to your theme and
 // edit it to wrap the $footer_message variable
 // .footer-message { @extend .-<%= project_name %>-footer-message; }
+
+// region.tpl.php (as if D6 supported it)
+
+#header-region { @extend .-<%= project_name %>-header-region; }
+
+#sidebar-left { @extend .-<%= project_name %>-sidebar-first-region; }
+
+#content-content {
+  @extend .-<%= project_name %>-content-region;
+  .pager { @extend .-<%= project_name %>-pager; } }
+
+#sidebar-right { @extend .-<%= project_name %>-sidebar-second-region; }
 
 // Core will print the footer blocks right away, but theming the
 // whole section might not be enough. Copy page.tpl.php to your theme and
