@@ -17,9 +17,9 @@ Gem::Specification.new do |gemspec|
     'lib/drupal.rb'
   ]
   gemspec.files += Dir.glob('drupal6/stylesheets/**/*.scss')
-  gemspec.files += Dir.glob('drupal6/templates/project/*')
-  gemspec.files += Dir.glob('drupal6/templates/zen/*')
-  # gemspec.files += Dir.glob('drupal6/templates/fusion/*')
+  gemspec.files += Dir.glob('drupal6/templates/project/**/*')
+  gemspec.files += Dir.glob('drupal6/templates/zen/**/*')
+  # gemspec.files += Dir.glob('drupal6/templates/fusion/**/*')
     
   # Gem Bookkeeping
   gemspec.require_paths = ['lib']
