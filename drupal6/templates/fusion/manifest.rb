@@ -6,12 +6,12 @@ file 'fusion_starter.info.erb', :to => "#{options[:project_name] || File.basenam
 file 'fusion.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
 file '_fusion-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true, :like => :stylesheet
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
-# Starter Lite CSS files (that will eventually move to SCSS)
+# Starter CSS files (that will eventually move to SCSS)
 file 'css/fusion-starter-style.css', :to => 'fusion-starter-style.css', :like => :css
 file 'css/fusion-starter-style-rtl.css', :to => 'fusion-starter-style-rtl.css', :like => :css
 file 'css/ie6-fixes.css', :to => 'ie6-fixes.css', :like => :css
 file 'css/local-sample.css', :to => 'local-sample.css', :like => :css
-# Starter Lite theme assets
+# Starter theme assets
 file 'favicon.ico'
 file 'logo.png'
 
