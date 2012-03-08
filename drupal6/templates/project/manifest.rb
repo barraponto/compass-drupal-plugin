@@ -21,5 +21,6 @@ If you're looking for something fun and easy to use, try the Zen or Fusion varia
 It implements the Template Approach in SASS template stylesheets.
 See http://www.chapterthree.com/blog/nica_lorber/design_drupal_template_approach
 
-* You MUST enable relative assets in config.rb in order to use images in the css.
+  * You MUST enable relative assets in config.rb in order to use images in the css.
+
 }
