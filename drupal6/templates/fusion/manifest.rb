@@ -1,11 +1,19 @@
-# Make sure you list all the project template files here in the manifest.
+# Drupal theme files
+file 'node.tpl.php'
+file 'node-product.tpl.php'
+# ERB processed SASS files
 file 'fusion_starter.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
-
 file 'fusion.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
-
 file '_fusion-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true, :like => :stylesheet
-
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
+# Starter Lite CSS files (that will eventually move to SCSS)
+file 'css/fusion-starter-style.css', :to => 'fusion-starter-style.css', :like => :css
+file 'css/fusion-starter-style-rtl.css', :to => 'fusion-starter-style-rtl.css', :like => :css
+file 'css/ie6-fixes.css', :to => 'ie6-fixes.css', :like => :css
+file 'css/local-sample.css', :to => 'local-sample.css', :like => :css
+# Starter Lite theme assets
+file 'favicon.ico'
+file 'logo.png'
 
 description "Fusion-based Drupal theme with template css"
 
