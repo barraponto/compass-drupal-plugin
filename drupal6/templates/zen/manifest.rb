@@ -13,6 +13,37 @@ file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.base
 
 file '_zen-skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-zen-skin.scss", :erb => true, :like => :stylesheet
 
+file 'block-editing.css', :like => :css
+file 'block-editing-rtl.css', :like => :css
+file 'blocks.css', :like => :css
+file 'comments.css', :like => :css
+file 'drupal6-reference.css', :like => :css
+file 'fields.css', :like => :css
+file 'forms.css', :like => :css
+file 'forms-rtl.css', :like => :css
+file 'html-reset.css', :like => :css
+file 'html-reset-rtl.css', :like => :css
+file 'ie6.css', :like => :css
+file 'ie6-rtl.css', :like => :css
+file 'ie.css', :like => :css
+file 'layout-fixed.css', :like => :css
+file 'layout-fixed-rtl.css', :like => :css
+file 'layout-liquid.css', :like => :css
+file 'layout-liquid-rtl.css', :like => :css
+file 'messages.css', :like => :css
+file 'messages-rtl.css', :like => :css
+file 'navigation.css', :like => :css
+file 'nodes.css', :like => :css
+file 'page-backgrounds.css', :like => :css
+file 'pages.css', :like => :css
+file 'pages-rtl.css', :like => :css
+file 'panels-styles.css', :like => :css
+file 'print.css', :like => :css
+file 'tabs.css', :like => :css
+file 'tabs-rtl.css', :like => :css
+file 'views-styles.css', :like => :css
+file 'wireframes.css', :like => :css
+
 description "Zen Layout for Drupal Zen Theme"
 
 help %Q{

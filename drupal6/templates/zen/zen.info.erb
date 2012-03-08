@@ -1,6 +1,6 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
   ; The name and description of the theme used on the admin/build/themes page.
-name = <%= project_name %>
+name        = <%= project_name %>
 description = Read the <a href="http://drupal.org/node/629510">online docs</a> or the included README.txt on how to create a Zen sub-theme.
 
   ; The screenshot used on the admin/build/themes page.
@@ -25,6 +25,7 @@ base theme = zen
   ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
 stylesheets[all][]   = css/wireframes.css
+stylesheets[all][]   = css/layout-fixed.css
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
