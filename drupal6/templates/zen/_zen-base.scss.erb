@@ -8,10 +8,11 @@ $<%= project_name %>-proportional-typeface: Verdana, Tahoma, "DejaVu Sans", sans
 $<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", monospace !default;
 
 // These are base theme specific settings, copy to <%= project_name %> if you want to change them 
-$<%= project_name %>-supported-regions: header, sidebar-first, sidebar-second, footer !default; // Zen has no content region by default
 $<%= project_name %>-navigation-width: 100% !default;
 $<%= project_name %>-navigation-height: 2.3em !default;
 $<%= project_name %>-footer-size: 150px !default;
+// Zen has no content region by default, see <%= project_name %>.info
+$<%= project_name %>-supported-regions: header, sidebar-first, sidebar-second, footer !default;
 
 // Map the zen variables to the skin variables
 $zen-supported-regions: $<%= project_name %>-supported-regions;

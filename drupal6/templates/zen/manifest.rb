@@ -9,6 +9,8 @@ file '_zen-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Co
 
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
 
+file '_zen-skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-zen-skin.scss", :erb => true, :like => :stylesheet
+
 description "Zen Layout for Drupal Zen Theme"
 
 help %Q{
