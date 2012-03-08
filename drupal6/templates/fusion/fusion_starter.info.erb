@@ -1,4 +1,3 @@
-; $Id: fusion_starter.info,v 1.1.2.5 2010/02/14 06:44:16 sociotech Exp $
 <% project_name = File.basename(Compass.configuration.project_path) %>
 name = <%= project_name %>
 description = Fusion Starter sub-theme. Requires <a href="http://drupal.org/project/fusion">Fusion Core</a> and the <a href="http://drupal.org/project/skinr">Skinr</a> module to enable easy point-and-click theming.
@@ -47,7 +46,7 @@ settings[sidebar_last_width] = 3
 skinr[options][inherit_skins] = true
 
 ; Disable 12 column grid block widths inherited from fusion_core
-skinr[grid12-width] =
+skinr[grid12-width] = ''
 
 ; Sample Skinr style (uncomment to use, see Skinr section in CSS)
 ;skinr[fusion-example-styles][title] = Sample Skinr block styles
@@ -55,10 +54,3 @@ skinr[grid12-width] =
 ;skinr[fusion-example-styles][features][] = block
 ;skinr[fusion-example-styles][options][1][label] = My sample Skinr style
 ;skinr[fusion-example-styles][options][1][class] = fusion-example-stylename
-
-; Information added by drupal.org packaging script on 2010-07-08
-version = "6.x-1.0"
-core = "6.x"
-project = "fusion"
-datestamp = "1278618609"
-

@@ -7,14 +7,20 @@ file '_fusion-base.scss.erb', :to => "_#{options[:project_name] || File.basename
 
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
 
-description "Fusion layout and skin stylesheets for object-oriented CSS development"
+description "Fusion-based Drupal theme with template css"
 
 help %Q{
-  This plugin starts Fusion layout and skin CSS files to speed up theme development
+  This plugin generates a template Drupal theme based on Fusion.
 }
 
 welcome_message %Q{
-  Hello and welcome to Fusion Compass Plugin.
-  Fusion is a powerful base theme built on top of the NineSixty grid framework meant to be used with the Skinr module.
-  You must enable relative assets in config.rb in order to use theme images in the css.
+Welcome to Drupal Compass Plugin.
+This is a powerful and configurable theme based on the NineSixty grid.
+
+It implements the Template Approach in SASS template stylesheets.
+See http://www.chapterthree.com/blog/nica_lorber/design_drupal_template_approach
+
+* You MUST download the Fusion theme and put it in your sites/all/themes folder.
+* You MUST also enable relative assets in config.rb in order to use images in the css.
+* Fusion supports and promotes the usage of the Skinr module. Try it.
 }
