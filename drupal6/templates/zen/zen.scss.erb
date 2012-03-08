@@ -97,7 +97,11 @@ body { @extend .-<%= project_name %>-body; }
   .links { @extend .-<%= project_name %>-node-links; }
   &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
   &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
-  .preview & { @extend .-<%= project_name %>-node-preview; } }
+  .preview & { @extend .-<%= project_name %>-node-preview; }
+  // Zen only selectors
+  .unpublished { @extend .-<%= project_name %>-unpublished-warning; }
+  &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
+  }
 
 // user-profile.tpl.php
 .profile {
