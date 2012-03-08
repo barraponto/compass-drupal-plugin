@@ -81,6 +81,7 @@ This is a powerful and beginner-friendly theme based on Zen.
 It implements the Template Approach in SASS template stylesheets.
 See http://www.chapterthree.com/blog/nica_lorber/design_drupal_template_approach
 
-* You MUST download the Zen theme and put it in your sites/all/themes folder.
-* You MUST also enable relative assets in config.rb in order to use images in the css.
+  * You MUST download the Zen theme and put it in your sites/all/themes folder.
+  * You MUST also enable relative assets in config.rb in order to use images in the css.
+
 }
