@@ -44,6 +44,9 @@ file 'tabs-rtl.css', :like => :css
 file 'views-styles.css', :like => :css
 file 'wireframes.css', :like => :css
 
+file 'js/README.txt'
+file 'templates/README.txt'
+
 description "Zen Layout for Drupal Zen Theme"
 
 help %Q{
