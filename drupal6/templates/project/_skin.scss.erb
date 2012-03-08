@@ -92,22 +92,18 @@ $<%= project_name %>-base-font-size: 14px;
 /* <%= project_name %> page.tpl.php styles */
 .-<%= project_name %>-body { }
 
-.-<%= project_name %>-skip-link { }
-
 .-<%= project_name %>-page { }
 
 .-<%= project_name %>-header-section { }
 
 .-<%= project_name %>-logo { }
 
-.-<%= project_name %>-branding { } // usually a #name-and-slogan wrapper div (YMMV)
+.-<%= project_name %>-branding { }
 
 .-<%= project_name %>-site-name {
   a { } }
 
 .-<%= project_name %>-site-slogan { }
-
-.-<%= project_name %>-header-region { }
 
 .-<%= project_name %>-main-section { }
 
@@ -126,9 +122,6 @@ $<%= project_name %>-base-font-size: 14px;
     &.first { }
     &.last { }
     &.expanded { } } }
-
-.-<%= project_name %>-sidebar-first-region,
-.-<%= project_name %>-sidebar-second-region { }
 
 .-<%= project_name %>-mission { }
 
@@ -153,8 +146,7 @@ $<%= project_name %>-base-font-size: 14px;
 
   // when there is more than one message, they get wrapped in a ul
   ul { }
-  li { }
-}
+  li { } }
 
 .-<%= project_name %>-help { }
 
@@ -167,18 +159,24 @@ $<%= project_name %>-base-font-size: 14px;
   .pager-last { }
   a { } }
 
-.-<%= project_name %>-feed-icons {
-  .feed-icon { } }
+.-<%= project_name %>-feed-icons { }
 
 .-<%= project_name %>-title { }
 
-.-<%= project_name %>-content-region { }
-
 .-<%= project_name %>-footer-section { }
 
-.-<%= project_name %>-footer-region { }
-
 .-<%= project_name %>-footer-message { }
+
+/* <%= project_name %> region.tpl.php styles */
+// even though Drupal 6 doesn't support it by default
+.-<%= project_name %>-header-region { }
+
+.-<%= project_name %>-content-region { }
+
+.-<%= project_name %>-sidebar-first-region,
+.-<%= project_name %>-sidebar-second-region { }
+
+.-<%= project_name %>-footer-region { }
 
 /* <%= project_name %> block.tpl.php styles */
 // These are defaults for every block in your theme
@@ -187,17 +185,17 @@ $<%= project_name %>-base-font-size: 14px;
 .-<%= project_name %>-block-content { @extend .-<%= project_name %>-restricted-html-content; }
 
 // Make copies of the components for a diversity of block styles, like these
-.-<%= project_name %>-content-block { }
-
-.-<%= project_name %>-content-block-title { }
-
-.-<%= project_name %>-content-block-content { }
-
 .-<%= project_name %>-header-block { }
 
 .-<%= project_name %>-header-block-title { }
 
 .-<%= project_name %>-header-block-content { }
+
+.-<%= project_name %>-content-block { }
+
+.-<%= project_name %>-content-block-title { }
+
+.-<%= project_name %>-content-block-content { }
 
 .-<%= project_name %>-sidebar-first-block,
 .-<%= project_name %>-sidebar-second-block { }
