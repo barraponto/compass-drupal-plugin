@@ -68,10 +68,10 @@ file 'favicon.ico'
 file 'screenshot.png'
 file 'logo.png'
 
-description "Zen Layout for Drupal Zen Theme"
+description "Zen-based Drupal theme with template css"
 
 help %Q{
-  This plugin starts a Zen layout stylesheet in your Compass project
+  This plugin generates a template Drupal theme based on Zen.
 }
 
 welcome_message %Q{
