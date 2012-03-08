@@ -1,5 +1,7 @@
 # Make sure you list all the project template files here in the manifest.
 file 'zen.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
+file 'template.php.erb', :to => "template.php", :erb => true
+file 'theme-settings.php.erb', :to => "theme-settings.php", :erb => true
 
 file 'zen.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
 
