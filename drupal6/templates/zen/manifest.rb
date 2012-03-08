@@ -39,10 +39,30 @@ file 'css/tabs.css', :to => 'tabs.css', :like => :css
 file 'css/tabs-rtl.css', :to => 'tabs-rtl.css', :like => :css
 file 'css/views-styles.css', :to => 'views-styles.css', :like => :css
 file 'css/wireframes.css', :to => 'wireframes.css', :like => :css
+# STARTERKIT Image files
+image 'images/messages-error-ie6.png', :to => 'messages-error-ie6.png'
+image 'images/messages-error.png', :to => 'messages-error.png'
+image 'images/messages-status-ie6.png', :to => 'messages-status-ie6.png'
+image 'images/messages-status.png', :to => 'messages-status.png'
+image 'images/messages-warning-ie6.png', :to => 'messages-warning-ie6.png'
+image 'images/messages-warning.png', :to => 'messages-warning.png'
+image 'images/tab-bar.png', :to => 'tab-bar.png'
+image 'images/tab-left-ie6.png', :to => 'tab-left-ie6.png'
+image 'images/tab-left.png', :to => 'tab-left.png'
+image 'images/tab-right-ie6.png', :to => 'tab-right-ie6.png'
+image 'images/tab-right.png', :to => 'tab-right.png'
+image 'images/tab-secondary-bg.png', :to => 'tab-secondary-bg.png'
+image 'images/tab-secondary.png', :to => 'tab-secondary.png'
+# STARTERKIT Image file sources
+file 'images-source/messages.psd'
+file 'images-source/panels-layouts.psd'
+file 'images-source/screenshot.psd'
+file 'images-source/tabs.psd'
 # STARTERKIT built-in documentation
 file 'css/README.txt', :to => 'README.txt', :like => :css
 file 'js/README.txt', :to => 'README.txt', :like => :javascript
 file 'templates/README.txt'
+file 'README.txt'
 # STARTERKIT theme assets
 file 'favicon.ico'
 file 'screenshot.png'
