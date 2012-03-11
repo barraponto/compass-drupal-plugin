@@ -1,24 +1,33 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
-@import "<%= File.basename(Compass.configuration.project_path) %>-skin";
-@import "_<%= File.basename(Compass.configuration.project_path) %>-base";
+@import "<%= project_name %>-skin";
+@import "_<%= project_name %>-base";
 
+// page.tpl.php
 body { @extend .-<%= project_name %>-body; }
-
-#page { @extend .-<%= project_name %>-page; }
 
 #skip { @extend .-<%= project_name %>-skip-link; }
 
+#page { @extend .-<%= project_name %>-page; }
+
 #header-group { @extend .-<%= project_name %>-header; }
 
-#logo { @extend .-<%= project_name %>-logo; }
+#secondary-menu { @extend .-<%= project_name %>-secondary-menu-wrapper; }
 
-#site-name-wrapper { @extend .-<%= project_name %>-name-and-slogan; }
+#secondary-menu > .links { @extend .-<%= project_name %>-secondary-menu; }
+
+#header-site-info { @extend .-<%= project_name %>-branding; }
+
+#logo { @extend .-<%= project_name %>-logo; }
 
 #site-name { @extend .-<%= project_name %>-site-name; }
 
 #slogan { @extend .-<%= project_name %>-site-slogan; }
 
-#main { @extend .-<%= project_name %>-main; }
+#primary-menu { @extend .-<%= project_name %>-primary-menu-wrapper; }
+
+#primary-menu > .links { @extend .-<%= project_name %>-primary-menu; }
+
+#main { @extend .-<%= project_name %>-main-section; }
 
 .messages {
   &.status { @extend .-<%= project_name %>-messages-status; }
