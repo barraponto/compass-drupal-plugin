@@ -1,0 +1,128 @@
+<% project_name = File.basename(Compass.configuration.project_path) %>
+@import "<%= project_name %>-base";
+@import "<%= project_name %>-skin-rtl";
+
+// Map the drupal variables to the skin variables
+$drupal-width: $<%= project_name %>-width;
+$drupal-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
+$drupal-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
+
+// page.tpl.php
+body { @extend .-<%= project_name %>-body; }
+
+#page { @extend .-<%= project_name %>-page; }
+
+#header { @extend .-<%= project_name %>-header-section; }
+
+#logo { @extend .-<%= project_name %>-logo; }
+
+#name-and-slogan { @extend .-<%= project_name %>-branding; }
+
+#site-name { @extend .-<%= project_name %>-site-name; }
+
+#site-slogan { @extend .-<%= project_name %>-site-slogan; }
+
+#container { @extend .-<%= project_name %>-main-section; }
+
+#navigation { @extend .-<%= project_name %>-navigation; }
+
+ul.primary-links  {
+  @extend .-<%= project_name %>-main-menu;
+  > li > .links { @extend .-<%= project_name %>-main-submenu; } }
+
+  ul.secondary-links  { 
+  @extend .-<%= project_name %>-secondary-menu;
+  > li > .links { @extend .-<%= project_name %>-secondary-submenu; } }
+
+#mission { @extend .-<%= project_name %>-mission; }
+
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; }
+
+#content {
+  @extend .-<%= project_name %>-content;
+  div.tabs { @extend .-<%= project_name %>-tabs; }
+  .messages { @extend .-<%= project_name %>-messages; }
+  .help { @extend .-<%= project_name %>-help; }
+  // Core prints only a link with an image inside, beware.
+  .feed-icon { @extend .-<%= project_name %>-feed-icons; } }
+
+#page-title { @extend .-<%= project_name %>-title; }
+
+#footer-wrapper { @extend .-<%= project_name %>-footer-section; }
+
+// Core will print the footer message right away, but theming the
+// whole section isn't a good idea. Copy page.tpl.php to your theme and
+// edit it to wrap the $footer_message variable
+// .footer-message { @extend .-<%= project_name %>-footer-message; }
+
+// region.tpl.php (as if D6 supported it)
+#header-region { @extend .-<%= project_name %>-header-region; }
+
+#sidebar-left { @extend .-<%= project_name %>-sidebar-first-region; }
+
+#content-content {
+  @extend .-<%= project_name %>-content-region;
+  .pager { @extend .-<%= project_name %>-pager; } }
+
+#sidebar-right { @extend .-<%= project_name %>-sidebar-second-region; }
+
+// Core will print the footer blocks right away, but theming the
+// whole section might not be enough. Copy page.tpl.php to your theme and
+// edit it to wrap the $footer variable
+// #footer { @extend .<%= project_name %>-footer-region; }
+
+// block.tpl.php
+.block {
+  // try scoping the selectors by region
+  @extend .-<%= project_name %>-block;
+  > h2 { @extend .-<%= project_name %>-block-title; }
+  .content { @extend .-<%= project_name %>-block-content; }
+
+  #header-region & {
+    @extend .-<%= project_name %>-header-block;
+    > h2 { @extend .-<%= project_name %>-header-block-title; }
+    .content { @extend .-<%= project_name %>-header-block-content; } }
+
+  #content-content & {
+    @extend .-<%= project_name %>-content-block;
+    > h2 { @extend .-<%= project_name %>-content-block-title; }
+    .content { @extend .-<%= project_name %>-content-block-content; } }
+
+  #sidebar-left & {
+    @extend .-<%= project_name %>-sidebar-first-block;
+    > h2 { @extend .-<%= project_name %>-sidebar-first-block-title; }
+    .content { @extend .-<%= project_name %>-sidebar-first-block-content; } }
+
+  #sidebar-right & {
+    @extend .-<%= project_name %>-sidebar-second-block;
+    > h2 { @extend .-<%= project_name %>-sidebar-second-block-title; }
+    .content { @extend .-<%= project_name %>-sidebar-second-block-content; } }
+
+  #footer & { // this works regardless of page.tpl.php patch suggested above
+    @extend .-<%= project_name %>-footer-block;
+    > h2 { @extend .-<%= project_name %>-footer-block-title; }
+    .content { @extend .-<%= project_name %>-footer-block-content; } } }
+
+// node.tpl.php
+.node {
+  @extend .-<%= project_name %>-node;
+  .picture { @extend .-<%= project_name %>-node-picture; }
+  > h2 { @extend .-<%= project_name %>-node-title; }
+  .meta { @extend .-<%= project_name %>-node-meta; }
+  .submitted { @extend .-<%= project_name %>-node-submitted; }
+  .terms { @extend .-<%= project_name %>-node-terms; }
+  .content { @extend .-<%= project_name %>-node-content; }
+  .links { @extend .-<%= project_name %>-node-links; }
+  &.sticky { @extend .-<%= project_name %>-node-sticky; }
+  &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
+  .preview & { @extend .-<%= project_name %>-node-preview; } }
+
+// user-profile.tpl.php
+.profile {
+  @extend .-<%= project_name %>-profile;
+  .picture { @extend .-<%= project_name %>-profile-picture; }
+  h3 { @extend .-<%= project_name %>-profile-category-title; }
+  dl { @extend .-<%= project_name %>-profile-category-wrapper; }
+  dt { @extend .-<%= project_name %>-profile-field-label; }
+  dd { @extend .-<%= project_name %>-profile-field-value; } }
+

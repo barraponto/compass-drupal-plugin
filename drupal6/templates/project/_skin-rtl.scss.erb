@@ -1,0 +1,241 @@
+<% project_name = File.basename(Compass.configuration.project_path) %>
+@import "<%= project_name %>-base";
+
+$<%= project_name %>-width: 960px;
+
+/* <%= project_name %> HTML elements styles */
+.-<%= project_name %>-h2 { }
+
+.-<%= project_name %>-h3 { }
+
+.-<%= project_name %>-h4 { }
+
+.-<%= project_name %>-p { }
+
+.-<%= project_name %>-li { }
+
+.-<%= project_name %>-ul { }
+
+.-<%= project_name %>-ol { }
+
+.-<%= project_name %>-blockquote { }
+
+.-<%= project_name %>-cite { }
+
+.-<%= project_name %>-a {
+  &:link { }
+  &:visited { }
+  &:hover { }
+  &:focus { }
+  &:active { } }
+
+.-<%= project_name %>-pre { }
+
+.-<%= project_name %>-code { }
+
+.-<%= project_name %>-table {
+  caption { }
+  thead { }
+  tbody { }
+  tfoot { } }
+
+.-<%= project_name %>-table-row {
+  &.odd { }
+  &.even { }
+  thead & { }
+  tbody & { }
+  tfoot & { }
+  th { }
+  td { } }
+
+/* <%= project_name %> filtered content styles */
+.-<%= project_name %>-full-html-content {
+  h2 { @extend .-<%= project_name %>-h2; }
+  h3 { @extend .-<%= project_name %>-h3; }
+  h4 { @extend .-<%= project_name %>-h4; }
+  p { @extend .-<%= project_name %>-p; }
+  li { @extend .-<%= project_name %>-li; }
+  ul { @extend .-<%= project_name %>-ul; }
+  ol { @extend .-<%= project_name %>-ol; }
+  pre { @extend .-<%= project_name %>-pre; }
+  code { @extend .-<%= project_name %>-code; }
+  blockquote { @extend .-<%= project_name %>-blockquote; }
+  cite { @extend .-<%= project_name %>-cite; }
+  a { @extend .-<%= project_name %>-a; }
+  table { @extend .-<%= project_name %>-table; } 
+  tr { @extend .-<%= project_name %>-table-row; } }
+
+.-<%= project_name %>-restricted-html-content {
+  h3 { @extend .-<%= project_name %>-h3; }
+  h4 { @extend .-<%= project_name %>-h4; }
+  p { @extend .-<%= project_name %>-p; }
+  ul { @extend .-<%= project_name %>-ul; }
+  ol { @extend .-<%= project_name %>-ol; }
+  li { @extend .-<%= project_name %>-li; }
+  a { @extend .-<%= project_name %>-a; } }
+
+/* <%= project_name %> page.tpl.php styles */
+.-<%= project_name %>-body { }
+
+.-<%= project_name %>-page { }
+
+.-<%= project_name %>-header-section { }
+
+.-<%= project_name %>-logo { }
+
+.-<%= project_name %>-branding { }
+
+.-<%= project_name %>-site-name {
+  a { } }
+
+.-<%= project_name %>-site-slogan { }
+
+.-<%= project_name %>-main-section { }
+
+.-<%= project_name %>-navigation { }
+
+.-<%= project_name %>-main-menu,
+.-<%= project_name %>-secondary-menu {
+  > li { // use '>' to target only child items
+    &.first { }
+    &.last { }
+    &.expanded { } } }
+
+.-<%= project_name %>-main-submenu,
+.-<%= project_name %>-secondary-submenu {
+  > li { // use '>' to target only child items
+    &.first { }
+    &.last { }
+    &.expanded { } } }
+
+.-<%= project_name %>-mission { }
+
+.-<%= project_name %>-breadcrumb {
+  a { } }
+
+.-<%= project_name %>-content { }
+
+.-<%= project_name %>-tabs {
+  .primary { }
+  .secondary { }
+  // the following styles apply to both tab groups.
+  ul { }
+  li { }
+  a { }
+  a.active { } }
+
+.-<%= project_name %>-messages {
+  &.status { }
+  &.warning { }
+  &.error { }
+
+  // when there is more than one message, they get wrapped in a ul
+  ul { }
+  li { } }
+
+.-<%= project_name %>-help { }
+
+.-<%= project_name %>-pager {
+  .pager-item { }
+  .pager-current { }
+  .pager-previous { }
+  .pager-next { }
+  .pager-first { }
+  .pager-last { }
+  a { } }
+
+.-<%= project_name %>-feed-icons { }
+
+.-<%= project_name %>-title { }
+
+.-<%= project_name %>-footer-section { }
+
+.-<%= project_name %>-footer-message { }
+
+/* <%= project_name %> region.tpl.php styles */
+// even though Drupal 6 doesn't support it by default
+.-<%= project_name %>-header-region { }
+
+.-<%= project_name %>-content-region { }
+
+.-<%= project_name %>-sidebar-first-region,
+.-<%= project_name %>-sidebar-second-region { }
+
+.-<%= project_name %>-footer-region { }
+
+/* <%= project_name %> block.tpl.php styles */
+// These are defaults for every block in your theme
+.-<%= project_name %>-block { }
+.-<%= project_name %>-block-title { }
+.-<%= project_name %>-block-content { @extend .-<%= project_name %>-restricted-html-content; }
+
+// Make copies of the components for a diversity of block styles, like these
+.-<%= project_name %>-header-block { }
+
+.-<%= project_name %>-header-block-title { }
+
+.-<%= project_name %>-header-block-content { }
+
+.-<%= project_name %>-content-block { }
+
+.-<%= project_name %>-content-block-title { }
+
+.-<%= project_name %>-content-block-content { }
+
+.-<%= project_name %>-sidebar-first-block,
+.-<%= project_name %>-sidebar-second-block { }
+
+.-<%= project_name %>-sidebar-first-block-title,
+.-<%= project_name %>-sidebar-second-block-title { }
+
+.-<%= project_name %>-sidebar-first-block-content,
+.-<%= project_name %>-sidebar-second-block-content { }
+
+.-<%= project_name %>-footer-block { }
+
+.-<%= project_name %>-footer-block-title { }
+
+.-<%= project_name %>-footer-block-content { }
+
+/* <%= project_name %> node.tpl.php styles */
+// Make copies of these components for a diversity of node styles
+.-<%= project_name %>-node { }
+
+.-<%= project_name %>-node-picture { }
+
+.-<%= project_name %>-node-title { } //meant for node listings, see also .-<%= project_name %>-title
+
+.-<%= project_name %>-node-meta { }
+
+.-<%= project_name %>-node-submitted { }
+
+.-<%= project_name %>-node-terms { }
+
+.-<%= project_name %>-node-content { @extend .-<%= project_name %>-full-html-content; }
+
+.-<%= project_name %>-node-links {
+  li {
+    &.first { }
+    &.last { } } }
+
+.-<%= project_name %>-node-sticky { }
+
+.-<%= project_name %>-node-unpublished {
+  .unpublished { } }
+
+.-<%= project_name %>-node-by-viewer { }
+
+.-<%= project_name %>-node-preview { }
+
+/* <%= project_name %> profile.tpl.php styles */
+.-<%= project_name %>-profile { }
+
+.-<%= project_name %>-profile-picture { }
+
+.-<%= project_name %>-profile-category-header { }
+
+.-<%= project_name %>-profile-category-wrapper { }
+
+.-<%= project_name %>-profile-field-label { }
+
+.-<%= project_name %>-profile-field-value { }
