@@ -1,15 +1,16 @@
+project_name = options[:project_name] || File.basename(Compass.configuration.project_path)
 # ERB processed Drupal theme files
-file 'zen.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
+file 'zen.info.erb', :to => "#{project_name}.info", :erb => true
 file 'template.php.erb', :to => "template.php", :erb => true
 file 'theme-settings.php.erb', :to => "theme-settings.php", :erb => true
 # ERB processed SASS files
-file 'sass/_skin-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true, :like => :stylesheet
-file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
-file 'sass/_zen-skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-zen-skin.scss", :erb => true, :like => :stylesheet
-file 'sass/zen.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
-file '../project/_skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin-rtl.scss", :erb => true, :like => :stylesheet
-file 'sass/_zen-skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-zen-skin-rtl.scss", :erb => true, :like => :stylesheet
-file 'sass/zen-rtl.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/_skin-base.scss.erb', :to => "_#{project_name}-base.scss", :erb => true, :like => :stylesheet
+file '../project/_skin.scss.erb', :to => "_#{project_name}-skin.scss", :erb => true, :like => :stylesheet
+file '../project/_skin-rtl.scss.erb', :to => "_#{project_name}-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/_zen-skin.scss.erb', :to => "_#{project_name}-zen-skin.scss", :erb => true, :like => :stylesheet
+file 'sass/_zen-skin-rtl.scss.erb', :to => "_#{project_name}-zen-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/zen.scss.erb', :to => "#{project_name}.scss", :erb => true, :like => :stylesheet
+file 'sass/zen-rtl.scss.erb', :to => "#{project_name}-rtl.scss", :erb => true, :like => :stylesheet
 # STARTERKIT CSS files (that will eventually move to SCSS)
 file 'css/block-editing.css', :to => 'block-editing.css', :like => :css
 file 'css/block-editing-rtl.css', :to => 'block-editing-rtl.css', :like => :css

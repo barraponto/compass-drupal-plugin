@@ -1,10 +1,11 @@
+project_name = options[:project_name] || File.basename(Compass.configuration.project_path)
 # Make sure you list all the project template files here in the manifest.
-file 'drupal.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
-file '_skin-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true, :like => :stylesheet
-file '_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
-file 'drupal.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
-file '_skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin-rtl.scss", :erb => true, :like => :stylesheet
-file 'drupal-rtl.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}-rtl.scss", :erb => true, :like => :stylesheet
+file 'drupal.info.erb', :to => "#{project_name}.info", :erb => true
+file '_skin-base.scss.erb', :to => "_#{project_name}-base.scss", :erb => true, :like => :stylesheet
+file '_skin.scss.erb', :to => "_#{project_name}-skin.scss", :erb => true, :like => :stylesheet
+file '_skin-rtl.scss.erb', :to => "_#{project_name}-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'drupal.scss.erb', :to => "#{project_name}.scss", :erb => true, :like => :stylesheet
+file 'drupal-rtl.scss.erb', :to => "#{project_name}-rtl.scss", :erb => true, :like => :stylesheet
 
 description "Core-based Drupal theme with template css"
 
