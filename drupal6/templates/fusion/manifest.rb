@@ -3,7 +3,7 @@ file 'node.tpl.php'
 file 'node-product.tpl.php'
 # ERB processed SASS files
 file 'fusion_starter.info.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.info", :erb => true
-file 'sass/_fusion-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true, :like => :stylesheet
+file 'sass/_skin-base.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-base.scss", :erb => true, :like => :stylesheet
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
 file 'sass/_fusion-skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-fusion-skin.scss", :erb => true, :like => :stylesheet
 file 'sass/fusion.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
