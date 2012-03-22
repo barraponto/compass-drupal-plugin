@@ -1,7 +1,0 @@
-<% project_name = File.basename(config.project_path) %>
-name = <%= project_name %>
-description = This is a raw, naked, bare Drupal theme. It inherits all of the default theme values. See http://drupal.org/node/171206 for more info on defaults.
-core = 6.x
-engine = phptemplate
-
-stylesheets[all][] = stylesheets/<%= project_name %>.css
