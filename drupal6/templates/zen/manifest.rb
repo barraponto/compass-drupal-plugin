@@ -7,6 +7,8 @@ file 'sass/_skin-base.scss.erb', :to => "_#{options[:project_name] || File.basen
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
 file 'sass/_zen-skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-zen-skin.scss", :erb => true, :like => :stylesheet
 file 'sass/zen.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
+file '../project/_skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/_zen-skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-zen-skin-rtl.scss", :erb => true, :like => :stylesheet
 file 'sass/zen-rtl.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}-rtl.scss", :erb => true, :like => :stylesheet
 # STARTERKIT CSS files (that will eventually move to SCSS)
 file 'css/block-editing.css', :to => 'block-editing.css', :like => :css

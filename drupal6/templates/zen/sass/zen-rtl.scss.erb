@@ -1,8 +1,122 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
 @import "drupal6/zen";
 @import "<%= project_name %>-base";
+@import "<%= project_name %>-skin-rtl";
+@import "<%= project_name %>-zen-skin-rtl";
+
+// Map the zen variables to the skin variables
+$zen-width: $<%= project_name %>-width;
+$zen-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
+$zen-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
+$zen-content-position: $<%= project_name %>-content-position;
+$zen-proportional-typeface: $<%= project_name %>-proportional-typeface;
+$zen-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
+$zen-base-font-size: $<%= project_name %>-base-font-size;
+$zen-navigation-width: $<%= project_name %>-navigation-width;
+$zen-navigation-height: $<%= project_name %>-navigation-height;
+$zen-footer-size: $<%= project_name %>-footer-size;
+$zen-supported-regions: $<%= project_name %>-supported-regions;
 
 // Generate the Zen RTL layout
 @include zen-layout("rtl");
 // Properly position the navigation wrapper
 @include zen-navigation("rtl");
+
+// page.tpl.php
+body { @extend .-<%= project_name %>-body; }
+
+#skip-link { @extend .-<%= project_name %>-skip-link; }
+
+#page { @extend .-<%= project_name %>-page; }
+
+#header { @extend .-<%= project_name %>-header-section; }
+
+#logo { @extend .-<%= project_name %>-logo; }
+
+#name-and-slogan { @extend .-<%= project_name %>-branding; }
+
+#site-name { @extend .-<%= project_name %>-site-name; }
+
+#site-slogan { @extend .-<%= project_name %>-site-slogan; }
+
+#main { @extend .-<%= project_name %>-main-section; }
+
+#content {
+  @extend .-<%= project_name %>-content;
+  h1.title { @extend .-<%= project_name %>-title; }
+  .messages { @extend .-<%= project_name %>-messages; }
+  .tabs { @extend .-<%= project_name %>-tabs; }
+  .help { @extend .-<%= project_name %>-help; }
+  .feed-icons { @extend .-<%= project_name %>-feed-icons; } }
+
+#mission { @extend .-<%= project_name %>-mission; }
+
+#breadcrumb { @extend .-<%= project_name %>-breadcrumb; } 
+
+#content-area {
+  // Zen does not support the content region by default.
+  // However, since it usually wraps the actual content
+  // it should extend the skin content-region properties
+  @extend .-<%= project_name %>-content-region;
+  .pager { @extend .-<%= project_name %>-pager; } }
+
+#navigation { @extend .-<%= project_name %>-navigation; }
+
+#main-menu {
+  @extend .-<%= project_name %>-main-menu;
+  > li.expanded > ul.menu { @extend .-<%= project_name %>-main-submenu; } }
+
+#footer { @extend .-<%= project_name %>-footer; }
+
+#secondary-menu {
+  @extend .-<%= project_name %>-secondary-menu;
+  > li.expanded > ul.menu { @extend .-<%= project_name %>-secondary-submenu; } }
+
+#footer-message { @extend .-<%= project_name %>-footer-message; }
+
+// region.tpl.php
+// See $zen-supported-regions in _<%= project_name %>-base.scss
+@each $region in $zen-supported-regions {
+  .region-#{$region} {
+    @extend .-<%= project_name %>-#{$region}-region; } }
+
+// block.tpl.php
+.block {
+  @extend .-<%= project_name %>-block;
+  > h2 { @extend .-<%= project_name %>-block-title; }
+  .content { @extend .-<%= project_name %>-block-content; }
+
+  // See $zen-supported-regions in _<%= project_name %>-base.scss
+  @each $region in $zen-supported-regions {
+    .region-#{$region} & {
+      @extend .-<%= project_name %>-#{$region}-block;
+      > h2 { @extend .-<%= project_name %>-#{$region}-block-title; }
+      .content { @extend .-<%= project_name %>-#{$region}-block-content; } } } }
+
+// node.tpl.php
+.node {
+  @extend .-<%= project_name %>-node;
+  .picture { @extend .-<%= project_name %>-node-picture; }
+  .title { @extend .-<%= project_name %>-node-title; }
+  .meta { @extend .-<%= project_name %>-node-meta; }
+  .submitted { @extend .-<%= project_name %>-node-submitted; }
+  .terms { @extend .-<%= project_name %>-node-terms; }
+  .content { @extend .-<%= project_name %>-node-content; }
+  .links { @extend .-<%= project_name %>-node-links; }
+  &.node-sticky { @extend .-<%= project_name %>-node-sticky; }
+  &.node-unpublished { @extend .-<%= project_name %>-node-unpublished; }
+  .preview & { @extend .-<%= project_name %>-node-preview; }
+  // Zen only selectors
+  .unpublished { @extend .-<%= project_name %>-unpublished-warning; }
+  &.node-by-viewer { @extend .-<%= project_name %>-node-by-viewer; }
+  }
+
+// user-profile.tpl.php
+.profile {
+  @extend .-<%= project_name %>-profile;
+  .picture { @extend .-<%= project_name %>-profile-picture; }
+  h3 { @extend .-<%= project_name %>-profile-category-title; }
+  dl { @extend .-<%= project_name %>-profile-category-wrapper; }
+  dt { @extend .-<%= project_name %>-profile-field-label; }
+  dd { @extend .-<%= project_name %>-profile-field-value; } }
+

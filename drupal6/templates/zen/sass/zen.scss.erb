@@ -5,7 +5,6 @@
 @import "<%= project_name %>-zen-skin";
 
 // Map the zen variables to the skin variables
-$zen-supported-regions: $<%= project_name %>-supported-regions;
 $zen-width: $<%= project_name %>-width;
 $zen-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
 $zen-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
@@ -16,6 +15,7 @@ $zen-base-font-size: $<%= project_name %>-base-font-size;
 $zen-navigation-width: $<%= project_name %>-navigation-width;
 $zen-navigation-height: $<%= project_name %>-navigation-height;
 $zen-footer-size: $<%= project_name %>-footer-size;
+$zen-supported-regions: $<%= project_name %>-supported-regions;
 
 // Generate the Zen layout
 @include zen-layout;
