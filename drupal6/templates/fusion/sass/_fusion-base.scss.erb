@@ -1,10 +1,5 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
-
-// Map the fusion variables to the skin variables
-$fusion-width: $<%= project_name %>-width;
-$fusion-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
-$fusion-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
-$fusion-content-position: $<%= project_name %>-content-position;
-$fusion-proportional-typeface: $<%= project_name %>-proportional-typeface;
-$fusion-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
-$fusion-base-font-size: $<%= project_name %>-base-font-size;
+// Set the total width of the content and sidebars
+$<%= project_name %>-width: 960px;
+$<%= project_name %>-first-sidebar-width: 200px;
+$<%= project_name %>-second-sidebar-width: 200px;

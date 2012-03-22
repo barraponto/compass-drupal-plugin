@@ -1,6 +1,12 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
+@import "<%= project_name %>-base";
 @import "<%= project_name %>-skin";
-@import "_<%= project_name %>-base";
+@import "<%= project_name %>-skin-fusion";
+
+// Map the fusion variables to the skin variables
+$fusion-width: $<%= project_name %>-width;
+$fusion-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
+$fusion-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
 
 // page.tpl.php
 body { @extend .-<%= project_name %>-body; }
