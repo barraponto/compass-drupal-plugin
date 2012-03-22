@@ -1,7 +1,6 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
 @import "drupal6/zen";
-@import "<%= project_name %>-skin";
-@import "_<%= project_name %>-base";
+@import "<%= project_name %>-base";
 
 // Generate the Zen RTL layout
 @include zen-layout("rtl");

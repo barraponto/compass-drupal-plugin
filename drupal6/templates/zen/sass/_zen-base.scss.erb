@@ -1,28 +1,27 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
-// Set <%= project_name %> default settings, safeguard if skin deletes them
-$<%= project_name %>-width: 960px !default;
-$<%= project_name %>-first-sidebar-width: 200px !default;
-$<%= project_name %>-second-sidebar-width: 200px !default;
-$<%= project_name %>-content-position: "middle" !default;
-$<%= project_name %>-proportional-typeface: Verdana, Tahoma, "DejaVu Sans", sans-serif !default;
-$<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", monospace !default;
+// Set the total width of the content and sidebars
+$<%= project_name %>-width: 960px;
+$<%= project_name %>-first-sidebar-width: 200px;
+$<%= project_name %>-second-sidebar-width: 200px;
 
-// These are base theme specific settings, copy to <%= project_name %> if you want to change them 
-$<%= project_name %>-navigation-width: 100% !default;
-$<%= project_name %>-navigation-height: 2.3em !default;
-$<%= project_name %>-footer-size: 150px !default;
+// Order the content and sidebars
+// Possible values are 'middle', 'first' and 'last'
+$<%= project_name %>-content-position: "middle";
+
+// Set the basic typeface palette
+$<%= project_name %>-proportional-typeface: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", monospace;
+
+// Set the base font-size
+$<%= project_name %>-base-font-size: 14px;
+
+// Set the navigation wrapper dimensions
+$<%= project_name %>-navigation-width: 100%;
+$<%= project_name %>-navigation-height: 2.3em;
+
+// Set the footer section dimensions for a fixed footer
+$<%= project_name %>-footer-size: 150px;
+
+// Declare the regions the <%= project_name %> skin supports
 // Zen has no content region by default, see <%= project_name %>.info
-$<%= project_name %>-supported-regions: header, sidebar-first, sidebar-second, footer !default;
-
-// Map the zen variables to the skin variables
-$zen-supported-regions: $<%= project_name %>-supported-regions;
-$zen-width: $<%= project_name %>-width;
-$zen-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
-$zen-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
-$zen-content-position: $<%= project_name %>-content-position;
-$zen-proportional-typeface: $<%= project_name %>-proportional-typeface;
-$zen-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
-$zen-base-font-size: $<%= project_name %>-base-font-size;
-$zen-navigation-width: $<%= project_name %>-navigation-width;
-$zen-navigation-height: $<%= project_name %>-navigation-height;
-$zen-footer-size: $<%= project_name %>-footer-size;
+$<%= project_name %>-supported-regions: header, sidebar-first, sidebar-second, footer;

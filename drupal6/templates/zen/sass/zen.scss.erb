@@ -1,8 +1,21 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
 @import "drupal6/zen";
+@import "<%= project_name %>-base";
 @import "<%= project_name %>-skin";
 @import "<%= project_name %>-zen-skin";
-@import "_<%= project_name %>-base";
+
+// Map the zen variables to the skin variables
+$zen-supported-regions: $<%= project_name %>-supported-regions;
+$zen-width: $<%= project_name %>-width;
+$zen-first-sidebar-width: $<%= project_name %>-first-sidebar-width;
+$zen-second-sidebar-width: $<%= project_name %>-second-sidebar-width;
+$zen-content-position: $<%= project_name %>-content-position;
+$zen-proportional-typeface: $<%= project_name %>-proportional-typeface;
+$zen-monospaced-typeface: $<%= project_name %>-monospaced-typeface;
+$zen-base-font-size: $<%= project_name %>-base-font-size;
+$zen-navigation-width: $<%= project_name %>-navigation-width;
+$zen-navigation-height: $<%= project_name %>-navigation-height;
+$zen-footer-size: $<%= project_name %>-footer-size;
 
 // Generate the Zen layout
 @include zen-layout;
