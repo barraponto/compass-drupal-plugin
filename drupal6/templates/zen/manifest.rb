@@ -7,8 +7,8 @@ file 'theme-settings.php.erb', :to => "theme-settings.php", :erb => true
 file 'sass/_skin-base.scss.erb', :to => "_#{project_name}-base.scss", :erb => true, :like => :stylesheet
 file '../project/_skin.scss.erb', :to => "_#{project_name}-skin.scss", :erb => true, :like => :stylesheet
 file '../project/_skin-rtl.scss.erb', :to => "_#{project_name}-skin-rtl.scss", :erb => true, :like => :stylesheet
-file 'sass/_zen-skin.scss.erb', :to => "_#{project_name}-zen-skin.scss", :erb => true, :like => :stylesheet
-file 'sass/_zen-skin-rtl.scss.erb', :to => "_#{project_name}-zen-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/_skin-zen.scss.erb', :to => "_#{project_name}-skin-zen.scss", :erb => true, :like => :stylesheet
+file 'sass/_skin-zen-rtl.scss.erb', :to => "_#{project_name}-skin-zen-rtl.scss", :erb => true, :like => :stylesheet
 file 'sass/zen.scss.erb', :to => "#{project_name}.scss", :erb => true, :like => :stylesheet
 file 'sass/zen-rtl.scss.erb', :to => "#{project_name}-rtl.scss", :erb => true, :like => :stylesheet
 # STARTERKIT CSS files (that will eventually move to SCSS)

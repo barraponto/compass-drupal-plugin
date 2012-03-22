@@ -7,8 +7,8 @@ file 'fusion_starter.info.erb', :to => "#{project_name}.info", :erb => true
 file 'sass/_skin-base.scss.erb', :to => "_#{project_name}-base.scss", :erb => true, :like => :stylesheet
 file '../project/_skin.scss.erb', :to => "_#{project_name}-skin.scss", :erb => true, :like => :stylesheet
 file '../project/_skin-rtl.scss.erb', :to => "_#{project_name}-skin-rtl.scss", :erb => true, :like => :stylesheet
-file 'sass/_fusion-skin.scss.erb', :to => "_#{project_name}-fusion-skin.scss", :erb => true, :like => :stylesheet
-file 'sass/_fusion-skin-rtl.scss.erb', :to => "_#{project_name}-fusion-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/_skin-fusion.scss.erb', :to => "_#{project_name}-skin-fusion.scss", :erb => true, :like => :stylesheet
+file 'sass/_skin-fusion-rtl.scss.erb', :to => "_#{project_name}-skin-fusion-rtl.scss", :erb => true, :like => :stylesheet
 file 'sass/fusion.scss.erb', :to => "#{project_name}.scss", :erb => true, :like => :stylesheet
 file 'sass/fusion-rtl.scss.erb', :to => "#{project_name}-rtl.scss", :erb => true, :like => :stylesheet
 # Starter CSS files (that will eventually move to SCSS)
