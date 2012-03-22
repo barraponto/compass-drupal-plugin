@@ -1,22 +1,7 @@
 <% project_name = File.basename(Compass.configuration.project_path) %>
-// This variable controls the total width of the container div
-// You can use px for a Fixed layout or % for a Liquid layout
+@import "<%= project_name %>-base";
+
 $<%= project_name %>-width: 960px;
-
-// These variables control the size of the sidebars
-$<%= project_name %>-first-sidebar-width: 200px;
-$<%= project_name %>-second-sidebar-width: 200px;
-
-// This variable positions the content relative to the sidebars
-// Possible values are first, last, middle
-$<%= project_name %>-content-position: "middle";
-
-// These variables control the typefaces as defined in html-reset.css
-$<%= project_name %>-proportional-typeface: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$<%= project_name %>-monospaced-typeface: "Courier New", "DejaVu Sans Mono", monospace;
-
-// These variables control the font sizes as defined in html-reset.css
-$<%= project_name %>-base-font-size: 14px;
 
 /* <%= project_name %> HTML elements styles */
 .-<%= project_name %>-h2 { }
