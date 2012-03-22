@@ -7,6 +7,9 @@ file 'sass/_skin-base.scss.erb', :to => "_#{options[:project_name] || File.basen
 file '../project/_skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin.scss", :erb => true, :like => :stylesheet
 file 'sass/_fusion-skin.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-fusion-skin.scss", :erb => true, :like => :stylesheet
 file 'sass/fusion.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}.scss", :erb => true, :like => :stylesheet
+file '../project/_skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/_fusion-skin-rtl.scss.erb', :to => "_#{options[:project_name] || File.basename(Compass.configuration.project_path)}-fusion-skin-rtl.scss", :erb => true, :like => :stylesheet
+file 'sass/fusion-rtl.scss.erb', :to => "#{options[:project_name] || File.basename(Compass.configuration.project_path)}-rtl.scss", :erb => true, :like => :stylesheet
 # Starter CSS files (that will eventually move to SCSS)
 file 'css/fusion-starter-style.css', :to => 'fusion-starter-style.css', :like => :css
 file 'css/fusion-starter-style-rtl.css', :to => 'fusion-starter-style-rtl.css', :like => :css

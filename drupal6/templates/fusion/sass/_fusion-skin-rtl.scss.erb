@@ -1,0 +1,26 @@
+<% project_name = File.basename(Compass.configuration.project_path) %>
+@import "<%= project_name %>-base";
+
+/* <%= project_name %> page.tpl.php Fusion specific styles */
+.-<%= project_name %>-skip-link { }
+
+.-<%= project_name %>-header-section-wrapper { }
+
+.-<%= project_name %>-secondary-menu-region-wrapper { }
+
+.-<%= project_name %>-primary-menu-region-wrapper { }
+
+.-<%= project_name %>-main-section-wrapper { }
+
+/* <%= project_name %> region.tpl.php Fusion specific styles */
+#header-top-wrapper { @extend .-<%= project_name %>-header-top-region-wrapper; }
+#header-top { @extend .-<%= project_name %>-header-top-region; }
+
+#preface-top { @extend .-<%= project_name %>-preface-top-region-wrapper; }
+#preface-top { @extend .-<%= project_name %>-preface-top-region; }
+
+#sidebar-first { @extend .-<%= project_name %>-sidebar-first-region-wrapper; }
+#sidebar-first { @extend .-<%= project_name %>-sidebar-first-region; }
+
+#sidebar-second { @extend .-<%= project_name %>-sidebar-second-region-wrapper; }
+#sidebar-second { @extend .-<%= project_name %>-sidebar-second-region; }
