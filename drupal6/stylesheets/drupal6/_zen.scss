@@ -15,6 +15,11 @@ $zen-base-font-size: 14px !default;
 
 @mixin zen-layout-base {
 
+  @if $zen-content-position != 'middle' and $zen-content-position != 'first' and $zen-content-position != 'last' {
+    @warn "Assuming $zen-content-position to be 'middle'";
+    $zen-content-position: 'middle';
+  }
+
   .region-header {
     clear: both; }
 
