@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Compass Drupal Plugin : A code-based template approach for Drupal themes" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Compass Drupal Plugin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/barraponto/compass-drupal-plugin">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Compass Drupal Plugin</h1>
+          <h2 id="project_tagline">A code-based template approach for Drupal themes</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/barraponto/compass-drupal-plugin/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/barraponto/compass-drupal-plugin/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>A Template Approach</h3>
+
+<p>A while ago, Nica Lorba published a blog post with Firework templates attached, named <a href="http://www.chapterthree.com/blog/nica_lorber/design_drupal_template_approach">Design for Drupal: A Template Approach</a>. She tried to fix the obvious flaws of almost every Drupal custom theme: <em>unstyled Drupal elements</em>. The templates were meant for designers to quickly notice whether they had thoroughly styled Drupal elements and served as a solid foundation to work on.</p>
+
+<p>This template is wonderful for graphic designers. But I'm a web designer who'd rather design in the browser. I then decided to port the Template Approach to a reusable SCSS stylesheet and noticed that it made porting styles between base themes easier. It might even make porting styles to other CMSs possible, although I'm not pursuing that right now.</p>
+
+<h3>How to</h3>
+
+<p>First, make sure you have ruby installed on your development environment. WHAT? Yes, this project actually relies on Ruby's implementation of SASS and Compass, but only on your development environment. Please note that you're not required to run ruby code on your server.</p>
+
+<p>Mac users already have Ruby installed. Ubuntu users can just <code>sudo apt-get install ruby</code>. Then let's get started with:</p>
+
+<pre><code>gem install compass-drupal-plugin
+compass create -r drupal --using drupal6/zen mytheme --relative-assets
+</code></pre>
+
+<p>This should create a <a href="http://drupal.org/project/zen">Zen</a> child theme complete and ready to go. There are three important SCSS files to read and edit in the <code>sass</code> folder:</p>
+
+<ul>
+<li>
+<strong>_mytheme-base.scss</strong>: settings for sidebar widths, font-size and stacks, fixed footer, sidebar order, etc.</li>
+<li>
+<strong>_mytheme-skin.scss</strong>: the actual template. Instead of looking for selectors like <code>#secondary-menu &gt; li.expanded &gt; ul.menu</code> you will find <code>.-mytheme-secondary-submenu</code>. This abstraction makes it easier to start editing the stylesheets right away, while at the same time makes porting styles between base themes easier.</li>
+<li>
+<strong>mytheme-skin.scss</strong>: maps the base-theme-specific CSS selectors to the skin selectors and applies theme-specific mixins to set sidebar-widths, fixed-footer, sidebar-order, etc. This file should be left untouched unless you want to disable the provided mixins or change smoe mappings to extend styles from a contributed skin file.</li>
+</ul><h3>Why Drupal 6?</h3>
+
+<p>This project started as a SASS port of Zen 6.x-2.x layout stylesheets (because I'm lazy). As this project grew in scope, I decided to finish it's initial roadmap supporting only D6 since porting changes across two code bases would be a burden. Also, once a D7 port is released, it will be very easy to port styles :)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Compass Drupal Plugin maintained by <a href="https://github.com/barraponto">barraponto</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-2769310-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
